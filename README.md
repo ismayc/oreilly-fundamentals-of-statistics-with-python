@@ -29,11 +29,11 @@ The major files in this repository are
 - **Open Anaconda Prompt (Windows) or Terminal (macOS/Linux)** (if using Anaconda), or **open your command prompt (Windows) or terminal (macOS/Linux)** (if using Python installation).
 - **Install Required Libraries using conda (Anaconda)**:
    ```bash
-   conda install numpy pandas scipy matplotlib seaborn statsmodels
+   conda install numpy pandas scipy matplotlib seaborn statsmodels scikit-learn
    ```
 - **Install Required Libraries using pip** (if not using Anaconda):
   ```bash
-  pip install numpy pandas scipy matplotlib seaborn statsmodels
+  pip install numpy pandas scipy matplotlib seaborn statsmodels scikit-learn
   ```
 
 ### Step 4: Launch Jupyter Notebook
