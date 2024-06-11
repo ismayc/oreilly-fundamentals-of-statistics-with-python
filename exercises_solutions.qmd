@@ -860,19 +860,230 @@ plt.show()
 
 # Week 3
 
-## Walkthrough 3.1: 
+## Walkthrough 3.1: Simulating Distributions
+
+### Simulating Binomial
+
+```{python}
+# Simulate binomial distribution
+binom_samples = np.random.binomial(n=10, p=0.5, size=10000)
+
+# Plot histogram
+plt.figure(figsize=(10, 5))
+sns.histplot(binom_samples, kde=False, bins=30)
+plt.title('Binomial Distribution (n=10, p=0.5)')
+plt.xlabel('Number of Successes')
+plt.ylabel('Frequency')
+plt.show()
+```
+
+### Simulating Normal
+
+```{python}
+# Simulate normal distribution
+normal_samples = np.random.normal(loc=0, scale=1, size=10000)
+
+# Plot histogram
+plt.figure(figsize=(10, 5))
+sns.histplot(normal_samples, kde=True, bins=30)
+plt.title('Normal Distribution (μ=0, σ=1)')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.show()
+```
+
 
 ## Exercise 3.1: 
 
+### Simulating Poisson
+
+```{python}
+# Simulate Poisson distribution with lambda (lam) parameter 3
+poisson_samples = np.random.poisson(lam=3, size=10000)
+
+# Plot histogram
+plt.figure(figsize=(10, 5))
+sns.histplot(poisson_samples, kde=False, bins=30)
+plt.title('Poisson Distribution (λ=3)')
+plt.xlabel('Number of Events')
+plt.ylabel('Frequency')
+plt.show()
+```
+
+
+### Simulating Exponential
+
+```{python}
+# Simulate exponential distribution with scale parameter 1
+exponential_samples = np.random.exponential(scale=1, size=10000)
+
+# Plot histogram
+plt.figure(figsize=(10, 5))
+sns.histplot(exponential_samples, kde=True, bins=30)
+plt.title('Exponential Distribution (λ=1)')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.show()
+```
+
+
+
 ---
 
-## Walkthrough 3.2: 
+## Walkthrough 3.2: t-tests
 
-## Exercise 3.2: 
+```{python}
+# One-sample t-test checking for evidence that mu compensation > 85000
+salary_mean = 85000
+t_stat, p_value = stats.ttest_1samp(
+  data_dev_survey['converted_comp_yearly'].dropna(), 
+  popmean = salary_mean,
+  alternative='greater')
+
+print(f"T-statistic: {t_stat}")
+print(f"P-value: {p_value}")
+```
+
+```{python}
+# Two-sample t-test comparing compensation across plans_to_use_ai groups
+# Checking for a difference
+using = data_dev_survey[data_dev_survey['plans_to_use_ai'] == 'Using']['converted_comp_yearly'].dropna()
+plan_to_use = data_dev_survey[data_dev_survey['plans_to_use_ai'] == 'Plan to use']['converted_comp_yearly'].dropna()
+t_stat, p_value = stats.ttest_ind(using, plan_to_use, equal_var=False)
+
+print(f"T-statistic: {t_stat}")
+print(f"P-value: {p_value}")
+```
+
+
+## Exercise 3.2: t-tests
+
+```{python}
+# One-sample t-test checking for evidence that mu flavor < 7.8
+flavor_mean = 7.8
+t_stat, p_value = stats.ttest_1samp(
+  coffee_quality['flavor'].dropna(), 
+  flavor_mean,
+  alternative='less')
+
+print(f"T-statistic: {t_stat}")
+print(f"P-value: {p_value}")
+
+```
+
+```{python}
+# Two-sample t-test checking for difference in Columbia and Brazil total_cup_points
+colombia = coffee_quality[coffee_quality['country_of_origin'] == 'Colombia']['total_cup_points'].dropna()
+brazil = coffee_quality[coffee_quality['country_of_origin'] == 'Brazil']['total_cup_points'].dropna()
+t_stat, p_value = stats.ttest_ind(colombia, brazil, equal_var=False)
+
+print(f"T-statistic: {t_stat}")
+print(f"P-value: {p_value}")
+```
+
 
 ---
 
-## Walkthrough 3.3: 
+## Walkthrough 3.3: Comparative Tests
 
-## Exercise 3.3: 
+<!-- Also show EDA first to make guesses as to statistical significance -->
+
+<!-- Look up *groups again -->
+
+```{python}
+# Perform one-way ANOVA comparing compensation across different levels of
+# remote_work
+groups = data_dev_survey.groupby('remote_work')['converted_comp_yearly'].apply(list)
+f_stat, p_value = stats.f_oneway(*groups)
+
+print(f"F-statistic: {f_stat}")
+print(f"P-value: {p_value}")
+```
+
+```{python}
+# Create a contingency table
+contingency_table = pd.crosstab(data_dev_survey['employment'], 
+                                data_dev_survey['remote_work'])
+
+# Perform chi-square test
+chi2, p, dof, expected = stats.chi2_contingency(contingency_table)
+
+print(f"Chi-Square Statistic: {chi2}")
+print(f"P-value: {p}")
+
+```
+
+
+## Exercise 3.3: Comparative Tests
+
+```{python}
+# Perform one-way ANOVA comparing total_cup_points across country_of_origin
+groups = coffee_quality.groupby('country_of_origin')['total_cup_points'].apply(list)
+f_stat, p_value = stats.f_oneway(*groups)
+
+print(f"F-statistic: {f_stat}")
+print(f"P-value: {p_value}")
+```
+
+```{python}
+# Perform a chi-square test of independence for processing_method versus
+# continent_of_origin
+
+# Create a contingency table
+contingency_table = pd.crosstab(coffee_quality['processing_method'], coffee_quality['continent_of_origin'])
+
+# Perform chi-square test
+chi2, p, dof, expected = stats.chi2_contingency(contingency_table)
+
+print(f"Chi-Square Statistic: {chi2}")
+print(f"P-value: {p}")
+```
+
+---
+
+## Walkthrough 3.4: Non-Parametric Tests
+
+```{python}
+# Perform Mann-Whitney U Test comparing compensation for Remote and In-person
+group1 = data_dev_survey[data_dev_survey['remote_work'] == 'Remote']['converted_comp_yearly'].dropna()
+group2 = data_dev_survey[data_dev_survey['remote_work'] == 'In-person']['converted_comp_yearly'].dropna()
+stat, p_value = stats.mannwhitneyu(group1, group2)
+
+print(f"Mann-Whitney U Statistic: {stat}")
+print(f"P-value: {p_value}")
+```
+
+```{python}
+# Perform Kruskal-Wallis H Test comparing compensation across countries
+groups = data_dev_survey.groupby('country')['converted_comp_yearly'].apply(list)
+stat, p_value = stats.kruskal(*groups)
+
+print(f"Kruskal-Wallis H Statistic: {stat}")
+print(f"P-value: {p_value}")
+```
+
+
+## Exercise 3.4: Non-Parametric Tests
+
+```{python}
+# Perform Mann-Whitney U Test comparing total_cup_points for Guatemala
+# and Hondurs
+group1 = coffee_quality[coffee_quality['country_of_origin'] == 'Guatemala']['total_cup_points'].dropna()
+group2 = coffee_quality[coffee_quality['country_of_origin'] == 'Honduras']['total_cup_points'].dropna()
+stat, p_value = stats.mannwhitneyu(group1, group2)
+
+print(f"Mann-Whitney U Statistic: {stat}")
+print(f"P-value: {p_value}")
+
+```
+
+```{python}
+# Perform Kruskal-Wallis H Test comparing total_cup_points across 
+# continent_of_origin
+groups = coffee_quality.groupby('continent_of_origin')['total_cup_points'].apply(list)
+stat, p_value = stats.kruskal(*groups)
+
+print(f"Kruskal-Wallis H Statistic: {stat}")
+print(f"P-value: {p_value}")
+```
 

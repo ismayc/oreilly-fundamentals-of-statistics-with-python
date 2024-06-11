@@ -810,7 +810,7 @@ max              13.500000  </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb123"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb123-1"><a href="#cb123-1" aria-hidden="true" tabindex="-1"></a>sns.pairplot(data_dev_survey, <span class="bu">vars</span><span class="op">=</span>[<span class="st">'years_code_pro'</span>, <span class="st">'work_exp'</span>, <span class="st">'converted_comp_yearly'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>&lt;seaborn.axisgrid.PairGrid object at 0x12bbf65d0&gt;</code></pre>
+<pre><code>&lt;seaborn.axisgrid.PairGrid object at 0x12ddc1790&gt;</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb125"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb125-1"><a href="#cb125-1" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">'Pair Plot of Selected Variables'</span>, y<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -850,7 +850,7 @@ max              13.500000  </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb132"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a>plt.plot(daily_counts.index, daily_counts.values, marker<span class="op">=</span><span class="st">'o'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[&lt;matplotlib.lines.Line2D object at 0x12c1116a0&gt;]</code></pre>
+<pre><code>[&lt;matplotlib.lines.Line2D object at 0x12e7ef5c0&gt;]</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb134"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Number of Surveys Completed Each Day in May 2023'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -929,7 +929,7 @@ max              13.500000  </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb152"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb152-1"><a href="#cb152-1" aria-hidden="true" tabindex="-1"></a>sns.pairplot(coffee_quality, <span class="bu">vars</span><span class="op">=</span>[<span class="st">'aroma'</span>, <span class="st">'acidity'</span>, <span class="st">'body'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>&lt;seaborn.axisgrid.PairGrid object at 0x12b9fa840&gt;</code></pre>
+<pre><code>&lt;seaborn.axisgrid.PairGrid object at 0x12e125d90&gt;</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb154"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb154-1"><a href="#cb154-1" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">'Pair Plot of Selected Variables'</span>, y<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -971,7 +971,7 @@ max              13.500000  </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb159"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb159-1"><a href="#cb159-1" aria-hidden="true" tabindex="-1"></a>plt.plot(monthly_mean.index.astype(<span class="bu">str</span>), monthly_mean.values, marker<span class="op">=</span><span class="st">'o'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[&lt;matplotlib.lines.Line2D object at 0x12ba166f0&gt;]</code></pre>
+<pre><code>[&lt;matplotlib.lines.Line2D object at 0x12e992f30&gt;]</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb161"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb161-1"><a href="#cb161-1" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Mean Total Cup Points by Month Graded'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -2384,25 +2384,372 @@ moisture_percentage             1.000000  </code></pre>
 </section>
 <section id="week-3" class="level1">
 <h1>Week 3</h1>
-<section id="walkthrough-3.1" class="level2">
-<h2 class="anchored" data-anchor-id="walkthrough-3.1">Walkthrough 3.1:</h2>
+<section id="walkthrough-3.1-simulating-distributions" class="level2">
+<h2 class="anchored" data-anchor-id="walkthrough-3.1-simulating-distributions">Walkthrough 3.1: Simulating Distributions</h2>
+<section id="simulating-binomial" class="level3">
+<h3 class="anchored" data-anchor-id="simulating-binomial">Simulating Binomial</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb390"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb390-1"><a href="#cb390-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulate binomial distribution</span></span>
+<span id="cb390-2"><a href="#cb390-2" aria-hidden="true" tabindex="-1"></a>binom_samples <span class="op">=</span> np.random.binomial(n<span class="op">=</span><span class="dv">10</span>, p<span class="op">=</span><span class="fl">0.5</span>, size<span class="op">=</span><span class="dv">10000</span>)</span>
+<span id="cb390-3"><a href="#cb390-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb390-4"><a href="#cb390-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot histogram</span></span>
+<span id="cb390-5"><a href="#cb390-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;Figure size 1000x500 with 0 Axes&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb392"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb392-1"><a href="#cb392-1" aria-hidden="true" tabindex="-1"></a>sns.histplot(binom_samples, kde<span class="op">=</span><span class="va">False</span>, bins<span class="op">=</span><span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;Axes: ylabel='Count'&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb394"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb394-1"><a href="#cb394-1" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Binomial Distribution (n=10, p=0.5)'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Text(0.5, 1.0, 'Binomial Distribution (n=10, p=0.5)')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb396"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb396-1"><a href="#cb396-1" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Number of Successes'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Text(0.5, 0, 'Number of Successes')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb398"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb398-1"><a href="#cb398-1" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Text(0, 0.5, 'Frequency')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb400"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb400-1"><a href="#cb400-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercises_solutions_files/figure-html/unnamed-chunk-59-71.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="simulating-normal" class="level3">
+<h3 class="anchored" data-anchor-id="simulating-normal">Simulating Normal</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb401"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb401-1"><a href="#cb401-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulate normal distribution</span></span>
+<span id="cb401-2"><a href="#cb401-2" aria-hidden="true" tabindex="-1"></a>normal_samples <span class="op">=</span> np.random.normal(loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">10000</span>)</span>
+<span id="cb401-3"><a href="#cb401-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb401-4"><a href="#cb401-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot histogram</span></span>
+<span id="cb401-5"><a href="#cb401-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;Figure size 1000x500 with 0 Axes&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb403"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb403-1"><a href="#cb403-1" aria-hidden="true" tabindex="-1"></a>sns.histplot(normal_samples, kde<span class="op">=</span><span class="va">True</span>, bins<span class="op">=</span><span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;Axes: ylabel='Count'&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb405"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb405-1"><a href="#cb405-1" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Normal Distribution (μ=0, σ=1)'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Text(0.5, 1.0, 'Normal Distribution (μ=0, σ=1)')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb407"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb407-1"><a href="#cb407-1" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Value'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Text(0.5, 0, 'Value')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb409"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb409-1"><a href="#cb409-1" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Text(0, 0.5, 'Frequency')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb411"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb411-1"><a href="#cb411-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercises_solutions_files/figure-html/unnamed-chunk-60-73.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="exercise-3.1" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-3.1">Exercise 3.1:</h2>
+<section id="simulating-poisson" class="level3">
+<h3 class="anchored" data-anchor-id="simulating-poisson">Simulating Poisson</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb412"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb412-1"><a href="#cb412-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulate Poisson distribution with lambda (lam) parameter 3</span></span>
+<span id="cb412-2"><a href="#cb412-2" aria-hidden="true" tabindex="-1"></a>poisson_samples <span class="op">=</span> np.random.poisson(lam<span class="op">=</span><span class="dv">3</span>, size<span class="op">=</span><span class="dv">10000</span>)</span>
+<span id="cb412-3"><a href="#cb412-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb412-4"><a href="#cb412-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot histogram</span></span>
+<span id="cb412-5"><a href="#cb412-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;Figure size 1000x500 with 0 Axes&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb414"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb414-1"><a href="#cb414-1" aria-hidden="true" tabindex="-1"></a>sns.histplot(poisson_samples, kde<span class="op">=</span><span class="va">False</span>, bins<span class="op">=</span><span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;Axes: ylabel='Count'&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb416"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb416-1"><a href="#cb416-1" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Poisson Distribution (λ=3)'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Text(0.5, 1.0, 'Poisson Distribution (λ=3)')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb418"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb418-1"><a href="#cb418-1" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Number of Events'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Text(0.5, 0, 'Number of Events')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb420"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb420-1"><a href="#cb420-1" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Text(0, 0.5, 'Frequency')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb422"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb422-1"><a href="#cb422-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercises_solutions_files/figure-html/unnamed-chunk-61-75.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="simulating-exponential" class="level3">
+<h3 class="anchored" data-anchor-id="simulating-exponential">Simulating Exponential</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb423"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb423-1"><a href="#cb423-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulate exponential distribution with scale parameter 1</span></span>
+<span id="cb423-2"><a href="#cb423-2" aria-hidden="true" tabindex="-1"></a>exponential_samples <span class="op">=</span> np.random.exponential(scale<span class="op">=</span><span class="dv">1</span>, size<span class="op">=</span><span class="dv">10000</span>)</span>
+<span id="cb423-3"><a href="#cb423-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb423-4"><a href="#cb423-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot histogram</span></span>
+<span id="cb423-5"><a href="#cb423-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;Figure size 1000x500 with 0 Axes&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb425"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb425-1"><a href="#cb425-1" aria-hidden="true" tabindex="-1"></a>sns.histplot(exponential_samples, kde<span class="op">=</span><span class="va">True</span>, bins<span class="op">=</span><span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;Axes: ylabel='Count'&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb427"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb427-1"><a href="#cb427-1" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Exponential Distribution (λ=1)'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Text(0.5, 1.0, 'Exponential Distribution (λ=1)')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb429"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb429-1"><a href="#cb429-1" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Value'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Text(0.5, 0, 'Value')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb431"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb431-1"><a href="#cb431-1" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Text(0, 0.5, 'Frequency')</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb433"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb433-1"><a href="#cb433-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="exercises_solutions_files/figure-html/unnamed-chunk-62-77.png" class="img-fluid figure-img" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
 <hr>
 </section>
-<section id="walkthrough-3.2" class="level2">
-<h2 class="anchored" data-anchor-id="walkthrough-3.2">Walkthrough 3.2:</h2>
 </section>
-<section id="exercise-3.2" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3.2">Exercise 3.2:</h2>
+<section id="walkthrough-3.2-t-tests" class="level2">
+<h2 class="anchored" data-anchor-id="walkthrough-3.2-t-tests">Walkthrough 3.2: t-tests</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb434"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb434-1"><a href="#cb434-1" aria-hidden="true" tabindex="-1"></a><span class="co"># One-sample t-test checking for evidence that mu compensation &gt; 85000</span></span>
+<span id="cb434-2"><a href="#cb434-2" aria-hidden="true" tabindex="-1"></a>salary_mean <span class="op">=</span> <span class="dv">85000</span></span>
+<span id="cb434-3"><a href="#cb434-3" aria-hidden="true" tabindex="-1"></a>t_stat, p_value <span class="op">=</span> stats.ttest_1samp(</span>
+<span id="cb434-4"><a href="#cb434-4" aria-hidden="true" tabindex="-1"></a>  data_dev_survey[<span class="st">'converted_comp_yearly'</span>].dropna(), </span>
+<span id="cb434-5"><a href="#cb434-5" aria-hidden="true" tabindex="-1"></a>  popmean <span class="op">=</span> salary_mean,</span>
+<span id="cb434-6"><a href="#cb434-6" aria-hidden="true" tabindex="-1"></a>  alternative<span class="op">=</span><span class="st">'greater'</span>)</span>
+<span id="cb434-7"><a href="#cb434-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb434-8"><a href="#cb434-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T-statistic: </span><span class="sc">{</span>t_stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>T-statistic: 2.387350503647815</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb436"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb436-1"><a href="#cb436-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P-value: </span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>P-value: 0.008563358466709872</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb438"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb438-1"><a href="#cb438-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Two-sample t-test comparing compensation across plans_to_use_ai groups</span></span>
+<span id="cb438-2"><a href="#cb438-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking for a difference</span></span>
+<span id="cb438-3"><a href="#cb438-3" aria-hidden="true" tabindex="-1"></a>using <span class="op">=</span> data_dev_survey[data_dev_survey[<span class="st">'plans_to_use_ai'</span>] <span class="op">==</span> <span class="st">'Using'</span>][<span class="st">'converted_comp_yearly'</span>].dropna()</span>
+<span id="cb438-4"><a href="#cb438-4" aria-hidden="true" tabindex="-1"></a>plan_to_use <span class="op">=</span> data_dev_survey[data_dev_survey[<span class="st">'plans_to_use_ai'</span>] <span class="op">==</span> <span class="st">'Plan to use'</span>][<span class="st">'converted_comp_yearly'</span>].dropna()</span>
+<span id="cb438-5"><a href="#cb438-5" aria-hidden="true" tabindex="-1"></a>t_stat, p_value <span class="op">=</span> stats.ttest_ind(using, plan_to_use, equal_var<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb438-6"><a href="#cb438-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb438-7"><a href="#cb438-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T-statistic: </span><span class="sc">{</span>t_stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>T-statistic: 0.9293366153676751</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb440"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb440-1"><a href="#cb440-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P-value: </span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>P-value: 0.3529304815725288</code></pre>
+</div>
+</div>
+</section>
+<section id="exercise-3.2-t-tests" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3.2-t-tests">Exercise 3.2: t-tests</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb442"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb442-1"><a href="#cb442-1" aria-hidden="true" tabindex="-1"></a><span class="co"># One-sample t-test checking for evidence that mu flavor &lt; 7.8</span></span>
+<span id="cb442-2"><a href="#cb442-2" aria-hidden="true" tabindex="-1"></a>flavor_mean <span class="op">=</span> <span class="fl">7.8</span></span>
+<span id="cb442-3"><a href="#cb442-3" aria-hidden="true" tabindex="-1"></a>t_stat, p_value <span class="op">=</span> stats.ttest_1samp(</span>
+<span id="cb442-4"><a href="#cb442-4" aria-hidden="true" tabindex="-1"></a>  coffee_quality[<span class="st">'flavor'</span>].dropna(), </span>
+<span id="cb442-5"><a href="#cb442-5" aria-hidden="true" tabindex="-1"></a>  flavor_mean,</span>
+<span id="cb442-6"><a href="#cb442-6" aria-hidden="true" tabindex="-1"></a>  alternative<span class="op">=</span><span class="st">'less'</span>)</span>
+<span id="cb442-7"><a href="#cb442-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb442-8"><a href="#cb442-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T-statistic: </span><span class="sc">{</span>t_stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>T-statistic: -2.8437004395767462</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb444"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb444-1"><a href="#cb444-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P-value: </span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>P-value: 0.0024543417348696964</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb446"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb446-1"><a href="#cb446-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Two-sample t-test checking for difference in Columbia and Brazil total_cup_points</span></span>
+<span id="cb446-2"><a href="#cb446-2" aria-hidden="true" tabindex="-1"></a>colombia <span class="op">=</span> coffee_quality[coffee_quality[<span class="st">'country_of_origin'</span>] <span class="op">==</span> <span class="st">'Colombia'</span>][<span class="st">'total_cup_points'</span>].dropna()</span>
+<span id="cb446-3"><a href="#cb446-3" aria-hidden="true" tabindex="-1"></a>brazil <span class="op">=</span> coffee_quality[coffee_quality[<span class="st">'country_of_origin'</span>] <span class="op">==</span> <span class="st">'Brazil'</span>][<span class="st">'total_cup_points'</span>].dropna()</span>
+<span id="cb446-4"><a href="#cb446-4" aria-hidden="true" tabindex="-1"></a>t_stat, p_value <span class="op">=</span> stats.ttest_ind(colombia, brazil, equal_var<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb446-5"><a href="#cb446-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb446-6"><a href="#cb446-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T-statistic: </span><span class="sc">{</span>t_stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>T-statistic: 2.3332681111615488</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb448"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb448-1"><a href="#cb448-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P-value: </span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>P-value: 0.032140770512696565</code></pre>
+</div>
+</div>
 <hr>
 </section>
-<section id="walkthrough-3.3" class="level2">
-<h2 class="anchored" data-anchor-id="walkthrough-3.3">Walkthrough 3.3:</h2>
+<section id="walkthrough-3.3-comparative-tests" class="level2">
+<h2 class="anchored" data-anchor-id="walkthrough-3.3-comparative-tests">Walkthrough 3.3: Comparative Tests</h2>
+<!-- Also show EDA first to make guesses as to statistical significance -->
+<!-- Look up *groups again -->
+<div class="cell">
+<div class="sourceCode cell-code" id="cb450"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb450-1"><a href="#cb450-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform one-way ANOVA comparing compensation across different levels of</span></span>
+<span id="cb450-2"><a href="#cb450-2" aria-hidden="true" tabindex="-1"></a><span class="co"># remote_work</span></span>
+<span id="cb450-3"><a href="#cb450-3" aria-hidden="true" tabindex="-1"></a>groups <span class="op">=</span> data_dev_survey.groupby(<span class="st">'remote_work'</span>)[<span class="st">'converted_comp_yearly'</span>].<span class="bu">apply</span>(<span class="bu">list</span>)</span>
+<span id="cb450-4"><a href="#cb450-4" aria-hidden="true" tabindex="-1"></a>f_stat, p_value <span class="op">=</span> stats.f_oneway(<span class="op">*</span>groups)</span>
+<span id="cb450-5"><a href="#cb450-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb450-6"><a href="#cb450-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"F-statistic: </span><span class="sc">{</span>f_stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>F-statistic: 14.664978544620904</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb452"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb452-1"><a href="#cb452-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P-value: </span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>P-value: 5.116178713207836e-07</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb454"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb454-1"><a href="#cb454-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a contingency table</span></span>
+<span id="cb454-2"><a href="#cb454-2" aria-hidden="true" tabindex="-1"></a>contingency_table <span class="op">=</span> pd.crosstab(data_dev_survey[<span class="st">'employment'</span>], </span>
+<span id="cb454-3"><a href="#cb454-3" aria-hidden="true" tabindex="-1"></a>                                data_dev_survey[<span class="st">'remote_work'</span>])</span>
+<span id="cb454-4"><a href="#cb454-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb454-5"><a href="#cb454-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform chi-square test</span></span>
+<span id="cb454-6"><a href="#cb454-6" aria-hidden="true" tabindex="-1"></a>chi2, p, dof, expected <span class="op">=</span> stats.chi2_contingency(contingency_table)</span>
+<span id="cb454-7"><a href="#cb454-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb454-8"><a href="#cb454-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Chi-Square Statistic: </span><span class="sc">{</span>chi2<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Chi-Square Statistic: 27.018703290562446</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb456"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb456-1"><a href="#cb456-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P-value: </span><span class="sc">{</span>p<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>P-value: 0.019146108619201168</code></pre>
+</div>
+</div>
 </section>
-<section id="exercise-3.3" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3.3">Exercise 3.3:</h2>
+<section id="exercise-3.3-comparative-tests" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3.3-comparative-tests">Exercise 3.3: Comparative Tests</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb458"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb458-1"><a href="#cb458-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform one-way ANOVA comparing total_cup_points across country_of_origin</span></span>
+<span id="cb458-2"><a href="#cb458-2" aria-hidden="true" tabindex="-1"></a>groups <span class="op">=</span> coffee_quality.groupby(<span class="st">'country_of_origin'</span>)[<span class="st">'total_cup_points'</span>].<span class="bu">apply</span>(<span class="bu">list</span>)</span>
+<span id="cb458-3"><a href="#cb458-3" aria-hidden="true" tabindex="-1"></a>f_stat, p_value <span class="op">=</span> stats.f_oneway(<span class="op">*</span>groups)</span>
+<span id="cb458-4"><a href="#cb458-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb458-5"><a href="#cb458-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"F-statistic: </span><span class="sc">{</span>f_stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>F-statistic: 3.429178050416842</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb460"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb460-1"><a href="#cb460-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P-value: </span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>P-value: 3.3064087043319192e-06</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb462"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb462-1"><a href="#cb462-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform a chi-square test of independence for processing_method versus</span></span>
+<span id="cb462-2"><a href="#cb462-2" aria-hidden="true" tabindex="-1"></a><span class="co"># continent_of_origin</span></span>
+<span id="cb462-3"><a href="#cb462-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb462-4"><a href="#cb462-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a contingency table</span></span>
+<span id="cb462-5"><a href="#cb462-5" aria-hidden="true" tabindex="-1"></a>contingency_table <span class="op">=</span> pd.crosstab(coffee_quality[<span class="st">'processing_method'</span>], coffee_quality[<span class="st">'continent_of_origin'</span>])</span>
+<span id="cb462-6"><a href="#cb462-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb462-7"><a href="#cb462-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform chi-square test</span></span>
+<span id="cb462-8"><a href="#cb462-8" aria-hidden="true" tabindex="-1"></a>chi2, p, dof, expected <span class="op">=</span> stats.chi2_contingency(contingency_table)</span>
+<span id="cb462-9"><a href="#cb462-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb462-10"><a href="#cb462-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Chi-Square Statistic: </span><span class="sc">{</span>chi2<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Chi-Square Statistic: 56.39467201623233</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb464"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb464-1"><a href="#cb464-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P-value: </span><span class="sc">{</span>p<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>P-value: 0.000767141959167542</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="walkthrough-3.4-non-parametric-tests" class="level2">
+<h2 class="anchored" data-anchor-id="walkthrough-3.4-non-parametric-tests">Walkthrough 3.4: Non-Parametric Tests</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb466"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb466-1"><a href="#cb466-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform Mann-Whitney U Test comparing compensation for Remote and In-person</span></span>
+<span id="cb466-2"><a href="#cb466-2" aria-hidden="true" tabindex="-1"></a>group1 <span class="op">=</span> data_dev_survey[data_dev_survey[<span class="st">'remote_work'</span>] <span class="op">==</span> <span class="st">'Remote'</span>][<span class="st">'converted_comp_yearly'</span>].dropna()</span>
+<span id="cb466-3"><a href="#cb466-3" aria-hidden="true" tabindex="-1"></a>group2 <span class="op">=</span> data_dev_survey[data_dev_survey[<span class="st">'remote_work'</span>] <span class="op">==</span> <span class="st">'In-person'</span>][<span class="st">'converted_comp_yearly'</span>].dropna()</span>
+<span id="cb466-4"><a href="#cb466-4" aria-hidden="true" tabindex="-1"></a>stat, p_value <span class="op">=</span> stats.mannwhitneyu(group1, group2)</span>
+<span id="cb466-5"><a href="#cb466-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb466-6"><a href="#cb466-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Mann-Whitney U Statistic: </span><span class="sc">{</span>stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mann-Whitney U Statistic: 44426.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb468"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb468-1"><a href="#cb468-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P-value: </span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>P-value: 4.34784546766904e-11</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb470"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb470-1"><a href="#cb470-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform Kruskal-Wallis H Test comparing compensation across countries</span></span>
+<span id="cb470-2"><a href="#cb470-2" aria-hidden="true" tabindex="-1"></a>groups <span class="op">=</span> data_dev_survey.groupby(<span class="st">'country'</span>)[<span class="st">'converted_comp_yearly'</span>].<span class="bu">apply</span>(<span class="bu">list</span>)</span>
+<span id="cb470-3"><a href="#cb470-3" aria-hidden="true" tabindex="-1"></a>stat, p_value <span class="op">=</span> stats.kruskal(<span class="op">*</span>groups)</span>
+<span id="cb470-4"><a href="#cb470-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb470-5"><a href="#cb470-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Kruskal-Wallis H Statistic: </span><span class="sc">{</span>stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Kruskal-Wallis H Statistic: 785.9809515500227</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb472"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb472-1"><a href="#cb472-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P-value: </span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>P-value: 3.281353234345449e-110</code></pre>
+</div>
+</div>
+</section>
+<section id="exercise-3.4-non-parametric-tests" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-3.4-non-parametric-tests">Exercise 3.4: Non-Parametric Tests</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb474"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb474-1"><a href="#cb474-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform Mann-Whitney U Test comparing total_cup_points for Guatemala</span></span>
+<span id="cb474-2"><a href="#cb474-2" aria-hidden="true" tabindex="-1"></a><span class="co"># and Hondurs</span></span>
+<span id="cb474-3"><a href="#cb474-3" aria-hidden="true" tabindex="-1"></a>group1 <span class="op">=</span> coffee_quality[coffee_quality[<span class="st">'country_of_origin'</span>] <span class="op">==</span> <span class="st">'Guatemala'</span>][<span class="st">'total_cup_points'</span>].dropna()</span>
+<span id="cb474-4"><a href="#cb474-4" aria-hidden="true" tabindex="-1"></a>group2 <span class="op">=</span> coffee_quality[coffee_quality[<span class="st">'country_of_origin'</span>] <span class="op">==</span> <span class="st">'Honduras'</span>][<span class="st">'total_cup_points'</span>].dropna()</span>
+<span id="cb474-5"><a href="#cb474-5" aria-hidden="true" tabindex="-1"></a>stat, p_value <span class="op">=</span> stats.mannwhitneyu(group1, group2)</span>
+<span id="cb474-6"><a href="#cb474-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb474-7"><a href="#cb474-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Mann-Whitney U Statistic: </span><span class="sc">{</span>stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mann-Whitney U Statistic: 217.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb476"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb476-1"><a href="#cb476-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P-value: </span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>P-value: 0.004309866203612997</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb478"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb478-1"><a href="#cb478-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform Kruskal-Wallis H Test comparing total_cup_points across </span></span>
+<span id="cb478-2"><a href="#cb478-2" aria-hidden="true" tabindex="-1"></a><span class="co"># continent_of_origin</span></span>
+<span id="cb478-3"><a href="#cb478-3" aria-hidden="true" tabindex="-1"></a>groups <span class="op">=</span> coffee_quality.groupby(<span class="st">'continent_of_origin'</span>)[<span class="st">'total_cup_points'</span>].<span class="bu">apply</span>(<span class="bu">list</span>)</span>
+<span id="cb478-4"><a href="#cb478-4" aria-hidden="true" tabindex="-1"></a>stat, p_value <span class="op">=</span> stats.kruskal(<span class="op">*</span>groups)</span>
+<span id="cb478-5"><a href="#cb478-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb478-6"><a href="#cb478-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Kruskal-Wallis H Statistic: </span><span class="sc">{</span>stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Kruskal-Wallis H Statistic: 18.1515777694049</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb480"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb480-1"><a href="#cb480-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"P-value: </span><span class="sc">{</span>p_value<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>P-value: 0.00040929490942587276</code></pre>
+</div>
+</div>
 </section>
 </section>
 

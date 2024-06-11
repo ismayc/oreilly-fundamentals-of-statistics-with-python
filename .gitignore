@@ -6,6 +6,8 @@ data/
 renv/
 renv.lock
 requirements.txt
+so_data_walkthrough*
+coffee_data_walkthrough*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
