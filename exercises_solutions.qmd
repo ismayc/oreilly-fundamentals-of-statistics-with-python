@@ -1,5 +1,5 @@
 ---
-title: "Walkthroughs and Exercises for *Fundamentals of Statistics in Python*"
+title: "Walkthroughs and Exercises for *Fundamentals of Statistics with Python*"
 author: "Dr. Chester Ismay"
 format: html
 engine: knitr
@@ -99,7 +99,7 @@ be good to proceed here. If not, scroll up and run it.
 ### Exploring a dataset
 
 ```{python}
-# Load in the dataset
+# Load in the coffee_quality dataset
 coffee_quality = pd.read_csv("coffee_quality.csv")
 ```
 
@@ -163,7 +163,7 @@ print(f"P-value: {p_value}")
 # Calculate center statistics for years_code_pro
 data_dev_survey['years_code_pro'].mean()
 data_dev_survey['years_code_pro'].median()
-data_dev_survey['years_code_pro'].mode()[0]
+data_dev_survey['years_code_pro'].mode()
 
 # To extract just the value for mode
 data_dev_survey['years_code_pro'].mode()[0]
@@ -188,6 +188,7 @@ median_years_code_pro = data_dev_survey['years_code_pro'].median()
 q3_years_code_pro = data_dev_survey['years_code_pro'].quantile(0.75)
 max_years_code_pro = data_dev_survey['years_code_pro'].max()
 
+# Print them out
 print(f"Five-Number Summary for years_code_pro:")
 print(f"Minimum: {min_years_code_pro}")
 print(f"First Quartile (Q1): {q1_years_code_pro}")
@@ -317,6 +318,7 @@ population = data_dev_survey['converted_comp_yearly'].dropna().values
 sample_size = 50
 num_samples = 1000
 
+# Set a seed to make code reproducible
 np.random.seed(2024)
 
 # Simulate sampling distribution of the mean
@@ -339,13 +341,14 @@ plt.show()
 ## Exercise 1.4: Sampling Distribution Generation
 
 ```{python}
-# Think of our data as a population to draw from
+# Think of our aroma data as a population to draw from
 population = coffee_quality['aroma'].dropna().values
 
 # Parameters
 sample_size = 50
 num_samples = 1000
 
+# Set random seed
 np.random.seed(2024)
 
 # Simulate sampling distribution of the mean
@@ -386,7 +389,7 @@ plt.show()
 ```
 
 ```{python}
-# Pair plot for selected variables
+# Pair plot for selected variables 'years_code_pro', 'work_exp', 'converted_comp_yearly'
 plt.figure(figsize=(12, 8))
 sns.pairplot(data_dev_survey, vars=['years_code_pro', 'work_exp', 'converted_comp_yearly'])
 plt.suptitle('Pair Plot of Selected Variables', y=1)
@@ -472,7 +475,7 @@ plt.show()
 
 ```{python}
 # Check for missing values
-print(data_dev_survey.isnull().sum())
+data_dev_survey.isnull().sum()
 
 # Remove duplicates if any
 data_dev_survey = data_dev_survey.drop_duplicates()
@@ -510,7 +513,7 @@ plt.show()
 
 ```{python}
 # Calculate summary statistics
-print(data_dev_survey.describe())
+data_dev_survey.describe()
 ```
 
 
@@ -520,7 +523,7 @@ print(data_dev_survey.describe())
 
 ```{python}
 # Check for missing values
-print(coffee_quality.isnull().sum())
+coffee_quality.isnull().sum()
 
 # Remove duplicates if any
 coffee_quality = coffee_quality.drop_duplicates()
@@ -583,7 +586,7 @@ data_dev_survey.head()
 
 ```{python}
 # Check for missing values
-print(data_dev_survey.isnull().sum())
+data_dev_survey.isnull().sum()
 
 # Make a copy of the dataset for imputation
 data_dev_survey_imputed = data_dev_survey.copy()
@@ -595,7 +598,7 @@ numeric_columns = data_dev_survey_imputed.select_dtypes(include=[np.number]).col
 data_dev_survey_imputed[numeric_columns] = data_dev_survey_imputed[numeric_columns].fillna(data_dev_survey_imputed[numeric_columns].median())
 
 # Display the first few rows of the imputed dataset
-print(data_dev_survey_imputed.head())
+data_dev_survey_imputed.head()
 ```
 
 ### Handling Outliers
@@ -620,17 +623,16 @@ data_dev_survey_imputed = data_dev_survey_imputed[~((numeric_data < (Q1 - 1.5 * 
 ```{python}
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
-# Normalization
+# Normalization on converted_comp_yearly
 scaler = MinMaxScaler()
 data_dev_survey_imputed[['converted_comp_yearly']] = scaler.fit_transform(data_dev_survey_imputed[['converted_comp_yearly']])
 
-# Standardization
+# Standardization on work_exp
 scaler = StandardScaler()
 data_dev_survey_imputed[['work_exp']] = scaler.fit_transform(data_dev_survey_imputed[['work_exp']])
 
-# Encoding categorical variables
+# Encoding categorical variables (country)
 data_dev_survey_imputed = pd.get_dummies(data_dev_survey_imputed, columns=['country'])
-
 ```
 
 ### Data Visualizations on Preprocessed Data
@@ -712,19 +714,19 @@ coffee_quality_imputed = coffee_quality_imputed[~((numeric_data < (Q1 - 1.5 * IQ
 ### Data Transformation
 
 ```{python}
-# Normalization
+# Normalization on total_cup_points
 scaler = MinMaxScaler()
 coffee_quality_imputed[['total_cup_points']] = scaler.fit_transform(coffee_quality_imputed[['total_cup_points']])
 # Can use this instead
 coffee_quality_imputed.loc[:, ['total_cup_points']] = scaler.fit_transform(coffee_quality_imputed[['total_cup_points']])
 
-# Standardization
+# Standardization on acidity
 scaler = StandardScaler()
 coffee_quality_imputed[['acidity']] = scaler.fit_transform(coffee_quality_imputed[['acidity']])
 # Or this
 coffee_quality_imputed.loc[:, ['acidity']] = scaler.fit_transform(coffee_quality_imputed[['acidity']])
 
-# Encoding categorical variables
+# Encoding categorical variables (country and continent of origin)
 coffee_quality_imputed = pd.get_dummies(coffee_quality_imputed, columns=['country_of_origin', 'continent_of_origin'])
 ```
 
@@ -821,7 +823,7 @@ numeric_columns = numeric_columns.drop(columns=['clean_cup', 'sweetness'], error
 correlation_matrix = numeric_columns.corr()
 
 # Display the correlation matrix
-print(correlation_matrix)
+correlation_matrix
 ```
 
 
@@ -1001,7 +1003,7 @@ print(f"P-value: {p_value}")
 ```
 
 ```{python}
-# Create a contingency table
+# Create a contingency table of employment and remote_work
 contingency_table = pd.crosstab(data_dev_survey['employment'], 
                                 data_dev_survey['remote_work'])
 
@@ -1067,7 +1069,7 @@ print(f"P-value: {p_value}")
 
 ```{python}
 # Perform Mann-Whitney U Test comparing total_cup_points for Guatemala
-# and Hondurs
+# and Honduras
 group1 = coffee_quality[coffee_quality['country_of_origin'] == 'Guatemala']['total_cup_points'].dropna()
 group2 = coffee_quality[coffee_quality['country_of_origin'] == 'Honduras']['total_cup_points'].dropna()
 stat, p_value = stats.mannwhitneyu(group1, group2)

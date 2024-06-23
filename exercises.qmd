@@ -1,0 +1,771 @@
+---
+title: "Walkthroughs and Exercises for *Fundamentals of Statistics with Python*"
+author: "Dr. Chester Ismay"
+format: html
+engine: knitr
+---
+
+```{python}
+#| include: false
+import pandas as pd
+
+# Display all columns
+pd.set_option('display.max_columns', None)
+```
+
+
+# Week 1
+
+## Walkthrough 1.1: Getting Started
+
+### Setting Up the Python Environment
+
+If you haven't already installed Python, Jupyter, and the necessary packages, there are instructions on the course repo in the README to do so [here](https://github.com/ismayc/oreilly-fundamentals-of-statistics-with-python/blob/main/README.md). 
+
+If you aren't able to do this on your machine, you may want to check out [Google Colab](https://colab.research.google.com/). It's a free service that allows you to run Jupyter notebooks in the cloud.
+
+```{python}
+# Importing libraries/modules and aliasing them as needed
+import numpy as np
+import pandas as pd
+import scipy.stats as stats
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.api as sm
+from sklearn.preprocessing import MinMaxScaler, StandardScaler
+```
+
+### Exploring a dataset
+
+```{python}
+# Load in the dataset
+
+```
+
+```{python}
+# Display information about the DataFrame
+
+```
+
+### Performing basic statistical functions using NumPy, Pandas, and SciPy.
+
+#### Using NumPy
+
+```{python}
+# Calculate the mean of the years_code_pro column
+
+```
+
+```{python}
+# Calculate the median of the work_exp column
+
+```
+
+```{python}
+# Calculate the standard deviation of the converted_comp_yearly column
+
+```
+
+#### Using Pandas
+
+```{python}
+# Display summary statistics on the numeric columns of the DataFrame
+
+```
+
+#### Using SciPy
+
+```{python}
+# Separate the data into two groups
+
+
+
+# Perform the t-test
+
+
+# Print the results
+
+
+```
+
+
+## Exercise 1.1: Getting Started
+
+### Setting Up the Python Environment
+
+If you ran the `# Importing libraries and aliasing them` code above, you should 
+be good to proceed here. If not, scroll up and run it.
+
+### Exploring a dataset
+
+```{python}
+# Load in the coffee_quality dataset
+
+```
+
+```{python}
+# Display information about the DataFrame
+
+```
+
+### Performing basic statistical functions using NumPy, Pandas, and SciPy.
+
+#### Using NumPy
+
+```{python}
+# Calculate the mean of the aroma column
+
+```
+
+```{python}
+# Calculate the median of the total_cup_points column
+
+```
+
+```{python}
+# Calculate the standard deviation of the moisture_percentage column
+
+```
+
+#### Using Pandas
+
+```{python}
+# Display summary statistics on the numeric columns of the DataFrame
+
+```
+
+#### Using SciPy
+
+```{python}
+# Focus on only Asia and North America entries
+
+# Separate the data into two groups
+
+
+# Perform the t-test
+
+
+# Print the results
+
+
+```
+
+
+
+---
+
+## Walkthrough 1.2: Data Summarizing
+
+### Compute and interpret measures of central tendency 
+
+```{python}
+# Calculate center statistics for years_code_pro
+
+
+# To extract just the value for mode
+
+```
+
+### Compute and interpret measures of variation
+
+```{python}
+# Calculate spread statistics for years_code_pro
+
+
+
+```
+
+```{python}
+# Calculate the five-number summary for 'years_code_pro'
+
+
+# Print them out
+```
+
+
+
+## Exercise 1.2: Data Summarizing
+
+```{python}
+# Calculate center statistics for 'aroma'
+
+```
+
+```{python}
+# Calculate spread statistics for 'aroma'
+
+```
+
+```{python}
+# Calculate the five-number summary for 'aroma'
+
+```
+
+
+---
+
+## Walkthrough 1.3: Cleaning and Preparing Data with Pandas
+
+```{python}
+# Histogram for years_code_pro
+
+```
+
+```{python}
+# Box plot for work_exp
+
+```
+
+```{python}
+# Scatter plot for years_code_pro vs. converted_comp_yearly
+
+```
+
+## Exercise 1.3: Cleaning and Preparing Data with Pandas
+
+```{python}
+# Histogram for acidity
+
+```
+
+```{python}
+# Box plot for body
+
+```
+
+```{python}
+# Scatter plot for body vs. acidity
+
+```
+
+
+---
+
+## Walkthrough 1.4: Sampling Distribution Generation
+
+```{python}
+# Think of our data as a population to draw from
+
+# Generate a large sample from the 'converted_comp_yearly' column
+# Parameters
+
+
+# Set a seed to make code reproducible
+
+
+# Simulate sampling distribution of the mean
+
+
+# Plot the sampling distribution of the sample means
+
+```
+
+
+## Exercise 1.4: Sampling Distribution Generation
+
+```{python}
+# Think of our aroma data as a population to draw from
+
+# Parameters
+
+
+
+# Set random seed
+
+
+# Simulate sampling distribution of the mean
+
+
+
+# Plot the sampling distribution of the sample means
+
+```
+
+
+---
+
+# Week 2
+
+## Walkthrough 2.1: Advanced Plots
+
+```{python}
+# Select only numeric columns
+
+# Calculate the correlation matrix for numeric columns
+
+# Heatmap for correlation matrix
+
+```
+
+```{python}
+# Pair plot for selected variables 'years_code_pro', 'work_exp', 'converted_comp_yearly'
+
+```
+
+```{python}
+# Time series plot
+
+
+# Count the number of surveys completed each day
+
+# Plot the counts as a line chart
+
+```
+
+## Exercise 2.1: Advanced Plots
+
+```{python}
+# Select only numeric columns
+
+# Drop the 'clean_cup' and 'sweetness' columns since they are always 10
+numeric_columns = numeric_columns.drop(columns=['clean_cup', 'sweetness'], errors='ignore')
+
+# Calculate the correlation matrix for numeric columns
+
+
+# Heatmap for correlation matrix
+
+```
+
+```{python}
+# Pair plot for selected variables ['aroma', 'acidity', 'body']
+
+```
+
+
+```{python}
+# Plot the mean total_cup_points for each grading_date
+
+# Convert to datetime
+
+# Extract the month and year from the grading_date column
+coffee_quality['month'] = coffee_quality['grading_date'].dt.to_period('M')
+
+# Aggregate the mean total_cup_points by month
+
+# Plot the mean total_cup_points by month as a line chart
+
+```
+
+---
+
+## Walkthrough 2.2: EDA
+
+### Data Cleaning
+
+```{python}
+# Check for missing values
+
+
+# Remove duplicates if any
+
+```
+
+### Data Visualization
+
+```{python}
+# Histogram for years_code_pro
+
+
+# Box plot for work_exp
+
+
+# Scatter plot for years_code_pro vs. converted_comp_yearly
+
+```
+
+
+### Summary Statistics
+
+```{python}
+# Calculate summary statistics
+
+```
+
+
+## Exercise 2.2: EDA
+
+### Data Cleaning
+
+```{python}
+# Check for missing values
+
+
+# Remove duplicates if any
+
+```
+
+
+### Data Visualization
+
+```{python}
+# Histogram for aroma
+
+
+# Box plot for acidity
+
+
+# Scatter plot for aroma vs. total_cup_points
+
+```
+
+
+
+### Summary Statistics
+
+```{python}
+# Calculate summary statistics
+
+```
+
+
+---
+
+## Walkthrough 2.3: Data Preprocessing
+
+### Inspect the Data after Loading
+
+```{python}
+# Display basic information about the dataset
+
+
+# Display the first few rows of the dataset
+
+```
+
+### Handle Missing Values
+
+```{python}
+# Check for missing values
+
+
+# Make a copy of the dataset for imputation
+
+# Select only numeric columns
+
+# Fill missing values in numeric columns with the median
+
+
+# Display the first few rows of the imputed dataset
+
+```
+
+### Handling Outliers
+
+```{python}
+# Select only numeric columns
+
+# Identify outliers using IQR
+
+
+# Remove outliers
+
+```
+
+### Data Transformation
+
+```{python}
+# Normalization on converted_comp_yearly
+
+
+# Standardization on work_exp
+
+
+# Encoding categorical variables (country)
+
+```
+
+### Data Visualizations on Preprocessed Data
+
+```{python}
+# Histogram for years_code_pro
+
+
+# Box plot for work_exp
+
+
+# Scatter plot for years_code_pro vs. converted_comp_yearly
+
+```
+
+
+## Exercise 2.3: Data Preprocessing
+
+### Inspect the Data after Loading
+
+```{python}
+# Display basic information about the dataset
+
+
+# Display the first few rows of the dataset
+
+```
+
+### Handle Missing Values
+
+```{python}
+# Check for missing values
+
+
+# Make a copy of the dataset for imputation
+
+
+# Select only numeric columns
+
+
+# Fill missing values in numeric columns with the median
+
+
+# Display the first few rows of the imputed dataset
+
+```
+
+### Handle Outliers
+
+```{python}
+# Select only numeric columns
+
+# Identify outliers using IQR
+
+
+# Remove outliers
+
+```
+
+### Data Transformation
+
+```{python}
+# Normalization on total_cup_points
+
+
+# Standardization on acidity
+
+
+# Encoding categorical variables (country and continent of origin)
+
+```
+
+### Data Visualizations on Preprocessed Data
+
+```{python}
+# Histogram for aroma
+
+
+# Box plot for acidity
+
+
+# Scatter plot for aroma vs. total_cup_points
+
+```
+
+
+
+---
+
+## Walkthrough 2.4: Correlations
+
+### Correlation Matrix
+
+```{python}
+# Select only numeric columns
+
+# Calculate the correlation matrix
+
+# Display the correlation matrix
+
+```
+
+### Visualize Correlations
+
+```{python}
+# Heatmap for correlation matrix
+
+```
+
+### Create Scatter Plots for Meaningful Correlations
+
+```{python}
+# Scatter plot for years_code_pro vs. years_code
+
+
+# Scatter plot for work_exp vs. years_code_pro
+
+```
+
+## Exercise 2.4: Correlations
+
+### Correlation Matrix
+
+```{python}
+# Select only numeric columns
+
+# Remove clean_cup and sweetness too
+
+# Calculate the correlation matrix
+
+# Display the correlation matrix
+
+```
+
+
+### Visualize Correlations
+
+```{python}
+# Heatmap for correlation matrix
+
+```
+
+### Create Scatter Plots for Meaningful Correlations
+
+```{python}
+# Scatter plot for flavor vs. total_cup_points
+
+
+# Scatter plot for overall vs. total_cup_points
+
+```
+
+
+---
+
+# Week 3
+
+## Walkthrough 3.1: Simulating Distributions
+
+### Simulating Binomial
+
+```{python}
+# Simulate binomial distribution
+
+# Plot histogram
+
+```
+
+### Simulating Normal
+
+```{python}
+# Simulate normal distribution
+
+# Plot histogram
+
+```
+
+
+## Exercise 3.1: 
+
+### Simulating Poisson
+
+```{python}
+# Simulate Poisson distribution with lambda (lam) parameter 3
+
+# Plot histogram
+
+```
+
+
+### Simulating Exponential
+
+```{python}
+# Simulate exponential distribution with scale parameter 1
+
+# Plot histogram
+
+```
+
+
+
+---
+
+## Walkthrough 3.2: t-tests
+
+```{python}
+# One-sample t-test checking for evidence that mu compensation > 85000
+
+```
+
+```{python}
+# Two-sample t-test comparing compensation across plans_to_use_ai groups
+# Checking for a difference
+
+```
+
+
+## Exercise 3.2: t-tests
+
+```{python}
+# One-sample t-test checking for evidence that mu flavor < 7.8
+
+```
+
+```{python}
+# Two-sample t-test checking for difference in Columbia and Brazil total_cup_points
+
+```
+
+
+---
+
+## Walkthrough 3.3: Comparative Tests
+
+```{python}
+# Perform one-way ANOVA comparing compensation across different levels of
+# remote_work
+
+```
+
+```{python}
+# Create a contingency table of employment and remote_work
+
+
+# Perform chi-square test
+
+```
+
+
+## Exercise 3.3: Comparative Tests
+
+```{python}
+# Perform one-way ANOVA comparing total_cup_points across country_of_origin
+
+```
+
+```{python}
+# Perform a chi-square test of independence for processing_method versus
+# continent_of_origin
+
+# Create a contingency table
+
+
+# Perform chi-square test
+
+```
+
+---
+
+## Walkthrough 3.4: Non-Parametric Tests
+
+```{python}
+# Perform Mann-Whitney U Test comparing compensation for Remote and In-person
+
+```
+
+```{python}
+# Perform Kruskal-Wallis H Test comparing compensation across countries
+
+```
+
+
+## Exercise 3.4: Non-Parametric Tests
+
+```{python}
+# Perform Mann-Whitney U Test comparing total_cup_points for Guatemala
+# and Honduras
+
+```
+
+```{python}
+# Perform Kruskal-Wallis H Test comparing total_cup_points across 
+# continent_of_origin
+
+```
+

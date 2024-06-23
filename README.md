@@ -4,8 +4,8 @@
 
 The major files in this repository are
 - `slides_2024-07.pdf`: PDF version of the slides used in this course to motivate the code.
-- `******.csv`: Data for code walkthroughs, one as Comma-Separated Values and the other as a Microsoft Excel file
-- `******.csv`: Data for student exercises.
+- `data_dev_survey.csv`: Data for code walkthroughs.
+- `coffee_quality.csv`: Data for student exercises.
 - `exercises.ipynb`: A Jupyter Notebook with pseudocode/instructions provide to be filled in for code walkthroughs and student exercises
 - `exercises_solutions.ipynb`: A Jupyter Notebook with answers to the code walkthroughs and exercises. An HTML version of these solutions is available at https://ismay-oreilly-dap.netlify.app/exercises_solutions.html and is the recommended way to view solutions.
 

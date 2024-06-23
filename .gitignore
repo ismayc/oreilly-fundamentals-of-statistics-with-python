@@ -3,6 +3,7 @@ data/
 *.Rhistory
 *.Rprofile
 *.DS_Store
+*.RData
 renv/
 renv.lock
 requirements.txt
