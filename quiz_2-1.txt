@@ -1,0 +1,111 @@
+### Multiple Choice Questions 
+ 
+#### Question 1: What is a heatmap primarily used for? 
+ 
+A) Visualizing relationships between pairs of variables  
+B) Displaying the distribution of a single variable  
+C) Representing individual values with colors in a matrix  
+D) Showing how a variable changes over time  
+E) Plotting categorical data  
+ 
+**Correct Answer: C**  
+**Justification:** A heatmap represents individual values with colors in a matrix, making it easy to identify patterns, correlations, and outliers. 
+ 
+#### Question 2: In which scenario would a pair plot be most useful? 
+ 
+A) Comparing sales data across different regions over time  
+B) Visualizing the frequency distribution of a single variable  
+C) Exploring relationships between multiple pairs of variables in a dataset  
+D) Showing the average monthly temperatures over several years  
+E) Displaying the intensity of values in a matrix  
+ 
+**Correct Answer: C**  
+**Justification:** A pair plot is useful for exploring relationships between multiple pairs of variables, allowing for a comprehensive visual summary of their interactions. 
+ 
+#### Question 3: What does a time series plot typically display? 
+ 
+A) Relationships between categorical variables  
+B) Correlation between pairs of numerical variables  
+C) Changes in a variable over time  
+D) Distribution of values within a dataset  
+E) Intensity of values in a heatmap  
+ 
+**Correct Answer: C**  
+**Justification:** A time series plot displays how a variable changes over time, making it essential for understanding trends, seasonal patterns, and anomalies in temporal data. 
+ 
+#### Question 4: Which of the following best describes a pair plot? 
+ 
+A) A plot showing how a variable changes over time  
+B) A graphical representation of individual values using colors  
+C) A matrix of scatterplots visualizing relationships between multiple pairs of variables  
+D) A single scatter plot comparing two variables  
+E) A bar chart comparing categories  
+ 
+**Correct Answer: C**  
+**Justification:** A pair plot is a matrix of scatterplots that visualizes relationships between multiple pairs of variables in a dataset. 
+ 
+#### Question 5: What type of data visualization would you use to identify correlations in a dataset? 
+ 
+A) Heatmap  
+B) Pair Plot  
+C) Time Series Plot  
+D) Bar Chart  
+E) Pie Chart  
+ 
+**Correct Answer: B**  
+**Justification:** A pair plot is ideal for identifying correlations and relationships between multiple pairs of variables in a dataset. 
+ 
+#### Question 6: Which plot would be most appropriate for visualizing temperature changes over a year? 
+ 
+A) Heatmap  
+B) Pair Plot  
+C) Time Series Plot  
+D) Histogram  
+E) Boxplot  
+ 
+**Correct Answer: C**  
+**Justification:** A time series plot is used to visualize changes in a variable, such as temperature, over time. 
+ 
+#### Question 7: How does a heatmap convey information? 
+ 
+A) Through scatter plots of paired variables  
+B) By showing changes in a variable over time  
+C) By using colors to represent individual values in a matrix  
+D) By plotting categorical data in bars  
+E) By displaying the frequency distribution of a single variable  
+ 
+**Correct Answer: C**  
+**Justification:** A heatmap uses colors to represent individual values in a matrix, making it easy to identify patterns and correlations. 
+ 
+#### Question 8: What is the main advantage of using a pair plot? 
+ 
+A) It shows the average of multiple variables  
+B) It visualizes relationships between pairs of variables simultaneously  
+C) It displays the frequency of data points in a variable  
+D) It shows the cumulative distribution of data  
+E) It identifies the mode of the dataset  
+ 
+**Correct Answer: B**  
+**Justification:** A pair plot visualizes relationships between multiple pairs of variables simultaneously, allowing for comprehensive analysis of interactions. 
+ 
+#### Question 9: Which visualization tool is best for identifying seasonal patterns in data? 
+ 
+A) Heatmap  
+B) Pair Plot  
+C) Time Series Plot  
+D) Histogram  
+E) Boxplot  
+ 
+**Correct Answer: C**  
+**Justification:** A time series plot is best for identifying trends and seasonal patterns in data over time. 
+ 
+#### Question 10: When would you use a heatmap instead of a pair plot? 
+ 
+A) To display the distribution of a single variable  
+B) To visualize relationships between two variables over time  
+C) To identify patterns and correlations in a matrix of data  
+D) To compare categorical data across groups  
+E) To plot the cumulative frequency of data  
+ 
+**Correct Answer: C**  
+**Justification:** A heatmap is used to identify patterns and correlations in a matrix of data, making it suitable for visualizing data intensity and relationships. 
