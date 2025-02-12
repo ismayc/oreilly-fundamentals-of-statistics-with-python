@@ -1,6 +1,13 @@
-exercises_solutions_files/
-mc-quarto/
-coffee_data_walkthrough/
-so_data_walkthrough/
+exercises_solutions_files/*
+mc-quarto/*
+coffee_data_walkthrough/*
+so_data_walkthrough/*
 coffee_data_walkthrough*
 so_data_walkthrough*
+coffee_quality.csv
+data_dev_survey.csv
+data/*
+slides*
+.Rhistory
+.Rprofile
+.RData

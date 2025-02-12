@@ -5,6 +5,9 @@ format:
   html:
     fig-width: 10
     fig-height: 5
+  ipynb:
+    fig-width: 10
+    fig-height: 5  
 engine: knitr
 ---
 
@@ -270,6 +273,7 @@ sns.histplot(data_dev_survey['years_code_pro']);
 plt.title('Histogram of Years of Coding Experience');
 plt.xlabel('Years of Coding Experience');
 plt.ylabel('Frequency');
+plt.show()
 ```
 
 ```{python}
@@ -284,6 +288,7 @@ plt.rcParams['figure.figsize'] = (10, 5)
 sns.boxplot(y=data_dev_survey['work_exp']);
 plt.title('Box Plot of Work Experience');
 plt.ylabel('Work Experience (years)');
+plt.show()
 ```
 
 ```{python}
@@ -291,6 +296,7 @@ plt.ylabel('Work Experience (years)');
 sns.boxplot(x=data_dev_survey['work_exp']);
 plt.title('Box Plot of Work Experience');
 plt.xlabel('Work Experience (years)');
+plt.show()
 ```
 
 
@@ -301,6 +307,7 @@ sns.scatterplot(x=data_dev_survey['years_code_pro'],
 plt.title('Scatter Plot of Years of Coding Experience vs. Yearly Compensation');
 plt.xlabel('Years of Coding Experience');
 plt.ylabel('Yearly Compensation');
+plt.show()
 ```
 
 ## Exercise 1.3: Cleaning and Preparing Data with Pandas
@@ -311,6 +318,7 @@ sns.histplot(coffee_quality['acidity']);
 plt.title('Histogram of Coffee Acidity');
 plt.xlabel('Acidity');
 plt.ylabel('Frequency');
+plt.show()
 ```
 
 ```{python}
@@ -331,6 +339,7 @@ sns.scatterplot(x=coffee_quality['body'], y=coffee_quality['acidity']);
 plt.title('Scatter Plot of Body vs. Acidity');
 plt.xlabel('Body');
 plt.ylabel('Acidity');
+plt.show()
 ```
 
 
@@ -364,6 +373,7 @@ plt.ylabel('Frequency');
 plt.xticks(rotation=30);
 # Adjust layout so labels are not cut off
 plt.tight_layout();
+plt.show()
 ```
 
 
@@ -394,6 +404,7 @@ plt.ylabel('Frequency');
 plt.xticks(rotation=30);
 # Adjust layout so labels are not cut off
 plt.tight_layout();
+plt.show()
 ```
 
 
@@ -414,19 +425,19 @@ correlation_matrix = numeric_columns.corr()
 plt.figure(figsize=(10, 8));
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f'); 
 plt.title('Heatmap of Correlation Matrix');
+plt.show()
 ```
 
 ```{python}
 # Pair plot for selected variables 'years_code_pro', 'work_exp', 'converted_comp_yearly'
-plt.figure(figsize=(12, 8));
 sns.pairplot(data_dev_survey, 
              vars=['years_code_pro', 'work_exp', 'converted_comp_yearly']);
 plt.suptitle('Pair Plot of Selected Variables', y=1);
+plt.show()
 ```
 
 ```{python}
 # Time series plot
-plt.figure(figsize=(12, 6));
 data_dev_survey['survey_completion_date'] = \
   pd.to_datetime(data_dev_survey['survey_completion_date'])
 
@@ -441,6 +452,8 @@ plt.xlabel('Day Completed');
 plt.ylabel('Number of Surveys');
 plt.xticks(rotation=30);
 plt.grid(True);
+plt.tight_layout();
+plt.show()
 ```
 
 ## Exercise 2.1: Advanced Plots
@@ -450,7 +463,8 @@ plt.grid(True);
 numeric_columns = coffee_quality.select_dtypes(include=[np.number])
 
 # Drop the 'clean_cup' and 'sweetness' columns since they are always 10
-numeric_columns = numeric_columns.drop(columns=['clean_cup', 'sweetness'], errors='ignore')
+numeric_columns = numeric_columns.drop(columns=['clean_cup', 'sweetness'], 
+                                       errors='ignore')
 
 # Calculate the correlation matrix for numeric columns
 correlation_matrix = numeric_columns.corr()
@@ -459,13 +473,14 @@ correlation_matrix = numeric_columns.corr()
 plt.figure(figsize=(10, 8));
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f');
 plt.title('Heatmap of Correlation Matrix');
+plt.show()
 ```
 
 ```{python}
 # Pair plot for selected variables ['aroma', 'acidity', 'body']
-plt.figure(figsize=(12, 8));
 sns.pairplot(coffee_quality, vars=['aroma', 'acidity', 'body']);
 plt.suptitle('Pair Plot of Selected Variables', y=1);
+plt.show()
 ```
 
 
@@ -499,6 +514,8 @@ plt.xlabel('Month');
 plt.ylabel('Mean Total Cup Points');
 plt.xticks(rotation=45);
 plt.grid(True);
+plt.tight_layout();
+plt.show()
 ```
 
 ---
@@ -524,11 +541,13 @@ sns.histplot(data_dev_survey['years_code_pro']);
 plt.title('Histogram of Years of Coding Experience');
 plt.xlabel('Years of Coding Experience');
 plt.ylabel('Frequency');
+plt.show()
 
 # Box plot for work_exp
 sns.boxplot(y=data_dev_survey['work_exp']);
 plt.title('Box Plot of Work Experience');
 plt.ylabel('Work Experience (years)');
+plt.show()
 
 # Scatter plot for years_code_pro vs. converted_comp_yearly
 sns.scatterplot(x=data_dev_survey['years_code'],
@@ -536,6 +555,7 @@ sns.scatterplot(x=data_dev_survey['years_code'],
 plt.title('Scatter Plot of Years of Coding Experience vs. Yearly Compensation');
 plt.xlabel('Years of Coding Experience');
 plt.ylabel('Yearly Compensation');
+plt.show()
 ```
 
 
@@ -568,18 +588,21 @@ sns.histplot(coffee_quality['aroma']);
 plt.title('Histogram of Coffee Aroma');
 plt.xlabel('Aroma');
 plt.ylabel('Frequency');
+plt.show()
 
 # Box plot for acidity
 sns.boxplot(y=coffee_quality['acidity']);
 plt.title('Box Plot of Coffee Acidity');
 plt.ylabel('Acidity');
+plt.show()
 
 # Scatter plot for aroma vs. total_cup_points
 sns.scatterplot(x=coffee_quality['aroma'], 
-                y=coffee_quality['total_cup_points'])
-plt.title('Scatter Plot of Aroma vs. Total Cup Points')
-plt.xlabel('Aroma')
+                y=coffee_quality['total_cup_points']);
+plt.title('Scatter Plot of Aroma vs. Total Cup Points');
+plt.xlabel('Aroma');
 plt.ylabel('Total Cup Points');
+plt.show()
 ```
 
 
@@ -679,11 +702,13 @@ sns.histplot(data_dev_survey_imputed['years_code_pro']);
 plt.title('Histogram of Years of Coding Experience');
 plt.xlabel('Years of Coding Experience');
 plt.ylabel('Frequency');
+plt.show()
 
 # Box plot for work_exp
 sns.boxplot(y=data_dev_survey_imputed['work_exp']);
 plt.title('Box Plot of Work Experience');
 plt.ylabel('Work Experience (years)');
+plt.show()
 
 # Scatter plot for years_code_pro vs. converted_comp_yearly
 sns.scatterplot(x=data_dev_survey_imputed['years_code_pro'],
@@ -691,6 +716,7 @@ sns.scatterplot(x=data_dev_survey_imputed['years_code_pro'],
 plt.title('Scatter Plot of Years of Coding Experience vs. Yearly Compensation');
 plt.xlabel('Years of Coding Experience');
 plt.ylabel('Yearly Compensation');
+plt.show()
 ```
 
 
@@ -767,8 +793,9 @@ coffee_quality_imputed.loc[:, ['acidity']] = \
   scaler.fit_transform(coffee_quality_imputed[['acidity']])
 
 # Encoding categorical variables (country and continent of origin)
-coffee_quality_imputed = pd.get_dummies(coffee_quality_imputed, 
-    columns=['country_of_origin', 'continent_of_origin'])
+coffee_quality_imputed = pd.get_dummies(
+  coffee_quality_imputed, 
+  columns=['country_of_origin', 'continent_of_origin'])
 ```
 
 ### Data Visualizations on Preprocessed Data
@@ -779,11 +806,13 @@ sns.histplot(coffee_quality_imputed['aroma']);
 plt.title('Histogram of Coffee Aroma');
 plt.xlabel('Aroma');
 plt.ylabel('Frequency');
+plt.show()
 
 # Box plot for acidity
 sns.boxplot(y=coffee_quality_imputed['acidity']);
 plt.title('Box Plot of Coffee Acidity');
 plt.ylabel('Acidity');
+plt.show()
 
 # Scatter plot for aroma vs. total_cup_points
 sns.scatterplot(x=coffee_quality_imputed['aroma'], 
@@ -791,6 +820,7 @@ sns.scatterplot(x=coffee_quality_imputed['aroma'],
 plt.title('Scatter Plot of Aroma vs. Total Cup Points');
 plt.xlabel('Aroma');
 plt.ylabel('Total Cup Points');
+plt.show()
 ```
 
 
@@ -819,6 +849,7 @@ correlation_matrix
 plt.figure(figsize=(10, 8));
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f');
 plt.title('Heatmap of Correlation Matrix');
+plt.show()
 ```
 
 ### Create Scatter Plots for Meaningful Correlations
@@ -830,12 +861,14 @@ sns.scatterplot(x=data_dev_survey['years_code_pro'],
 plt.title('Scatter Plot of Years of Professional Coding Experience vs. Years of Professional Coding Experience');
 plt.xlabel('Years of Professional Coding Experience');
 plt.ylabel('Years of Coding Experience');
+plt.show()
 
 # Scatter plot for work_exp vs. years_code_pro
 sns.scatterplot(x=data_dev_survey['work_exp'], y=data_dev_survey['years_code_pro']);
 plt.title('Scatter Plot of Work Experience vs. Years of Professional Coding Experience');
 plt.xlabel('Work Experience');
 plt.ylabel('Years of Professional Coding Experience');
+plt.show()
 ```
 
 ## Exercise 2.4: Correlations
@@ -865,6 +898,7 @@ correlation_matrix
 plt.figure(figsize=(10, 8));
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f');
 plt.title('Heatmap of Correlation Matrix');
+plt.show()
 ```
 
 ### Create Scatter Plots for Meaningful Correlations
@@ -876,6 +910,7 @@ sns.scatterplot(x=coffee_quality['flavor'],
 plt.title('Scatter Plot of Flavor vs. Total Cup Points');
 plt.xlabel('Flavor');
 plt.ylabel('Total Cup Points');
+plt.show()
 
 # Scatter plot for overall vs. total_cup_points
 sns.scatterplot(x=coffee_quality['overall'], 
@@ -883,6 +918,7 @@ sns.scatterplot(x=coffee_quality['overall'],
 plt.title('Scatter Plot of Overall vs. Total Cup Points');
 plt.xlabel('Overall');
 plt.ylabel('Total Cup Points');
+plt.show()
 ```
 
 
@@ -903,6 +939,7 @@ sns.histplot(binom_samples, kde=False, bins=30);
 plt.title('Binomial Distribution (n=10, p=0.5)');
 plt.xlabel('Number of Successes');
 plt.ylabel('Frequency');
+plt.show()
 ```
 
 ### Simulating Normal
@@ -916,6 +953,7 @@ sns.histplot(normal_samples, kde=True, bins=30);
 plt.title('Normal Distribution (μ=0, σ=1)');
 plt.xlabel('Value');
 plt.ylabel('Frequency');
+plt.show()
 ```
 
 
@@ -932,6 +970,7 @@ sns.histplot(poisson_samples, kde=False, bins=30);
 plt.title('Poisson Distribution (λ=3)');
 plt.xlabel('Number of Events');
 plt.ylabel('Frequency');
+plt.show()
 ```
 
 
@@ -946,9 +985,8 @@ sns.histplot(exponential_samples, kde=True, bins=30);
 plt.title('Exponential Distribution (λ=1)');
 plt.xlabel('Value');
 plt.ylabel('Frequency');
+plt.show()
 ```
-
-
 
 ---
 
@@ -1060,7 +1098,8 @@ print(f"P-value: {p_value}")
 # continent_of_origin
 
 # Create a contingency table
-contingency_table = pd.crosstab(coffee_quality['processing_method'], coffee_quality['continent_of_origin'])
+contingency_table = pd.crosstab(coffee_quality['processing_method'],
+                                coffee_quality['continent_of_origin'])
 
 # Perform chi-square test
 chi2, p, dof, expected = stats.chi2_contingency(contingency_table)
