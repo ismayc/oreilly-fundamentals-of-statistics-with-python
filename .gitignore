@@ -12,7 +12,7 @@ coffee_data_walkthrough*
 mc-quarto/answers-w1.qmd
 mc-quarto/answers-w1.html
 mc-quarto/answers-w1_files/*
-extract-questions.R
+mc-quarto/extract-questions.R
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
