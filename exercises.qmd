@@ -1,16 +1,26 @@
 ---
 title: "Walkthroughs and Exercises for *Fundamentals of Statistics with Python*"
 author: "Dr. Chester Ismay"
-format: html
+format: ipynb
 engine: knitr
 ---
 
+```{python, eval=FALSE}
+# Install the packages directly if needed with pip
+# Check the repo's README below for more information
+!pip install numpy pandas scipy matplotlib seaborn statsmodels scikit-learn jupyter
+```
+
+
 ```{python}
-#| include: false
 import pandas as pd
 
 # Display all columns
 pd.set_option('display.max_columns', None)
+
+# Display all outputs from each cell
+from IPython.core.interactiveshell import InteractiveShell
+InteractiveShell.ast_node_interactivity = "all"
 ```
 
 
@@ -22,7 +32,7 @@ pd.set_option('display.max_columns', None)
 
 If you haven't already installed Python, Jupyter, and the necessary packages, there are instructions on the course repo in the README to do so [here](https://github.com/ismayc/oreilly-fundamentals-of-statistics-with-python/blob/main/README.md). 
 
-If you aren't able to do this on your machine, you may want to check out [Google Colab](https://colab.research.google.com/). It's a free service that allows you to run Jupyter notebooks in the cloud.
+If you aren't able to do this on your machine, you may want to check out [Google Colab](https://colab.research.google.com/). It's a free service that allows you to run Jupyter notebooks in the cloud. Alternatively, I've set up some temporary notebooks on Binder ([![()](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ismayc/oreilly-fundamentals-of-statistics-with-python/tree/main/HEAD)) that you can work with online as well.
 
 ```{python}
 # Importing libraries/modules and aliasing them as needed
@@ -212,6 +222,12 @@ be good to proceed here. If not, scroll up and run it.
 ```
 
 ```{python}
+# Set the default figure size for all plots
+
+```
+
+
+```{python}
 # Box plot for work_exp
 
 ```
@@ -314,7 +330,7 @@ be good to proceed here. If not, scroll up and run it.
 
 ## Exercise 2.1: Advanced Plots
 
-```{python}
+```{python, eval=FALSE}
 # Select only numeric columns
 
 # Drop the 'clean_cup' and 'sweetness' columns since they are always 10
@@ -333,7 +349,7 @@ numeric_columns = numeric_columns.drop(columns=['clean_cup', 'sweetness'], error
 ```
 
 
-```{python}
+```{python, eval=FALSE}
 # Plot the mean total_cup_points for each grading_date
 
 # Convert to datetime

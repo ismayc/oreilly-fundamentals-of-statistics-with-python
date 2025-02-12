@@ -1,0 +1,511 @@
+---
+title: "<h2> Fundamentals of Statistics with Python </h2>"
+subtitle: "Review Questions for Week 1"
+author: "<small> Dr. Chester Ismay</small>" 
+format: revealjs
+---
+
+  
+# Review Questions 
+
+Welcome to the quiz!  
+- Each slide contains a question with multiple-choice answers.  
+- Enter the letter of your response into the chat.  
+- Test your brain's understanding! It helps with learning and retention.
+
+---
+
+# Review of Week 1 Module 1
+
+---
+
+## Question 1
+
+**What is the primary purpose of statistical analysis?**
+
+- **A)** To collect raw data without interpreting it  
+- **B)** To uncover patterns, relationships, and trends in data  
+- **C)** To store data in a database  
+- **D)** To design software applications  
+- **E)** To create interactive web pages  
+
+---
+
+## Question 2
+
+**Why is statistical analysis important?**
+
+- **A)** It reduces data size  
+- **B)** It provides empirical evidence for decision-making  
+- **C)** It replaces the need for data collection  
+- **D)** It makes data collection unnecessary  
+- **E)** It eliminates all uncertainty in decision-making  
+
+---
+
+## Question 3
+
+**In which field is statistical analysis NOT commonly used?**
+
+- **A)** Healthcare  
+- **B)** Economics  
+- **C)** Sports  
+- **D)** Cooking recipes  
+- **E)** Social Sciences  
+
+---
+
+## Question 4
+
+**What do descriptive statistics do?**
+
+- **A)** Make predictions about a population  
+- **B)** Summarize data from a sample  
+- **C)** Develop software algorithms  
+- **D)** Collect data from surveys  
+- **E)** Analyze DNA sequences  
+
+---
+
+## Question 5
+
+**Which of the following is an example of inferential statistics?**
+
+- **A)** Calculating the mean of a dataset  
+- **B)** Creating a bar chart  
+- **C)** Making predictions about a population based on a sample  
+- **D)** Listing the range of a dataset  
+- **E)** Measuring the standard deviation  
+
+---
+
+## Question 6
+
+**Which library is considered the foundation of numerical computing in Python?**
+
+- **A)** Pandas  
+- **B)** SciPy  
+- **C)** Seaborn  
+- **D)** Matplotlib  
+- **E)** NumPy  
+
+---
+
+## Question 7
+
+**What is the main functionality of the Pandas library?**
+
+- **A)** Optimizing numerical computations  
+- **B)** Creating advanced visualizations  
+- **C)** Solving complex mathematical equations  
+- **D)** Data manipulation and analysis  
+- **E)** Conducting hypothesis testing  
+
+---
+
+## Question 8
+
+**Which library extends the capabilities of NumPy with additional functions for optimization, integration, and more?**
+
+- **A)** Seaborn  
+- **B)** Matplotlib  
+- **C)** SciPy  
+- **D)** Statsmodels  
+- **E)** Pandas  
+
+---
+
+## Question 9
+
+**Which library is built on top of Matplotlib and simplifies the process of creating attractive statistical graphics?**
+
+- **A)** NumPy  
+- **B)** Pandas  
+- **C)** SciPy  
+- **D)** Seaborn  
+- **E)** Statsmodels  
+
+---
+
+## Question 10
+
+**What is the primary use of the Statsmodels library?**
+
+- **A)** Numerical computing  
+- **B)** Data visualization  
+- **C)** Statistical modeling and hypothesis testing  
+- **D)** Data manipulation  
+- **E)** Creating interactive dashboards  
+
+---
+
+# Review of Week 1 Module 2
+
+---
+
+## Question 11
+
+**What does the mean represent in a dataset?**
+
+- **A)** The middle value when the data is sorted  
+- **B)** The most frequently occurring value  
+- **C)** The sum of all values divided by the number of values  
+- **D)** The difference between the highest and lowest values  
+- **E)** The average of the squared differences from the mean  
+
+---
+
+## Question 12
+
+**How is the median value of a dataset determined?**
+
+- **A)** It is the sum of all values divided by the number of values  
+- **B)** It is the middle value when the data is sorted  
+- **C)** It is the most frequently occurring value  
+- **D)** It is the average of the squared differences from the mean  
+- **E)** It is the difference between the highest and lowest values  
+
+---
+
+## Question 13
+
+**What does the mode of a dataset indicate?**
+
+- **A)** The sum of all values divided by the number of values  
+- **B)** The middle value when the data is sorted  
+- **C)** The most frequently occurring value  
+- **D)** The difference between the highest and lowest values  
+- **E)** The average of the squared differences from the mean  
+
+---
+
+## Question 14
+
+**Which measure represents the difference between the highest and lowest values in a dataset?**
+
+- **A)** Mean  
+- **B)** Median  
+- **C)** Mode  
+- **D)** Range  
+- **E)** Variance  
+
+---
+
+## Question 15
+
+**What does variance measure in a dataset?**
+
+- **A)** The sum of all values divided by the number of values  
+- **B)** The middle value when the data is sorted  
+- **C)** The most frequently occurring value  
+- **D)** The difference between the highest and lowest values  
+- **E)** The average of the squared differences from the mean  
+
+---
+
+## Question 16
+
+**How is the standard deviation related to variance?**
+
+- **A)** It is the sum of all values divided by the number of values  
+- **B)** It is the square root of the variance  
+- **C)** It is the difference between the highest and lowest values  
+- **D)** It is the middle value when the data is sorted  
+- **E)** It is the most frequently occurring value  
+
+---
+
+## Question 17
+
+**What does the 75th percentile represent in a dataset?**
+
+- **A)** The sum of all values divided by the number of values  
+- **B)** The value below which 25% of the data falls  
+- **C)** The value below which 75% of the data falls  
+- **D)** The difference between the highest and lowest values  
+- **E)** The average of the squared differences from the mean  
+
+---
+
+## Question 18
+
+**In which situation is the median more informative than the mean?**
+
+- **A)** When there are no outliers in the dataset  
+- **B)** When the data is normally distributed  
+- **C)** When the dataset contains outliers  
+- **D)** When calculating the most frequently occurring value  
+- **E)** When measuring the spread of the data  
+
+---
+
+## Question 19
+
+**What is the primary use of the mode in a dataset?**
+
+- **A)** To measure the spread of the data  
+- **B)** To determine the middle value when the data is sorted  
+- **C)** To find the most frequently occurring value  
+- **D)** To calculate the average of the squared differences from the mean  
+- **E)** To find the difference between the highest and lowest values  
+
+---
+
+## Question 20
+
+**What does the range tell us about a dataset?**
+
+- **A)** The sum of all values divided by the number of values  
+- **B)** The middle value when the data is sorted  
+- **C)** The most frequently occurring value  
+- **D)** The spread between the highest and lowest values  
+- **E)** The average of the squared differences from the mean  
+
+---
+
+# Review of Week 1 Module 3
+
+---
+
+## Question 21
+
+**Why is data visualization important?**
+
+- **A)** It makes data collection unnecessary  
+- **B)** It transforms complex data into understandable visual formats  
+- **C)** It stores data in a database  
+- **D)** It eliminates the need for data analysis  
+- **E)** It replaces the need for statistical methods  
+
+---
+
+## Question 22
+
+**Which type of visualization is used to show the frequency distribution of a numeric dataset?**
+
+- **A)** Bar Chart  
+- **B)** Boxplot  
+- **C)** Histogram  
+- **D)** Scatter Plot  
+- **E)** Line Plot  
+
+---
+
+## Question 23
+
+**What does a boxplot visualize?**
+
+- **A)** The relationship between two variables  
+- **B)** The frequency of data points within ranges  
+- **C)** The median, quartiles, and potential outliers in a dataset  
+- **D)** The comparison between different categories  
+- **E)** The trend over time  
+
+---
+
+## Question 24
+
+**Which type of plot is best for visualizing the relationship between two numeric variables?**
+
+- **A)** Histogram  
+- **B)** Bar Chart  
+- **C)** Boxplot  
+- **D)** Scatter Plot  
+- **E)** Pie Chart  
+
+---
+
+## Question 25
+
+**What is a primary strength of Matplotlib?**
+
+- **A)** Creating interactive web applications  
+- **B)** Providing extensive customization options for static plots  
+- **C)** Offering built-in themes and color palettes  
+- **D)** Simplifying the creation of complex statistical plots  
+- **E)** Automatically analyzing data  
+
+---
+
+## Question 26
+
+**Which Seaborn feature enhances the aesthetic appeal of visualizations?**
+
+- **A)** Low-level plotting functions  
+- **B)** Default styles and color palettes  
+- **C)** Advanced numerical computations  
+- **D)** Interactive plotting capabilities  
+- **E)** In-depth data manipulation  
+
+---
+
+## Question 27
+
+**Which Seaborn theme adds a light grid to the background with dark items?**
+
+- **A)** Whitegrid  
+- **B)** Darkgrid  
+- **C)** Dark  
+- **D)** White  
+- **E)** Ticks  
+
+---
+
+## Question 28
+
+**Which library is built on top of Matplotlib and provides a high-level interface for drawing statistical graphics?**
+
+- **A)** NumPy  
+- **B)** Pandas  
+- **C)** SciPy  
+- **D)** Seaborn  
+- **E)** Statsmodels  
+
+---
+
+## Question 29
+
+**Which type of chart is best for comparing different categories or groups?**
+
+- **A)** Line Plot  
+- **B)** Bar Chart  
+- **C)** Scatter Plot  
+- **D)** Histogram  
+- **E)** Boxplot  
+
+---
+
+## Question 30
+
+**What is a scatter plot primarily used for?**
+
+- **A)** Summarizing data distribution  
+- **B)** Showing data frequency within ranges  
+- **C)** Comparing categorical data  
+- **D)** Visualizing the relationship between two variables  
+- **E)** Displaying trends over time  
+
+---
+
+# Review of Week 1 Module 4
+
+---
+
+## Question 31
+
+**When is the mean an appropriate measure of central tendency?**
+
+- **A)** When the data is heavily skewed  
+- **B)** When the data contains significant outliers  
+- **C)** When the data is normally distributed without outliers  
+- **D)** When the data is categorical  
+- **E)** When the data has multiple modes  
+
+---
+
+## Question 32
+
+**In a dataset, how does the median compare to the mean in the presence of outliers?**
+
+- **A)** The median is always higher than the mean  
+- **B)** The median is always lower than the mean  
+- **C)** The median is more affected by outliers than the mean  
+- **D)** The median is less affected by outliers than the mean  
+- **E)** The median and mean are always equal  
+
+---
+
+## Question 33
+
+**In a dataset {2, 2, 3, 4, 4, 4, 5, 5}, what is the mode?**
+
+- **A)** 2  
+- **B)** 3  
+- **C)** 4  
+- **D)** 5  
+- **E)** There is no mode  
+
+---
+
+## Question 34
+
+**What is the standard deviation of a dataset a measure of?**
+
+- **A)** The central value of the dataset  
+- **B)** The sum of all values divided by the number of values  
+- **C)** The range of the dataset  
+- **D)** The average distance of each data point from the mean  
+- **E)** The most frequently occurring value  
+
+---
+
+## Question 35
+
+**Given a dataset with values {10, 20, 30, 40, 50}, what is the standard deviation approximately?**
+
+- **A)** 1  
+- **B)** 14.14  
+- **C)** 30  
+- **D)** 100  
+- **E)** 200  
+
+---
+
+## Question 36
+
+**If the mean of a dataset is 50 and the standard deviation is 5, what is the value that is one standard deviation above the mean?**
+
+- **A)** 45  
+- **B)** 50  
+- **C)** 55  
+- **D)** 60  
+- **E)** 65  
+
+---
+
+## Question 37
+
+**Which measure of central tendency is most appropriate for a dataset with categorical data?**
+
+- **A)** Mean  
+- **B)** Median  
+- **C)** Mode  
+- **D)** Standard deviation  
+- **E)** Variance  
+
+---
+
+## Question 38
+
+**What is the median of the dataset {7, 8, 9, 10, 11}?**
+
+- **A)** 7  
+- **B)** 8  
+- **C)** 9  
+- **D)** 10  
+- **E)** 11  
+
+---
+
+## Question 39
+
+**What does a high standard deviation indicate about a dataset?**
+
+- **A)** The data points are very close to the mean  
+- **B)** The data points are spread out over a large range of values  
+- **C)** The data points are all identical  
+- **D)** The mean is equal to the median  
+- **E)** The data has a high number of outliers  
+
+---
+
+## Question 40
+
+**If a dataset has a mean of 100 and a median of 80, what can be inferred about the skewness of the dataset?**
+
+- **A)** The dataset is symmetric  
+- **B)** The dataset is positively skewed  
+- **C)** The dataset is negatively skewed  
+- **D)** The dataset has no skewness  
+- **E)** The dataset is normally distributed  
+
