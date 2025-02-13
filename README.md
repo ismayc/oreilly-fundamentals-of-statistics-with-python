@@ -13,7 +13,7 @@ The major files in this repository are
 
 If you aren't able to do this on your machine, you may want to check out [Google Colab](https://colab.research.google.com/). 
 It's a free service that allows you to run Jupyter notebooks in the cloud. 
-Alternatively, I've set up some temporary notebooks on Binder ([here](https://mybinder.org/v2/gh/ismayc/oreilly-fundamentals-of-statistics-with-python/main?urlpath=%2Fdoc%2Ftree%2Fexercises.ipynb) that you can work with online as well.
+Alternatively, I've set up some temporary notebooks on Binder [here](https://mybinder.org/v2/gh/ismayc/oreilly-fundamentals-of-statistics-with-python/main?urlpath=%2Fdoc%2Ftree%2Fexercises.ipynb) that you can work with online as well.
 
 ### Step 1: Install Python
 - **Option 1: Anaconda Installation**:
