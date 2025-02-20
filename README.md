@@ -15,6 +15,7 @@ If you aren't able to do this on your machine, you may want to check out [Google
 It's a free service that allows you to run Jupyter notebooks in the cloud. 
 Alternatively, I've set up some temporary notebooks on Binder [here](https://mybinder.org/v2/gh/ismayc/oreilly-fundamentals-of-statistics-with-python/main?urlpath=%2Fdoc%2Ftree%2Fexercises.ipynb) that you can work with online as well.
 
+
 ### Step 1: Install Python
 - **Option 1: Anaconda Installation**:
   - **Download Anaconda**: Go to the [official Anaconda website](https://www.anaconda.com/products/distribution) and download the latest version of Anaconda for your operating system (Windows, macOS, or Linux). Anaconda conveniently installs Python, Jupyter Notebook, and many other commonly used packages for data science and machine learning.

@@ -1,0 +1,523 @@
+---
+title: "<h2> Fundamentals of Statistics with Python </h2>"
+subtitle: "Review Questions for Week 2"
+author: "<small> Dr. Chester Ismay</small>" 
+format: revealjs
+---
+
+  
+# Review Questions 
+
+Welcome to the quiz!  
+- Each slide contains a question with multiple-choice answers.  
+- Enter the letter of your response into the chat.  
+- Test your brain's understanding! It helps with learning and retention.
+
+---
+
+# Review of Week 2 Module 1
+
+---
+
+## Question 1
+
+**What is a heatmap primarily used for?**
+
+- **A)** Visualizing relationships between pairs of variables  
+- **B)** Displaying the distribution of a single variable  
+- **C)** Showing how a variable changes over time  
+- **D)** Plotting categorical data  
+- **E)** Representing individual values with colors in a matrix  
+
+---
+
+## Question 2
+
+**In which scenario would a pair plot be most useful?**
+
+- **A)** Comparing sales data across different regions over time  
+- **B)** Visualizing the frequency distribution of a single variable  
+- **C)** Exploring relationships between multiple pairs of variables in a dataset  
+- **D)** Showing the average monthly temperatures over several years  
+- **E)** Displaying the intensity of values in a matrix  
+
+---
+
+## Question 3
+
+**What does a time series plot typically display?**
+
+- **A)** Relationships between categorical variables  
+- **B)** Changes in a variable over time  
+- **C)** Correlation between pairs of numerical variables  
+- **D)** Distribution of values within a dataset  
+- **E)** Intensity of values in a heatmap  
+
+---
+
+## Question 4
+
+**Which of the following best describes a pair plot?**
+
+- **A)** A matrix of scatterplots visualizing relationships between multiple pairs of variables  
+- **B)** A graphical representation of individual values using colors  
+- **C)** A plot showing how a variable changes over time  
+- **D)** A single scatter plot comparing two variables  
+- **E)** A bar chart comparing categories  
+
+---
+
+## Question 5
+
+**What type of data visualization would you use to identify correlations in a dataset?**
+
+- **A)** Histogram  
+- **B)** Pair Plot  
+- **C)** Time Series Plot  
+- **D)** Bar Chart  
+- **E)** Pie Chart  
+
+---
+
+## Question 6
+
+**Which plot would be most appropriate for visualizing temperature changes over a year?**
+
+- **A)** Heatmap  
+- **B)** Pair Plot  
+- **C)** Histogram  
+- **D)** Time Series Plot  
+- **E)** Boxplot  
+
+---
+
+## Question 7
+
+**How does a heatmap convey information?**
+
+- **A)** Through scatter plots of paired variables  
+- **B)** By showing changes in a variable over time  
+- **C)** By using colors to represent individual values in a matrix  
+- **D)** By plotting categorical data in bars  
+- **E)** By displaying the frequency distribution of a single variable  
+
+---
+
+## Question 8
+
+**What is the main advantage of using a pair plot?**
+
+- **A)** It shows the average of multiple variables  
+- **B)** It visualizes relationships between pairs of variables simultaneously  
+- **C)** It displays the frequency of data points in a variable  
+- **D)** It shows the cumulative distribution of data  
+- **E)** It identifies the mode of the dataset  
+
+---
+
+## Question 9
+
+**Which visualization tool is best for identifying seasonal patterns in data?**
+
+- **A)** Heatmap  
+- **B)** Pair Plot  
+- **C)** Boxplot  
+- **D)** Histogram  
+- **E)** Time Series Plot  
+
+---
+
+## Question 10
+
+**When would you use a heatmap instead of a pair plot?**
+
+- **A)** To display the distribution of a single variable  
+- **B)** To visualize relationships between two variables over time  
+- **C)** To compare categorical data across groups  
+- **D)** To identify patterns and correlations in a matrix of data  
+- **E)** To plot the cumulative frequency of data  
+
+---
+
+# Review of Week 2 Module 2
+
+---
+
+## Question 11
+
+**What is the primary goal of understanding the data structure?**
+
+- **A)** To perform hypothesis testing  
+- **B)** To identify the types, shapes, and formats of data  
+- **C)** To visualize data using charts and plots  
+- **D)** To normalize and scale data  
+- **E)** To calculate summary statistics  
+
+---
+
+## Question 12
+
+**Why is detecting outliers and anomalies important in data analysis?**
+
+- **A)** They help in calculating the mean  
+- **B)** They always represent errors in the data  
+- **C)** They can distort statistical analyses and lead to incorrect conclusions  
+- **D)** They are used to create visualizations  
+- **E)** They are necessary for hypothesis testing  
+
+---
+
+## Question 13
+
+**What does hypothesis testing allow researchers to do?**
+
+- **A)** Summarize the central tendency of the data  
+- **B)** Visualize the data using plots  
+- **C)** Identify outliers in the data  
+- **D)** Test assumptions about a population based on sample data  
+- **E)** Normalize and scale the data  
+
+---
+
+## Question 14
+
+**How does establishing relationships between variables help in data analysis?**
+
+- **A)** It helps uncover patterns and trends that inform predictions and decisions  
+- **B)** It provides the mean and median of the data  
+- **C)** It handles missing values in the dataset  
+- **D)** It removes duplicates from the data  
+- **E)** It scales and encodes the data  
+
+---
+
+## Question 15
+
+**Which technique involves creating graphical illustrations of data to uncover patterns and insights?**
+
+- **A)** Data cleaning  
+- **B)** Data transformation  
+- **C)** Hypothesis testing  
+- **D)** Summary statistics  
+- **E)** Data visualization  
+
+---
+
+## Question 16
+
+**What is the purpose of summary statistics in data analysis?**
+
+- **A)** To test hypotheses about the data  
+- **B)** To visualize data using plots and charts  
+- **C)** To calculate measures of central tendency and variability  
+- **D)** To scale and encode categorical data  
+- **E)** To handle missing values and remove duplicates  
+
+---
+
+## Question 17
+
+**During the data cleaning process, which of the following steps is typically performed?**
+
+- **A)** Testing hypotheses  
+- **B)** Handling missing values and removing duplicates  
+- **C)** Visualizing data  
+- **D)** Calculating summary statistics  
+- **E)** Establishing relationships between variables  
+
+---
+
+## Question 18
+
+**What is the main goal of data transformation?**
+
+- **A)** To remove outliers from the dataset  
+- **B)** To create visual representations of data  
+- **C)** To calculate the mean, median, and mode  
+- **D)** To perform hypothesis testing  
+- **E)** To modify data to make it suitable for analysis, including normalizing and encoding data  
+
+---
+
+## Question 19
+
+**Which of the following is a common step in data collection?**
+
+- **A)** Handling missing values  
+- **B)** Scaling numerical data  
+- **C)** Creating scatter plots and bar charts  
+- **D)** Gathering data from various sources  
+- **E)** Calculating standard deviation  
+
+---
+
+## Question 20
+
+**Why is data visualization an important step in EDA?**
+
+- **A)** It removes outliers from the dataset  
+- **B)** It handles missing values and removes duplicates  
+- **C)** It calculates measures of central tendency and variability  
+- **D)** It tests assumptions about a population based on sample data  
+- **E)** It helps identify patterns, trends, and outliers in the data  
+
+---
+
+# Review of Week 2 Module 3
+
+---
+
+---
+
+---
+
+## Question 21
+
+**Why is data preprocessing important?**
+
+- **A)** It eliminates the need for data collection  
+- **B)** It ensures data quality and consistency  
+- **C)** It increases the size of the dataset  
+- **D)** It reduces the need for statistical analysis  
+- **E)** It replaces data visualization  
+
+---
+
+## Question 22
+
+**What is one of the main purposes of data transformation?**
+
+- **A)** To handle missing values  
+- **B)** To visualize data using charts  
+- **C)** To perform hypothesis testing  
+- **D)** To remove duplicates from the dataset  
+- **E)** To modify data to make it suitable for analysis  
+
+---
+
+## Question 23
+
+**Which method is used to handle missing values by filling in estimated values?**
+
+- **A)** Removal  
+- **B)** Imputation  
+- **C)** Standardization  
+- **D)** Normalization  
+- **E)** Encoding  
+
+---
+
+## Question 24
+
+**How does standardization transform data?**
+
+- **A)** It scales data to have a mean of 0 and standard deviation of 1  
+- **B)** It removes outliers from the dataset  
+- **C)** It scales data to a range between 0 and 1  
+- **D)** It converts categorical data to numerical form  
+- **E)** It removes duplicates from the dataset  
+
+---
+
+## Question 25
+
+**What is the purpose of normalization in data preprocessing?**
+
+- **A)** To handle missing values  
+- **B)** To convert categorical data to numerical form  
+- **C)** To scale data to a standard range, typically between 0 and 1  
+- **D)** To visualize data using plots and charts  
+- **E)** To calculate summary statistics  
+
+---
+
+## Question 26
+
+**Which technique involves using binary columns to represent categorical data?**
+
+- **A)** Standardization  
+- **B)** Normalization  
+- **C)** Label Encoding  
+- **D)** One-Hot Encoding  
+- **E)** Imputation  
+
+---
+
+## Question 27
+
+**When is it appropriate to use label encoding?**
+
+- **A)** When you need to fill missing values  
+- **B)** When the categorical data is ordinal  
+- **C)** When you need to scale numerical data to a range between 0 and 1  
+- **D)** When visualizing data using scatter plots  
+- **E)** When calculating the mean and median  
+
+---
+
+## Question 28
+
+**What does handling missing values help ensure in a dataset?**
+
+- **A)** Increased dataset size  
+- **B)** Data quality and consistency  
+- **C)** Improved visualization  
+- **D)** Enhanced data collection  
+- **E)** Reduced need for statistical analysis  
+
+---
+
+## Question 29
+
+**Which technique is used to identify outliers in a dataset?**
+
+- **A)** One-Hot Encoding  
+- **B)** Label Encoding  
+- **C)** Z-Scores  
+- **D)** Normalization  
+- **E)** Imputation  
+
+---
+
+## Question 30
+
+**What is the result of standardizing a dataset?**
+
+- **A)** Data is scaled to a range between 0 and 1  
+- **B)** Data points are converted to binary columns  
+- **C)** Categorical data is removed  
+- **D)** Missing values are filled with the mean  
+- **E)** Data has a mean of 0 and a standard deviation of 1  
+
+---
+
+# Review of Week 2 Module 4
+
+---
+
+---
+
+## Question 31
+
+**What does correlation measure?**
+
+- **A)** The difference between two variables  
+- **B)** The strength and direction of a linear relationship between two variables  
+- **C)** The causation between two variables  
+- **D)** The average of two variables  
+- **E)** The variability within a single variable  
+
+---
+
+## Question 32
+
+**What type of correlation is indicated when both variables increase together?**
+
+- **A)** Negative Correlation  
+- **B)** Positive Correlation  
+- **C)** Zero Correlation  
+- **D)** Perfect Correlation  
+- **E)** No Correlation  
+
+---
+
+## Question 33
+
+**What is indicated by a correlation coefficient (_r_) of 0?**
+
+- **A)** Strong positive correlation  
+- **B)** Strong negative correlation  
+- **C)** No linear relationship between variables  
+- **D)** Perfect positive correlation  
+- **E)** Perfect negative correlation  
+
+---
+
+## Question 34
+
+**Which value of the correlation coefficient indicates a perfect negative correlation?**
+
+- **A)** 0  
+- **B)** 1  
+- **C)** 0.5  
+- **D)** -1  
+- **E)** -0.5  
+
+---
+
+## Question 35
+
+**What is the primary difference between correlation and causation?**
+
+- **A)** Correlation implies causation  
+- **B)** Causation implies correlation  
+- **C)** Correlation measures variability, while causation measures central tendency  
+- **D)** Correlation is always positive, while causation is always negative  
+- **E)** Correlation measures the strength of a relationship, while causation implies a direct cause-and-effect relationship  
+
+---
+
+## Question 36
+
+**Which of the following is an example of correlation without causation?**
+
+- **A)** Smoking and lung cancer  
+- **B)** Ice cream sales and drowning incidents  
+- **C)** Study hours and exam scores  
+- **D)** Exercise and weight loss  
+- **E)** Vaccination and disease prevention  
+
+---
+
+## Question 37
+
+**Which of the following best describes a negative correlation?**
+
+- **A)** One variable increases while the other decreases  
+- **B)** Both variables decrease together  
+- **C)** Both variables increase together  
+- **D)** There is no relationship between the variables  
+- **E)** Both variables have a correlation coefficient of 1  
+
+---
+
+## Question 38
+
+**What does a correlation coefficient (_r_) close to 1 indicate?**
+
+- **A)** Strong negative correlation  
+- **B)** Weak positive correlation  
+- **C)** No correlation  
+- **D)** Strong positive correlation  
+- **E)** Perfect negative correlation  
+
+---
+
+## Question 39
+
+**What is an example of causation?**
+
+- **A)** Ice cream sales and drowning incidents  
+- **B)** The number of books read and the amount of coffee consumed  
+- **C)** The number of hours spent watching TV and the amount of exercise  
+- **D)** Shoe size and intelligence  
+- **E)** Smoking and lung cancer  
+
+---
+
+## Question 40
+
+**What does zero correlation imply about the relationship between two variables?**
+
+- **A)** They have a perfect positive relationship  
+- **B)** There is no linear relationship between the variables  
+- **C)** They have a perfect negative relationship  
+- **D)** One variable causes the other to change  
+- **E)** The variables are inversely related  
+
+---
+
+
+# THE END! Well done!
+
+
