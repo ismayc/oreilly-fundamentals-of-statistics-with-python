@@ -2,7 +2,7 @@
 title: "<h2> Fundamentals of Statistics with Python </h2>"
 subtitle: "Review Questions for Week 1"
 author: "<small> Dr. Chester Ismay</small>" 
-format: revealjs
+format: html
 ---
 
   
