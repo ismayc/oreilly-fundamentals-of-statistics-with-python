@@ -1,0 +1,1157 @@
+---
+title: "<h2> Fundamentals of Statistics with Python </h2>"
+subtitle: "Review Questions for Week 3"
+author: "<small> Dr. Chester Ismay</small>" 
+format: revealjs
+---
+
+  
+# Review Questions 
+
+Welcome to the quiz!  
+- Each slide contains a question with multiple-choice answers.  
+- Enter the letter of your response into the chat.  
+- Test your brain's understanding! It helps with learning and retention.
+
+---
+
+# Review of Week 3 Module 1
+
+---
+
+## Question 1
+
+**What type of distribution is used to model the number of successes in a fixed number of independent Bernoulli trials?**
+
+- **A) Poisson Distribution**
+- **B) Binomial Distribution**
+- **C) Normal Distribution**
+- **D) Exponential Distribution**
+- **E) Uniform Distribution**
+
+---
+
+## Answer to Question 1
+
+**What type of distribution is used to model the number of successes in a fixed number of independent Bernoulli trials?**
+
+- **A) Poisson Distribution**
+- <span style="color:green;">**B) Binomial Distribution ✅**</span>
+- **C) Normal Distribution**
+- **D) Exponential Distribution**
+- **E) Uniform Distribution**
+
+::: {.notes}
+**Explanation:** The binomial distribution represents the number of successes in a fixed number of independent Bernoulli trials, each with the same probability of success.
+:::
+
+---
+
+## Question 2
+
+**Which distribution models the number of events occurring in a fixed interval of time or space?**
+
+- **A) Binomial Distribution**
+- **B) Normal Distribution**
+- **C) Poisson Distribution**
+- **D) Exponential Distribution**
+- **E) Geometric Distribution**
+
+---
+
+## Answer to Question 2
+
+**Which distribution models the number of events occurring in a fixed interval of time or space?**
+
+- **A) Binomial Distribution**
+- **B) Normal Distribution**
+- <span style="color:green;">**C) Poisson Distribution ✅**</span>
+- **D) Exponential Distribution**
+- **E) Geometric Distribution**
+
+::: {.notes}
+**Explanation:** The Poisson distribution models the number of events occurring in a fixed interval of time or space, where the events occur independently and with a constant average rate.
+:::
+
+---
+
+## Question 3
+
+**What is a key characteristic of the normal distribution?**
+
+- **A) It is skewed to the right**
+- **B) It is symmetrical and bell-shaped**
+- **C) It is skewed to the left**
+- **D) It is uniform**
+- **E) It has no central peak**
+
+---
+
+## Answer to Question 3
+
+**What is a key characteristic of the normal distribution?**
+
+- **A) It is skewed to the right**
+- <span style="color:green;">**B) It is symmetrical and bell-shaped ✅**</span>
+- **C) It is skewed to the left**
+- **D) It is uniform**
+- **E) It has no central peak**
+
+::: {.notes}
+**Explanation:** The normal distribution is symmetrical around its mean and has a bell-shaped curve, with most data points clustering around the central peak.
+:::
+
+---
+
+## Question 4
+
+**What does the parameter $\lambda$ (lambda) represent in the Poisson and exponential distributions?**
+
+- **A) Mean**
+- **B) Median**
+- **C) Mode**
+- **D) Rate**
+- **E) Variance**
+
+---
+
+## Answer to Question 4
+
+**What does the parameter $\lambda$  (lambda) represent in the Poisson and exponential distributions?**
+
+- **A) Mean**
+- **B) Median**
+- **C) Mode**
+- <span style="color:green;">**D) Rate ✅**</span>
+- **E) Variance**
+
+::: {.notes}
+**Explanation:** In both the Poisson and exponential distributions, the parameter $\lambda$ (lambda) represents the rate at which events occur.
+:::
+
+---
+
+## Question 5
+
+**In a normal distribution, where are the mean and median located?**
+
+- **A) At the peak of the distribution**
+- **B) At different points**
+- **C) At the tails of the distribution**
+- **D) Mean is at the peak, median is at the tail**
+- **E) Median is at the peak, mean is at the tail**
+
+---
+
+## Answer to Question 5
+
+**In a normal distribution, where are the mean and median located?**
+
+- <span style="color:green;">**A) At the peak of the distribution ✅**</span>
+- **B) At different points**
+- **C) At the tails of the distribution**
+- **D) Mean is at the peak, median is at the tail**
+- **E) Median is at the peak, mean is at the tail**
+
+::: {.notes}
+**Explanation:** In a normal distribution, the mean and median are equal and located at the peak of the distribution.
+:::
+
+---
+
+## Question 6
+
+**According to the Empirical Rule, what percentage of data lies within one standard deviation of the mean in a normal distribution?**
+
+- **A) 50%**
+- **B) 68%**
+- **C) 95%**
+- **D) 99.7%**
+- **E) 100%**
+
+---
+
+## Answer to Question 6
+
+**According to the Empirical Rule, what percentage of data lies within one standard deviation of the mean in a normal distribution?**
+
+- **A) 50%**
+- <span style="color:green;">**B) 68% ✅**</span>
+- **C) 95%**
+- **D) 99.7%**
+- **E) 100%**
+
+::: {.notes}
+**Explanation:** According to the Empirical Rule, approximately 68% of the data in a normal distribution lies within one standard deviation of the mean.
+:::
+
+---
+
+## Question 7
+
+**What does the standard deviation ($\sigma$) measure in a normal distribution?**
+
+- **A) The central location of the distribution**
+- **B) The number of data points**
+- **C) The height of the peak of the distribution**
+- **D) The spread or dispersion of the distribution**
+- **E) The skewness of the distribution**
+
+---
+
+## Answer to Question 7
+
+**What does the standard deviation ($\sigma$) measure in a normal distribution?**
+
+- **A) The central location of the distribution**
+- **B) The number of data points**
+- **C) The height of the peak of the distribution**
+- <span style="color:green;">**D) The spread or dispersion of the distribution ✅**</span>
+- **E) The skewness of the distribution**
+
+::: {.notes}
+**Explanation:** The standard deviation (σ) measures the spread or dispersion of the distribution, indicating how much the data points deviate from the mean.
+:::
+
+---
+
+## Question 8
+
+**What type of distribution is described as having a bell-shaped curve with most of the data points clustering around the central peak?**
+
+- **A) Binomial Distribution**
+- **B) Poisson Distribution**
+- **C) Log-normal Distribution**
+- **D) Exponential Distribution**
+- **E) Normal Distribution**
+
+---
+
+## Answer to Question 8
+
+**What type of distribution is described as having a bell-shaped curve with most of the data points clustering around the central peak?**
+
+- **A) Binomial Distribution**
+- **B) Poisson Distribution**
+- **C) Log-normal Distribution**
+- **D) Exponential Distribution**
+- <span style="color:green;">**E) Normal Distribution ✅**</span>
+
+::: {.notes}
+**Explanation:** The normal distribution is characterized by a bell-shaped curve with most data points clustering around the central peak.
+:::
+
+---
+
+## Question 9
+
+**How much data falls within two standard deviations of the mean according to the Empirical Rule?**
+
+- **A) 50%**
+- **B) 68%**
+- **C) 95%**
+- **D) 99.7%**
+- **E) 100%**
+
+---
+
+## Answer to Question 9
+
+**How much data falls within two standard deviations of the mean according to the Empirical Rule?**
+
+- **A) 50%**
+- **B) 68%**
+- <span style="color:green;">**C) 95% ✅**</span>
+- **D) 99.7%**
+- **E) 100%**
+
+::: {.notes}
+**Explanation:** According to the Empirical Rule, approximately 95% of the data in a normal distribution falls within two standard deviations of the mean.
+:::
+
+---
+
+## Question 10
+
+**In the context of the Empirical Rule, which statement is true about the distribution of data within three standard deviations of the mean?**
+
+- **A) 50% of the data falls within three standard deviations**
+- **B) 68% of the data falls within three standard deviations**
+- **C) 95% of the data falls within three standard deviations**
+- **D) 99.7% of the data falls within three standard deviations**
+- **E) 100% of the data falls within three standard deviations**
+
+---
+
+## Answer to Question 10
+
+**In the context of the Empirical Rule, which statement is true about the distribution of data within three standard deviations of the mean?**
+
+- **A) 50% of the data falls within three standard deviations**
+- **B) 68% of the data falls within three standard deviations**
+- **C) 95% of the data falls within three standard deviations**
+- <span style="color:green;">**D) 99.7% of the data falls within three standard deviations ✅**</span>
+- **E) 100% of the data falls within three standard deviations**
+
+::: {.notes}
+**Explanation:** According to the Empirical Rule, approximately 99.7% of the data in a normal distribution falls within three standard deviations of the mean.
+:::
+
+---
+
+# Review of Week 3 Module 2
+
+---
+
+## Question 11
+
+**What is the primary purpose of hypothesis testing?**
+
+- **A) To visualize data distributions**
+- **B) To make inferences about population parameters based on sample data**
+- **C) To calculate descriptive statistics**
+- **D) To measure central tendency**
+- **E) To conduct exploratory data analysis**
+
+---
+
+## Answer to Question 11
+
+**What is the primary purpose of hypothesis testing?**
+
+- **A) To visualize data distributions**
+- <span style="color:green;">**B) To make inferences about population parameters based on sample data ✅**</span>
+- **C) To calculate descriptive statistics**
+- **D) To measure central tendency**
+- **E) To conduct exploratory data analysis**
+
+::: {.notes}
+**Explanation:** Hypothesis testing is used to make inferences about population parameters based on sample data, determining whether there is enough evidence to reject the null hypothesis in favor of the alternative hypothesis.
+:::
+
+---
+
+## Question 12
+
+**What does the null hypothesis ($H_0$) typically represent?**
+
+- **A) A significant effect or difference**
+- **B) A relationship between variables**
+- **C) No effect or no difference**
+- **D) The researcher's desired outcome**
+- **E) A random effect**
+
+---
+
+## Answer to Question 12
+
+**What does the null hypothesis ($H_0$) typically represent?**
+
+- **A) A significant effect or difference**
+- **B) A relationship between variables**
+- <span style="color:green;">**C) No effect or no difference ✅**</span>
+- **D) The researcher's desired outcome**
+- **E) A random effect**
+
+::: {.notes}
+**Explanation:** The null hypothesis (H₀) represents the idea of no effect or no difference and serves as the default or starting assumption.
+:::
+
+---
+
+## Question 13
+
+**In hypothesis testing, what does a significance level ($\alpha$) of 0.05 represent?**
+
+- **A) A 5% probability of accepting the null hypothesis**
+- **B) A 5% probability of rejecting the null hypothesis when it is true**
+- **C) A 5% probability of accepting the alternative hypothesis**
+- **D) A 5% probability of rejecting the alternative hypothesis**
+- **E) A 5% probability of making a Type II error**
+
+---
+
+## Answer to Question 13
+
+**In hypothesis testing, what does a significance level ($\alpha$) of 0.05 represent?**
+
+- **A) A 5% probability of accepting the null hypothesis**
+- <span style="color:green;">**B) A 5% probability of rejecting the null hypothesis when it is true ✅**</span>
+- **C) A 5% probability of accepting the alternative hypothesis**
+- **D) A 5% probability of rejecting the alternative hypothesis**
+- **E) A 5% probability of making a Type II error**
+
+::: {.notes}
+**Explanation:** A significance level ($\alpha$) of 0.05 means there is a 5% chance of rejecting the null hypothesis when it is actually true, representing the probability of making a Type I error.
+:::
+
+---
+
+## Question 14
+
+**What is a Type I error in hypothesis testing?**
+
+- **A) Failing to reject the null hypothesis when it is false**
+- **B) Rejecting the alternative hypothesis when it is true**
+- **C) Accepting the alternative hypothesis when it is false**
+- **D) Rejecting the null hypothesis when it is true**
+- **E) A measurement error**
+
+---
+
+## Answer to Question 14
+
+**What is a Type I error in hypothesis testing?**
+
+- **A) Failing to reject the null hypothesis when it is false**
+- **B) Rejecting the alternative hypothesis when it is true**
+- **C) Accepting the alternative hypothesis when it is false**
+- <span style="color:green;">**D) Rejecting the null hypothesis when it is true ✅**</span>
+- **E) A measurement error**
+
+::: {.notes}
+**Explanation:** A Type I error occurs when we reject the null hypothesis (H₀) even though it is true, resulting in a false positive.
+:::
+
+---
+
+## Question 15
+
+**Which test is used when the population variance is known and the sample size is large ($n > 30$)?**
+
+- **A) T-Test**
+- **B) Z-Test**
+- **C) Chi-Square Test**
+- **D) ANOVA**
+- **E) F-Test**
+
+---
+
+## Answer to Question 15
+
+**Which test is used when the population variance is known and the sample size is large ($n > 30$)?**
+
+- **A) T-Test**
+- <span style="color:green;">**B) Z-Test ✅**</span>
+- **C) Chi-Square Test**
+- **D) ANOVA**
+- **E) F-Test**
+
+::: {.notes}
+**Explanation:** The Z-test is used when the population variance is known and the sample size is large (greater than 30).
+:::
+
+---
+
+## Question 16
+
+**When should a T-test be used instead of a Z-test?**
+
+- **A) When the population variance is known and the sample size is large**
+- **B) When comparing more than two groups**
+- **C) When the population variance is unknown and the sample size is small**
+- **D) When analyzing categorical data**
+- **E) When the sample size is very large**
+
+---
+
+## Answer to Question 16
+
+**When should a T-test be used instead of a Z-test?**
+
+- **A) When the population variance is known and the sample size is large**
+- **B) When comparing more than two groups**
+- <span style="color:green;">**C) When the population variance is unknown and the sample size is small ✅**</span>
+- **D) When analyzing categorical data**
+- **E) When the sample size is very large**
+
+::: {.notes}
+**Explanation:** A T-test is used when the population variance is unknown and the sample size is small (30 or fewer).
+:::
+
+---
+
+## Question 17
+
+**Which of the following statements is true about the T-distribution?**
+
+- **A) It has heavier tails than the normal distribution**
+- **B) It is used only for large sample sizes**
+- **C) It approaches the normal distribution as sample size decreases**
+- **D) It is symmetrical but not bell-shaped**
+- **E) It cannot be used for hypothesis testing**
+
+---
+
+## Answer to Question 17
+
+**Which of the following statements is true about the T-distribution?**
+
+- <span style="color:green;">**A) It has heavier tails than the normal distribution ✅**</span>
+- **B) It is used only for large sample sizes**
+- **C) It approaches the normal distribution as sample size decreases**
+- **D) It is symmetrical but not bell-shaped**
+- **E) It cannot be used for hypothesis testing**
+
+::: {.notes}
+**Explanation:** The T-distribution has heavier tails than the normal distribution, which accounts for the increased variability expected in small samples.
+:::
+
+---
+
+## Question 18
+
+**What happens to the T-distribution as the sample size increases?**
+
+- **A) It becomes skewed to the right**
+- **B) It becomes skewed to the left**
+- **C) It approaches the normal distribution**
+- **D) It becomes wider and flatter**
+- **E) It remains the same**
+
+---
+
+## Answer to Question 18
+
+**What happens to the T-distribution as the sample size increases?**
+
+- **A) It becomes skewed to the right**
+- **B) It becomes skewed to the left**
+- <span style="color:green;">**C) It approaches the normal distribution ✅**</span>
+- **D) It becomes wider and flatter**
+- **E) It remains the same**
+
+::: {.notes}
+**Explanation:** As the sample size increases, the T-distribution approaches the normal distribution, becoming more similar in shape.
+:::
+
+---
+
+## Question 19
+
+**When comparing means from two different groups, which test should be used?**
+
+- **A) One-sample T-test**
+- **B) Z-test**
+- **C) Chi-square test**
+- **D) Two-sample T-test**
+- **E) ANOVA**
+
+---
+
+## Answer to Question 19
+
+**When comparing means from two different groups, which test should be used?**
+
+- **A) One-sample T-test**
+- **B) Z-test**
+- **C) Chi-square test**
+- <span style="color:green;">**D) Two-sample T-test ✅**</span>
+- **E) ANOVA**
+
+::: {.notes}
+**Explanation:** The two-sample T-test is used to compare the means of two independent groups to determine if there is a statistically significant difference between them.
+:::
+
+---
+
+## Question 20
+
+**What is a Type II error in hypothesis testing?**
+
+- **A) Failing to reject the null hypothesis when it is false**
+- **B) Rejecting the null hypothesis when it is true**
+- **C) Accepting the alternative hypothesis when it is false**
+- **D) Rejecting the alternative hypothesis when it is true**
+- **E) A calculation error**
+
+---
+
+## Answer to Question 20
+
+**What is a Type II error in hypothesis testing?**
+
+- <span style="color:green;">**A) Failing to reject the null hypothesis when it is false ✅**</span>
+- **B) Rejecting the null hypothesis when it is true**
+- **C) Accepting the alternative hypothesis when it is false**
+- **D) Rejecting the alternative hypothesis when it is true**
+- **E) A calculation error**
+
+::: {.notes}
+**Explanation:** A Type II error occurs when we fail to reject the null hypothesis (H₀) even though it is false, resulting in a false negative.
+:::
+
+---
+
+# Review of Week 3 Module 3
+
+---
+
+## Question 21
+
+**What does ANOVA (Analysis of Variance) compare?**
+
+- **A) Medians of three or more groups**
+- **B) Means of three or more groups**
+- **C) Variances of two groups**
+- **D) Frequencies of categorical data**
+- **E) Standard deviations of multiple samples**
+
+---
+
+## Answer to Question 21
+
+**What does ANOVA (Analysis of Variance) compare?**
+
+- **A) Medians of three or more groups**
+- <span style="color:green;">**B) Means of three or more groups ✅**</span>
+- **C) Variances of two groups**
+- **D) Frequencies of categorical data**
+- **E) Standard deviations of multiple samples**
+
+::: {.notes}
+**Explanation:** ANOVA is used to compare the means of three or more groups to determine if there are any statistically significant differences between them.
+:::
+
+---
+
+## Question 22
+
+**When is the Chi-Square Test for Independence used?**
+
+- **A) To test the association between categorical variables**
+- **B) To compare means of three or more groups**
+- **C) To compare variances of two groups**
+- **D) To test the goodness of fit for a sample distribution**
+- **E) To analyze continuous data**
+
+---
+
+## Answer to Question 22
+
+**When is the Chi-Square Test for Independence used?**
+
+- <span style="color:green;">**A) To test the association between categorical variables ✅**</span>
+- **B) To compare means of three or more groups**
+- **C) To compare variances of two groups**
+- **D) To test the goodness of fit for a sample distribution**
+- **E) To analyze continuous data**
+
+::: {.notes}
+**Explanation:** The Chi-Square Test for Independence is used to test if there is a significant association between two categorical variables.
+:::
+
+---
+
+## Question 23
+
+**What is the null hypothesis ($H_0$) in an ANOVA test?**
+
+- **A) All group medians are equal**
+- **B) All group variances are equal**
+- **C) The variables are independent**
+- **D) At least one group mean is different**
+- **E) All group means are equal**
+
+---
+
+## Answer to Question 23
+
+**What is the null hypothesis ($H_0$) in an ANOVA test?**
+
+- **A) All group medians are equal**
+- **B) All group variances are equal**
+- **C) The variables are independent**
+- **D) At least one group mean is different**
+- <span style="color:green;">**E) All group means are equal ✅**</span>
+
+::: {.notes}
+**Explanation:** In ANOVA, the null hypothesis ($H_0$) states that all group means are equal.
+:::
+
+---
+
+## Question 24
+
+**What is the purpose of the Chi-Square Goodness of Fit Test?**
+
+- **A) To determine if a sample distribution matches a population distribution**
+- **B) To test the association between categorical variables**
+- **C) To compare means of three or more groups**
+- **D) To compare variances of two groups**
+- **E) To test the independence of two variables**
+
+---
+
+## Answer to Question 24
+
+**What is the purpose of the Chi-Square Goodness of Fit Test?**
+
+- <span style="color:green;">**A) To determine if a sample distribution matches a population distribution ✅**</span>
+- **B) To test the association between categorical variables**
+- **C) To compare means of three or more groups**
+- **D) To compare variances of two groups**
+- **E) To test the independence of two variables**
+
+::: {.notes}
+**Explanation:** The Chi-Square Goodness of Fit Test determines if the observed frequencies in a sample match the expected frequencies of a population distribution.
+:::
+
+---
+
+## Question 25
+
+**What is the F-statistic in ANOVA?**
+
+- **A) The ratio of the means of groups**
+- **B) The ratio of the variances between groups to the variance within groups**
+- **C) The sum of squared differences between observed and expected frequencies**
+- **D) The mean difference between two samples**
+- **E) The correlation coefficient between two variables**
+
+---
+
+## Answer to Question 25
+
+**What is the F-statistic in ANOVA?**
+
+- **A) The ratio of the means of groups**
+- <span style="color:green;">**B) The ratio of the variances between groups to the variance within groups ✅**</span>
+- **C) The sum of squared differences between observed and expected frequencies**
+- **D) The mean difference between two samples**
+- **E) The correlation coefficient between two variables**
+
+::: {.notes}
+**Explanation:** The F-statistic in ANOVA is the ratio of the variance between the groups to the variance within the groups.
+:::
+
+---
+
+## Question 26
+
+**When should you use ANOVA?**
+
+- **A) When comparing the means of two groups**
+- **B) When examining the relationship between two categorical variables**
+- **C) When comparing the means of three or more groups**
+- **D) When determining if a sample distribution fits a population distribution**
+- **E) When analyzing paired sample data**
+
+---
+
+## Answer to Question 26
+
+**When should you use ANOVA?**
+
+- **A) When comparing the means of two groups**
+- **B) When examining the relationship between two categorical variables**
+- <span style="color:green;">**C) When comparing the means of three or more groups ✅**</span>
+- **D) When determining if a sample distribution fits a population distribution**
+- **E) When analyzing paired sample data**
+
+::: {.notes}
+**Explanation:** ANOVA is used when comparing the means of three or more groups.
+:::
+
+---
+
+## Question 27
+
+**What does the alternative hypothesis ($H_a$) state in a Chi-Square Test for Independence?**
+
+- **A) The variables are independent**
+- **B) All group means are equal**
+- **C) At least one group mean is different**
+- **D) The variables are not independent**
+- **E) The sample distribution fits the population distribution**
+
+---
+
+## Answer to Question 27
+
+**What does the alternative hypothesis ($H_a$) state in a Chi-Square Test for Independence?**
+
+- **A) The variables are independent**
+- **B) All group means are equal**
+- **C) At least one group mean is different**
+- <span style="color:green;">**D) The variables are not independent ✅**</span>
+- **E) The sample distribution fits the population distribution**
+
+::: {.notes}
+**Explanation:** In a Chi-Square Test for Independence, the alternative hypothesis ($H_a$) states that the variables are not independent.
+:::
+
+---
+
+## Question 28
+
+**How is the Chi-Square Statistic ($\chi^2$) calculated?**
+
+- **A) As the ratio of the variance between groups to the variance within groups**
+- **B) As the sum of the squared differences between observed and expected frequencies divided by the expected frequency**
+- **C) As the difference between sample means**
+- **D) As the correlation coefficient between two variables**
+- **E) As the ratio of sample variances**
+
+---
+
+## Answer to Question 28
+
+**How is the Chi-Square Statistic ($\chi^2$) calculated?**
+
+- **A) As the ratio of the variance between groups to the variance within groups**
+- <span style="color:green;">**B) As the sum of the squared differences between observed and expected frequencies divided by the expected frequency ✅**</span>
+- **C) As the difference between sample means**
+- **D) As the correlation coefficient between two variables**
+- **E) As the ratio of sample variances**
+
+::: {.notes}
+**Explanation:** The Chi-Square Statistic ($\chi^2$) is calculated as the sum of the squared differences between observed and expected frequencies, divided by the expected frequency.
+:::
+
+---
+
+## Question 29
+
+**What is the null hypothesis ($H_0$) for a Chi-Square Test for Independence?**
+
+- **A) All group means are equal**
+- **B) The variances are equal**
+- **C) At least one group mean is different**
+- **D) The sample distribution fits the population distribution**
+- **E) The variables are independent**
+
+---
+
+## Answer to Question 29
+
+**What is the null hypothesis ($H_0$) for a Chi-Square Test for Independence?**
+
+- **A) All group means are equal**
+- **B) The variances are equal**
+- **C) At least one group mean is different**
+- **D) The sample distribution fits the population distribution**
+- <span style="color:green;">**E) The variables are independent ✅**</span>
+
+::: {.notes}
+**Explanation:** The null hypothesis ($H_0$) for a Chi-Square Test for Independence states that the variables are independent.
+:::
+
+---
+
+## Question 30
+
+**When is the Chi-Square Goodness of Fit Test appropriate?**
+
+- **A) When comparing the means of three or more groups**
+- **B) When testing the association between categorical variables**
+- **C) When determining if a sample distribution matches an expected population distribution**
+- **D) When comparing variances of two groups**
+- **E) When analyzing continuous data**
+
+---
+
+## Answer to Question 30
+
+**When is the Chi-Square Goodness of Fit Test appropriate?**
+
+- **A) When comparing the means of three or more groups**
+- **B) When testing the association between categorical variables**
+- <span style="color:green;">**C) When determining if a sample distribution matches an expected population distribution ✅**</span>
+- **D) When comparing variances of two groups**
+- **E) When analyzing continuous data**
+
+::: {.notes}
+**Explanation:** The Chi-Square Goodness of Fit Test is used to determine if an observed sample distribution matches an expected population distribution.
+:::
+
+---
+
+
+# Review of Week 3 Module 4
+
+---
+
+## Question 31
+
+**When should non-parametric tests be used?**
+
+- **A) When data follows a normal distribution**
+- **B) When sample sizes are large**
+- **C) When data does not meet the assumptions of parametric tests**
+- **D) When data is interval or ratio**
+- **E) When data is normally distributed and has no outliers**
+
+---
+
+## Answer to Question 31
+
+**When should non-parametric tests be used?**
+
+- **A) When data follows a normal distribution**
+- **B) When sample sizes are large**
+- <span style="color:green;">**C) When data does not meet the assumptions of parametric tests ✅**</span>
+- **D) When data is interval or ratio**
+- **E) When data is normally distributed and has no outliers**
+
+::: {.notes}
+**Explanation:** Non-parametric tests are ideal when the data does not meet the assumptions required for parametric tests, such as normality.
+:::
+
+---
+
+## Question 32
+
+**Which type of data is suitable for non-parametric tests?**
+
+- **A) Ordinal or categorical data**
+- **B) Ratio data**
+- **C) Interval data**
+- **D) Normally distributed data**
+- **E) Continuous data only**
+
+---
+
+## Answer to Question 32
+
+**Which type of data is suitable for non-parametric tests?**
+
+- <span style="color:green;">**A) Ordinal or categorical data ✅**</span>
+- **B) Ratio data**
+- **C) Interval data**
+- **D) Normally distributed data**
+- **E) Continuous data only**
+
+::: {.notes}
+**Explanation:** Non-parametric tests are particularly useful for ordinal data or categorical data.
+:::
+
+---
+
+## Question 33
+
+**What is one of the main advantages of non-parametric tests?**
+
+- **A) They require large sample sizes**
+- **B) They assume a specific distribution for the data**
+- **C) They require normally distributed data**
+- **D) They can only be used with normal distributions**
+- **E) They are more flexible than parametric tests**
+
+---
+
+## Answer to Question 33
+
+**What is one of the main advantages of non-parametric tests?**
+
+- **A) They require large sample sizes**
+- **B) They assume a specific distribution for the data**
+- **C) They require normally distributed data**
+- **D) They can only be used with normal distributions**
+- <span style="color:green;">**E) They are more flexible than parametric tests ✅**</span>
+
+::: {.notes}
+**Explanation:** Non-parametric tests are more flexible because they do not rely on strict assumptions about the underlying data distribution.
+:::
+
+---
+
+## Question 34
+
+**Which test is used to compare differences between two independent groups when the data does not meet the assumptions of normality?**
+
+- **A) Z-Test**
+- **B) T-Test**
+- **C) Mann-Whitney U Test**
+- **D) ANOVA**
+- **E) Chi-Square Test**
+
+---
+
+## Answer to Question 34
+
+**Which test is used to compare differences between two independent groups when the data does not meet the assumptions of normality?**
+
+- **A) Z-Test**
+- **B) T-Test**
+- <span style="color:green;">**C) Mann-Whitney U Test ✅**</span>
+- **D) ANOVA**
+- **E) Chi-Square Test**
+
+::: {.notes}
+**Explanation:** The Mann-Whitney U Test is used to compare differences between two independent groups when the data does not meet the assumptions of normality.
+:::
+
+---
+
+## Question 35
+
+**What does the Kruskal-Wallis H Test compare?**
+
+- **A) Differences between two independent groups**
+- **B) Differences between three or more independent groups**
+- **C) Differences within a single group**
+- **D) Association between categorical variables**
+- **E) Differences between paired samples**
+
+---
+
+## Answer to Question 35
+
+**What does the Kruskal-Wallis H Test compare?**
+
+- **A) Differences between two independent groups**
+- <span style="color:green;">**B) Differences between three or more independent groups ✅**</span>
+- **C) Differences within a single group**
+- **D) Association between categorical variables**
+- **E) Differences between paired samples**
+
+::: {.notes}
+**Explanation:** The Kruskal-Wallis H Test is used to compare differences between three or more independent groups.
+:::
+
+---
+
+## Question 36
+
+**What is the null hypothesis ($H_0$) for the Mann-Whitney U Test?**
+
+- **A) The means of the two groups are equal**
+- **B) The variances of the two groups are equal**
+- **C) The distributions of the two groups are not equal**
+- **D) The distributions of the two groups are equal**
+- **E) The sample sizes of the two groups are equal**
+
+---
+
+## Answer to Question 36
+
+**What is the null hypothesis ($H_0$) for the Mann-Whitney U Test?**
+
+- **A) The means of the two groups are equal**
+- **B) The variances of the two groups are equal**
+- **C) The distributions of the two groups are not equal**
+- <span style="color:green;">**D) The distributions of the two groups are equal ✅**</span>
+- **E) The sample sizes of the two groups are equal**
+
+::: {.notes}
+**Explanation:** The null hypothesis for the Mann-Whitney U Test states that the distributions of the two groups are equal.
+:::
+
+---
+
+## Question 37
+
+**When is the Kruskal-Wallis H Test used?**
+
+- **A) When comparing the distributions of three or more independent groups**
+- **B) When testing the relationship between two categorical variables**
+- **C) When comparing the means of two independent groups**
+- **D) When analyzing the correlation between two variables**
+- **E) When comparing paired samples**
+
+---
+
+## Answer to Question 37
+
+**When is the Kruskal-Wallis H Test used?**
+
+- <span style="color:green;">**A) When comparing the distributions of three or more independent groups ✅**</span>
+- **B) When testing the relationship between two categorical variables**
+- **C) When comparing the means of two independent groups**
+- **D) When analyzing the correlation between two variables**
+- **E) When comparing paired samples**
+
+::: {.notes}
+**Explanation:** The Kruskal-Wallis H Test is used to compare the distributions of three or more independent groups.
+:::
+
+---
+
+## Question 38
+
+**What is the alternative hypothesis for the Kruskal-Wallis H Test?**
+
+- **A) All group means are equal**
+- **B) At least one group distribution is different**
+- **C) All group variances are equal**
+- **D) The sample sizes of the groups are equal**
+- **E) The groups are not independent**
+
+---
+
+## Answer to Question 38
+
+**What is the alternative hypothesis for the Kruskal-Wallis H Test?**
+
+- **A) All group means are equal**
+- <span style="color:green;">**B) At least one group distribution is different ✅**</span>
+- **C) All group variances are equal**
+- **D) The sample sizes of the groups are equal**
+- **E) The groups are not independent**
+
+::: {.notes}
+**Explanation:** The alternative hypothesis for the Kruskal-Wallis H Test states that the distributions of at least one group are different.
+:::
+
+---
+
+## Question 39
+
+**Why are non-parametric tests useful for small sample sizes?**
+
+- **A) They require the data to be normally distributed**
+- **B) They assume specific distributions for the data**
+- **C) They provide valid results even with smaller samples**
+- **D) They require interval or ratio data**
+- **E) They cannot handle ordinal data**
+
+---
+
+## Answer to Question 39
+
+**Why are non-parametric tests useful for small sample sizes?**
+
+- **A) They require the data to be normally distributed**
+- **B) They assume specific distributions for the data**
+- <span style="color:green;">**C) They provide valid results even with smaller samples ✅**</span>
+- **D) They require interval or ratio data**
+- **E) They cannot handle ordinal data**
+
+::: {.notes}
+**Explanation:** Non-parametric tests can provide valid results even with smaller samples, making them useful for small sample sizes.
+:::
+
+---
+
+## Question 40
+
+**What is the primary purpose of the Mann-Whitney U Test?**
+
+- **A) To compare differences between three or more independent groups**
+- **B) To test the association between categorical variables**
+- **C) To compare paired samples**
+- **D) To determine the variance of a single group**
+- **E) To compare differences between two independent groups**
+
+---
+
+## Answer to Question 40
+
+**What is the primary purpose of the Mann-Whitney U Test?**
+
+- **A) To compare differences between three or more independent groups**
+- **B) To test the association between categorical variables**
+- **C) To compare paired samples**
+- **D) To determine the variance of a single group**
+- <span style="color:green;">**E) To compare differences between two independent groups ✅**</span>
+
+::: {.notes}
+**Explanation:** The primary purpose of the Mann-Whitney U Test is to compare differences between two independent groups.
+:::
+
+---
+
+
+
+# THE END! Well done!
