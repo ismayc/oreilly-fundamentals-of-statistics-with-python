@@ -9,10 +9,11 @@ renv.lock
 requirements.txt
 so_data_walkthrough*
 coffee_data_walkthrough*
-mc-quarto/answers-w1.qmd
-mc-quarto/answers-w1.html
-mc-quarto/answers-w1_files/*
+mc-quarto/answers-w3.qmd
+mc-quarto/answers-w3.html
+mc-quarto/answers-w3_files/*
 mc-quarto/extract-questions.R
+mc-quarto/convert-answers-to-quarto.R
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

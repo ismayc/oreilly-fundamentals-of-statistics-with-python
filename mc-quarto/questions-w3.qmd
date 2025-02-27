@@ -57,7 +57,7 @@ Welcome to the quiz!
 
 ## Question 4
 
-**What does the parameter λ (lambda) represent in the Poisson and exponential distributions?**
+**What does the parameter $\lambda$ (lambda) represent in the Poisson and exponential distributions?**
 
 - **A) Mean**
 - **B) Median**
@@ -93,7 +93,7 @@ Welcome to the quiz!
 
 ## Question 7
 
-**What does the standard deviation (σ) measure in a normal distribution?**
+**What does the standard deviation ($\sigma$) measure in a normal distribution?**
 
 - **A) The central location of the distribution**
 - **B) The number of data points**
@@ -157,7 +157,7 @@ Welcome to the quiz!
 
 ## Question 12
 
-**What does the null hypothesis (H₀) typically represent?**
+**What does the null hypothesis ($H_0$) typically represent?**
 
 - **A) A significant effect or difference**
 - **B) A relationship between variables**
@@ -169,7 +169,7 @@ Welcome to the quiz!
 
 ## Question 13
 
-**In hypothesis testing, what does a significance level (α) of 0.05 represent?**
+**In hypothesis testing, what does a significance level ($\alpha$) of 0.05 represent?**
 
 - **A) A 5% probability of accepting the null hypothesis**
 - **B) A 5% probability of rejecting the null hypothesis when it is true**
@@ -193,7 +193,7 @@ Welcome to the quiz!
 
 ## Question 15
 
-**Which test is used when the population variance is known and the sample size is large (n > 30)?**
+**Which test is used when the population variance is known and the sample size is large ($n > 30$)?**
 
 - **A) T-Test**
 - **B) Z-Test**
@@ -293,7 +293,7 @@ Welcome to the quiz!
 
 ## Question 23
 
-**What is the null hypothesis (H₀) in an ANOVA test?**
+**What is the null hypothesis ($H_0$) in an ANOVA test?**
 
 - **A) All group medians are equal**
 - **B) All group variances are equal**
@@ -353,7 +353,7 @@ Welcome to the quiz!
 
 ## Question 28
 
-**How is the Chi-Square Statistic (χ²) calculated?**
+**How is the Chi-Square Statistic ($\chi^2$) calculated?**
 
 - **A) As the ratio of the variance between groups to the variance within groups**
 - **B) As the sum of the squared differences between observed and expected frequencies divided by the expected frequency**
@@ -365,7 +365,7 @@ Welcome to the quiz!
 
 ## Question 29
 
-**What is the null hypothesis (H₀) for a Chi-Square Test for Independence?**
+**What is the null hypothesis ($H_0$) for a Chi-Square Test for Independence?**
 
 - **A) All group means are equal**
 - **B) The variances are equal**
@@ -454,7 +454,7 @@ Welcome to the quiz!
 
 ## Question 36
 
-**What is the null hypothesis (H₀) for the Mann-Whitney U Test?**
+**What is the null hypothesis ($H_0$) for the Mann-Whitney U Test?**
 
 - **A) The means of the two groups are equal**
 - **B) The variances of the two groups are equal**
@@ -478,7 +478,7 @@ Welcome to the quiz!
 
 ## Question 38
 
-**What is the alternative hypothesis (Hₐ) for the Kruskal-Wallis H Test?**
+**What is the alternative hypothesis for the Kruskal-Wallis H Test?**
 
 - **A) All group means are equal**
 - **B) At least one group distribution is different**
