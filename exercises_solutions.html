@@ -72,10 +72,108 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="fullcontent">
+<body>
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#week-1" id="toc-week-1" class="nav-link active" data-scroll-target="#week-1">Week 1</a>
+  <ul class="collapse">
+  <li><a href="#walkthrough-1.1-getting-started" id="toc-walkthrough-1.1-getting-started" class="nav-link" data-scroll-target="#walkthrough-1.1-getting-started">Walkthrough 1.1: Getting Started</a>
+  <ul class="collapse">
+  <li><a href="#setting-up-the-python-environment" id="toc-setting-up-the-python-environment" class="nav-link" data-scroll-target="#setting-up-the-python-environment">Setting Up the Python Environment</a></li>
+  <li><a href="#exploring-a-dataset" id="toc-exploring-a-dataset" class="nav-link" data-scroll-target="#exploring-a-dataset">Exploring a dataset</a></li>
+  <li><a href="#performing-basic-statistical-functions-using-numpy-pandas-and-scipy." id="toc-performing-basic-statistical-functions-using-numpy-pandas-and-scipy." class="nav-link" data-scroll-target="#performing-basic-statistical-functions-using-numpy-pandas-and-scipy.">Performing basic statistical functions using NumPy, Pandas, and SciPy.</a></li>
+  </ul></li>
+  <li><a href="#exercise-1.1-getting-started" id="toc-exercise-1.1-getting-started" class="nav-link" data-scroll-target="#exercise-1.1-getting-started">Exercise 1.1: Getting Started</a>
+  <ul class="collapse">
+  <li><a href="#setting-up-the-python-environment-1" id="toc-setting-up-the-python-environment-1" class="nav-link" data-scroll-target="#setting-up-the-python-environment-1">Setting Up the Python Environment</a></li>
+  <li><a href="#exploring-a-dataset-1" id="toc-exploring-a-dataset-1" class="nav-link" data-scroll-target="#exploring-a-dataset-1">Exploring a dataset</a></li>
+  <li><a href="#performing-basic-statistical-functions-using-numpy-pandas-and-scipy.-1" id="toc-performing-basic-statistical-functions-using-numpy-pandas-and-scipy.-1" class="nav-link" data-scroll-target="#performing-basic-statistical-functions-using-numpy-pandas-and-scipy.-1">Performing basic statistical functions using NumPy, Pandas, and SciPy.</a></li>
+  </ul></li>
+  <li><a href="#walkthrough-1.2-data-summarizing" id="toc-walkthrough-1.2-data-summarizing" class="nav-link" data-scroll-target="#walkthrough-1.2-data-summarizing">Walkthrough 1.2: Data Summarizing</a>
+  <ul class="collapse">
+  <li><a href="#compute-and-interpret-measures-of-central-tendency" id="toc-compute-and-interpret-measures-of-central-tendency" class="nav-link" data-scroll-target="#compute-and-interpret-measures-of-central-tendency">Compute and interpret measures of central tendency</a></li>
+  <li><a href="#compute-and-interpret-measures-of-variation" id="toc-compute-and-interpret-measures-of-variation" class="nav-link" data-scroll-target="#compute-and-interpret-measures-of-variation">Compute and interpret measures of variation</a></li>
+  </ul></li>
+  <li><a href="#exercise-1.2-data-summarizing" id="toc-exercise-1.2-data-summarizing" class="nav-link" data-scroll-target="#exercise-1.2-data-summarizing">Exercise 1.2: Data Summarizing</a></li>
+  <li><a href="#walkthrough-1.3-cleaning-and-preparing-data-with-pandas" id="toc-walkthrough-1.3-cleaning-and-preparing-data-with-pandas" class="nav-link" data-scroll-target="#walkthrough-1.3-cleaning-and-preparing-data-with-pandas">Walkthrough 1.3: Cleaning and Preparing Data with Pandas</a></li>
+  <li><a href="#exercise-1.3-cleaning-and-preparing-data-with-pandas" id="toc-exercise-1.3-cleaning-and-preparing-data-with-pandas" class="nav-link" data-scroll-target="#exercise-1.3-cleaning-and-preparing-data-with-pandas">Exercise 1.3: Cleaning and Preparing Data with Pandas</a></li>
+  <li><a href="#walkthrough-1.4-sampling-distribution-generation" id="toc-walkthrough-1.4-sampling-distribution-generation" class="nav-link" data-scroll-target="#walkthrough-1.4-sampling-distribution-generation">Walkthrough 1.4: Sampling Distribution Generation</a></li>
+  <li><a href="#exercise-1.4-sampling-distribution-generation" id="toc-exercise-1.4-sampling-distribution-generation" class="nav-link" data-scroll-target="#exercise-1.4-sampling-distribution-generation">Exercise 1.4: Sampling Distribution Generation</a></li>
+  </ul></li>
+  <li><a href="#week-2" id="toc-week-2" class="nav-link" data-scroll-target="#week-2">Week 2</a>
+  <ul class="collapse">
+  <li><a href="#walkthrough-2.1-advanced-plots" id="toc-walkthrough-2.1-advanced-plots" class="nav-link" data-scroll-target="#walkthrough-2.1-advanced-plots">Walkthrough 2.1: Advanced Plots</a></li>
+  <li><a href="#exercise-2.1-advanced-plots" id="toc-exercise-2.1-advanced-plots" class="nav-link" data-scroll-target="#exercise-2.1-advanced-plots">Exercise 2.1: Advanced Plots</a></li>
+  <li><a href="#walkthrough-2.2-eda" id="toc-walkthrough-2.2-eda" class="nav-link" data-scroll-target="#walkthrough-2.2-eda">Walkthrough 2.2: EDA</a>
+  <ul class="collapse">
+  <li><a href="#data-cleaning" id="toc-data-cleaning" class="nav-link" data-scroll-target="#data-cleaning">Data Cleaning</a></li>
+  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization">Data Visualization</a></li>
+  <li><a href="#summary-statistics" id="toc-summary-statistics" class="nav-link" data-scroll-target="#summary-statistics">Summary Statistics</a></li>
+  </ul></li>
+  <li><a href="#exercise-2.2-eda" id="toc-exercise-2.2-eda" class="nav-link" data-scroll-target="#exercise-2.2-eda">Exercise 2.2: EDA</a>
+  <ul class="collapse">
+  <li><a href="#data-cleaning-1" id="toc-data-cleaning-1" class="nav-link" data-scroll-target="#data-cleaning-1">Data Cleaning</a></li>
+  <li><a href="#data-visualization-1" id="toc-data-visualization-1" class="nav-link" data-scroll-target="#data-visualization-1">Data Visualization</a></li>
+  <li><a href="#summary-statistics-1" id="toc-summary-statistics-1" class="nav-link" data-scroll-target="#summary-statistics-1">Summary Statistics</a></li>
+  </ul></li>
+  <li><a href="#walkthrough-2.3-data-preprocessing" id="toc-walkthrough-2.3-data-preprocessing" class="nav-link" data-scroll-target="#walkthrough-2.3-data-preprocessing">Walkthrough 2.3: Data Preprocessing</a>
+  <ul class="collapse">
+  <li><a href="#inspect-the-data-after-loading" id="toc-inspect-the-data-after-loading" class="nav-link" data-scroll-target="#inspect-the-data-after-loading">Inspect the Data after Loading</a></li>
+  <li><a href="#handle-missing-values" id="toc-handle-missing-values" class="nav-link" data-scroll-target="#handle-missing-values">Handle Missing Values</a></li>
+  <li><a href="#handling-outliers" id="toc-handling-outliers" class="nav-link" data-scroll-target="#handling-outliers">Handling Outliers</a></li>
+  <li><a href="#data-transformation" id="toc-data-transformation" class="nav-link" data-scroll-target="#data-transformation">Data Transformation</a></li>
+  <li><a href="#data-visualizations-on-preprocessed-data" id="toc-data-visualizations-on-preprocessed-data" class="nav-link" data-scroll-target="#data-visualizations-on-preprocessed-data">Data Visualizations on Preprocessed Data</a></li>
+  </ul></li>
+  <li><a href="#exercise-2.3-data-preprocessing" id="toc-exercise-2.3-data-preprocessing" class="nav-link" data-scroll-target="#exercise-2.3-data-preprocessing">Exercise 2.3: Data Preprocessing</a>
+  <ul class="collapse">
+  <li><a href="#inspect-the-data-after-loading-1" id="toc-inspect-the-data-after-loading-1" class="nav-link" data-scroll-target="#inspect-the-data-after-loading-1">Inspect the Data after Loading</a></li>
+  <li><a href="#handle-missing-values-1" id="toc-handle-missing-values-1" class="nav-link" data-scroll-target="#handle-missing-values-1">Handle Missing Values</a></li>
+  <li><a href="#handle-outliers" id="toc-handle-outliers" class="nav-link" data-scroll-target="#handle-outliers">Handle Outliers</a></li>
+  <li><a href="#data-transformation-1" id="toc-data-transformation-1" class="nav-link" data-scroll-target="#data-transformation-1">Data Transformation</a></li>
+  <li><a href="#data-visualizations-on-preprocessed-data-1" id="toc-data-visualizations-on-preprocessed-data-1" class="nav-link" data-scroll-target="#data-visualizations-on-preprocessed-data-1">Data Visualizations on Preprocessed Data</a></li>
+  </ul></li>
+  <li><a href="#walkthrough-2.4-correlations" id="toc-walkthrough-2.4-correlations" class="nav-link" data-scroll-target="#walkthrough-2.4-correlations">Walkthrough 2.4: Correlations</a>
+  <ul class="collapse">
+  <li><a href="#correlation-matrix" id="toc-correlation-matrix" class="nav-link" data-scroll-target="#correlation-matrix">Correlation Matrix</a></li>
+  <li><a href="#visualize-correlations" id="toc-visualize-correlations" class="nav-link" data-scroll-target="#visualize-correlations">Visualize Correlations</a></li>
+  <li><a href="#create-scatter-plots-for-meaningful-correlations" id="toc-create-scatter-plots-for-meaningful-correlations" class="nav-link" data-scroll-target="#create-scatter-plots-for-meaningful-correlations">Create Scatter Plots for Meaningful Correlations</a></li>
+  </ul></li>
+  <li><a href="#exercise-2.4-correlations" id="toc-exercise-2.4-correlations" class="nav-link" data-scroll-target="#exercise-2.4-correlations">Exercise 2.4: Correlations</a>
+  <ul class="collapse">
+  <li><a href="#correlation-matrix-1" id="toc-correlation-matrix-1" class="nav-link" data-scroll-target="#correlation-matrix-1">Correlation Matrix</a></li>
+  <li><a href="#visualize-correlations-1" id="toc-visualize-correlations-1" class="nav-link" data-scroll-target="#visualize-correlations-1">Visualize Correlations</a></li>
+  <li><a href="#create-scatter-plots-for-meaningful-correlations-1" id="toc-create-scatter-plots-for-meaningful-correlations-1" class="nav-link" data-scroll-target="#create-scatter-plots-for-meaningful-correlations-1">Create Scatter Plots for Meaningful Correlations</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#week-3" id="toc-week-3" class="nav-link" data-scroll-target="#week-3">Week 3</a>
+  <ul class="collapse">
+  <li><a href="#walkthrough-3.1-simulating-distributions" id="toc-walkthrough-3.1-simulating-distributions" class="nav-link" data-scroll-target="#walkthrough-3.1-simulating-distributions">Walkthrough 3.1: Simulating Distributions</a>
+  <ul class="collapse">
+  <li><a href="#simulating-binomial" id="toc-simulating-binomial" class="nav-link" data-scroll-target="#simulating-binomial">Simulating Binomial</a></li>
+  <li><a href="#simulating-normal" id="toc-simulating-normal" class="nav-link" data-scroll-target="#simulating-normal">Simulating Normal</a></li>
+  </ul></li>
+  <li><a href="#exercise-3.1" id="toc-exercise-3.1" class="nav-link" data-scroll-target="#exercise-3.1">Exercise 3.1:</a>
+  <ul class="collapse">
+  <li><a href="#simulating-poisson" id="toc-simulating-poisson" class="nav-link" data-scroll-target="#simulating-poisson">Simulating Poisson</a></li>
+  <li><a href="#simulating-exponential" id="toc-simulating-exponential" class="nav-link" data-scroll-target="#simulating-exponential">Simulating Exponential</a></li>
+  </ul></li>
+  <li><a href="#walkthrough-3.2-t-tests" id="toc-walkthrough-3.2-t-tests" class="nav-link" data-scroll-target="#walkthrough-3.2-t-tests">Walkthrough 3.2: t-tests</a></li>
+  <li><a href="#exercise-3.2-t-tests" id="toc-exercise-3.2-t-tests" class="nav-link" data-scroll-target="#exercise-3.2-t-tests">Exercise 3.2: t-tests</a></li>
+  <li><a href="#walkthrough-3.3-comparative-tests" id="toc-walkthrough-3.3-comparative-tests" class="nav-link" data-scroll-target="#walkthrough-3.3-comparative-tests">Walkthrough 3.3: Comparative Tests</a></li>
+  <li><a href="#exercise-3.3-comparative-tests" id="toc-exercise-3.3-comparative-tests" class="nav-link" data-scroll-target="#exercise-3.3-comparative-tests">Exercise 3.3: Comparative Tests</a></li>
+  <li><a href="#walkthrough-3.4-non-parametric-tests" id="toc-walkthrough-3.4-non-parametric-tests" class="nav-link" data-scroll-target="#walkthrough-3.4-non-parametric-tests">Walkthrough 3.4: Non-Parametric Tests</a></li>
+  <li><a href="#exercise-3.4-non-parametric-tests" id="toc-exercise-3.4-non-parametric-tests" class="nav-link" data-scroll-target="#exercise-3.4-non-parametric-tests">Exercise 3.4: Non-Parametric Tests</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
