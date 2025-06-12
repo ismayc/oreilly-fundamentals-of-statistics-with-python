@@ -100,8 +100,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#compute-and-interpret-measures-of-variation" id="toc-compute-and-interpret-measures-of-variation" class="nav-link" data-scroll-target="#compute-and-interpret-measures-of-variation">Compute and interpret measures of variation</a></li>
   </ul></li>
   <li><a href="#exercise-1.2-data-summarizing" id="toc-exercise-1.2-data-summarizing" class="nav-link" data-scroll-target="#exercise-1.2-data-summarizing">Exercise 1.2: Data Summarizing</a></li>
-  <li><a href="#walkthrough-1.3-cleaning-and-preparing-data-with-pandas" id="toc-walkthrough-1.3-cleaning-and-preparing-data-with-pandas" class="nav-link" data-scroll-target="#walkthrough-1.3-cleaning-and-preparing-data-with-pandas">Walkthrough 1.3: Cleaning and Preparing Data with Pandas</a></li>
-  <li><a href="#exercise-1.3-cleaning-and-preparing-data-with-pandas" id="toc-exercise-1.3-cleaning-and-preparing-data-with-pandas" class="nav-link" data-scroll-target="#exercise-1.3-cleaning-and-preparing-data-with-pandas">Exercise 1.3: Cleaning and Preparing Data with Pandas</a></li>
+  <li><a href="#walkthrough-1.3-data-visualization" id="toc-walkthrough-1.3-data-visualization" class="nav-link" data-scroll-target="#walkthrough-1.3-data-visualization">Walkthrough 1.3: Data Visualization</a></li>
+  <li><a href="#exercise-1.3-data-visualization" id="toc-exercise-1.3-data-visualization" class="nav-link" data-scroll-target="#exercise-1.3-data-visualization">Exercise 1.3: Data Visualization</a></li>
   <li><a href="#walkthrough-1.4-sampling-distribution-generation" id="toc-walkthrough-1.4-sampling-distribution-generation" class="nav-link" data-scroll-target="#walkthrough-1.4-sampling-distribution-generation">Walkthrough 1.4: Sampling Distribution Generation</a></li>
   <li><a href="#exercise-1.4-sampling-distribution-generation" id="toc-exercise-1.4-sampling-distribution-generation" class="nav-link" data-scroll-target="#exercise-1.4-sampling-distribution-generation">Exercise 1.4: Sampling Distribution Generation</a></li>
   </ul></li>
@@ -545,7 +545,8 @@ Name: years_code_pro, dtype: int64</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>50</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>data_dev_survey[<span class="st">'years_code_pro'</span>].var(ddof<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ddof=1 tells Python to calculate the variance in a way that works better when you're using a sample instead of data from everyone</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>data_dev_survey[<span class="st">'years_code_pro'</span>].var(ddof<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>51.17615171500372</code></pre>
 </div>
@@ -665,8 +666,8 @@ Name: years_code_pro, dtype: int64</code></pre>
 </div>
 <hr>
 </section>
-<section id="walkthrough-1.3-cleaning-and-preparing-data-with-pandas" class="level2">
-<h2 class="anchored" data-anchor-id="walkthrough-1.3-cleaning-and-preparing-data-with-pandas">Walkthrough 1.3: Cleaning and Preparing Data with Pandas</h2>
+<section id="walkthrough-1.3-data-visualization" class="level2">
+<h2 class="anchored" data-anchor-id="walkthrough-1.3-data-visualization">Walkthrough 1.3: Data Visualization</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb84"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Histogram for 'years_code_pro'</span></span>
 <span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>sns.histplot(data_dev_survey[<span class="st">'years_code_pro'</span>])<span class="op">;</span></span>
@@ -731,8 +732,8 @@ Name: years_code_pro, dtype: int64</code></pre>
 </div>
 </div>
 </section>
-<section id="exercise-1.3-cleaning-and-preparing-data-with-pandas" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1.3-cleaning-and-preparing-data-with-pandas">Exercise 1.3: Cleaning and Preparing Data with Pandas</h2>
+<section id="exercise-1.3-data-visualization" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-1.3-data-visualization">Exercise 1.3: Data Visualization</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb89"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Histogram for 'acidity'</span></span>
 <span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>sns.histplot(coffee_quality[<span class="st">'acidity'</span>])<span class="op">;</span></span>

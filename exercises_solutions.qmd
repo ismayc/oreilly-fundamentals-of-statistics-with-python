@@ -204,6 +204,7 @@ range_years_code_pro = data_dev_survey['years_code_pro'].max() \
                         - data_dev_survey['years_code_pro'].min()
 range_years_code_pro
 
+# ddof=1 tells Python to calculate the variance in a way that works better when you're using a sample instead of data from everyone
 data_dev_survey['years_code_pro'].var(ddof=1)
 data_dev_survey['years_code_pro'].std(ddof=1)
 ```
@@ -270,7 +271,7 @@ print(f"Maximum: {max_aroma}")
 
 ---
 
-## Walkthrough 1.3: Cleaning and Preparing Data with Pandas
+## Walkthrough 1.3: Data Visualization
 
 ```{python}
 # Histogram for 'years_code_pro'
@@ -315,7 +316,7 @@ plt.ylabel('Yearly Compensation');
 plt.show()
 ```
 
-## Exercise 1.3: Cleaning and Preparing Data with Pandas
+## Exercise 1.3: Data Visualization
 
 ```{python}
 # Histogram for 'acidity'
