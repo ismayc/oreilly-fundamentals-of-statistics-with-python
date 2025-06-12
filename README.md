@@ -60,6 +60,7 @@ Alternatively, I've set up some temporary notebooks on Binder [here](https://myb
      import matplotlib.pyplot as plt
      import seaborn as sns
      import statsmodels.api as sm
+     from sklearn.preprocessing import MinMaxScaler, StandardScaler
      ```
    - Run the cell (`Shift + Enter`). If no errors appear, the libraries are installed correctly.
 
