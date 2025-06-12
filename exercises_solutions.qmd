@@ -1,5 +1,5 @@
 ---
-title: "Walkthroughs and Exercises for *Fundamentals of Statistics with Python*"
+title: "Walkthroughs and Exercises for Fundamentals of Statistics with Python"
 author: "Dr. Chester Ismay"
 format: 
   html:
@@ -8,9 +8,9 @@ format:
     toc-location: left
     fig-width: 10
     fig-height: 5
-  # ipynb:
-  #   fig-width: 10
-  #   fig-height: 5
+  ipynb:
+    fig-width: 10
+    fig-height: 5
 engine: knitr
 ---
 
@@ -73,17 +73,17 @@ data_dev_survey.info()
 #### Using NumPy
 
 ```{python}
-# Calculate the mean of the years_code_pro column
+# Calculate the mean of the 'years_code_pro' column
 np.mean(data_dev_survey['years_code_pro'])
 ```
 
 ```{python}
-# Calculate the median of the work_exp column
+# Calculate the median of the 'work_exp' column
 np.median(data_dev_survey['work_exp'])
 ```
 
 ```{python}
-# Calculate the standard deviation of the converted_comp_yearly column
+# Calculate the standard deviation of the 'converted_comp_yearly' column
 np.std(data_dev_survey['converted_comp_yearly'])
 ```
 
@@ -103,7 +103,7 @@ using_ai = data_dev_survey[data_dev_survey['plans_to_use_ai'] == 'Using']\
 plan_to_use_ai = data_dev_survey[data_dev_survey['plans_to_use_ai'] == 'Plan to use']\
             ['converted_comp_yearly']
 
-# Perform the t-test
+# Perform the t-test looking for a difference in mean salary for the groups
 t_stat, p_value = stats.ttest_ind(using_ai, plan_to_use_ai, equal_var=False)
 
 # Print the results
@@ -136,17 +136,17 @@ coffee_quality.info()
 #### Using NumPy
 
 ```{python}
-# Calculate the mean of the aroma column
+# Calculate the mean of the 'aroma' column
 np.mean(coffee_quality['aroma'])
 ```
 
 ```{python}
-# Calculate the median of the total_cup_points column
+# Calculate the median of the 'total_cup_points' column
 np.median(coffee_quality['total_cup_points'])
 ```
 
 ```{python}
-# Calculate the standard deviation of the moisture_percentage column
+# Calculate the standard deviation of the 'moisture_percentage' column
 np.std(coffee_quality['moisture_percentage'])
 ```
 
@@ -170,7 +170,7 @@ north_american = coffee_quality\
             [coffee_quality['continent_of_origin'] == 'North America']\
             ['total_cup_points']
 
-# Perform the t-test to test for difference in total_cup_points
+# Perform the t-test to test for difference in 'total_cup_points'
 t_stat, p_value = stats.ttest_ind(asian, north_american, equal_var=False)
 
 # Print the results
@@ -199,7 +199,7 @@ data_dev_survey['years_code_pro'].mode()[0]
 ### Compute and interpret measures of variation
 
 ```{python}
-# Calculate spread statistics for years_code_pro
+# Calculate spread statistics for 'years_code_pro'
 range_years_code_pro = data_dev_survey['years_code_pro'].max() \
                         - data_dev_survey['years_code_pro'].min()
 range_years_code_pro
@@ -273,7 +273,7 @@ print(f"Maximum: {max_aroma}")
 ## Walkthrough 1.3: Cleaning and Preparing Data with Pandas
 
 ```{python}
-# Histogram for years_code_pro
+# Histogram for 'years_code_pro'
 sns.histplot(data_dev_survey['years_code_pro']);
 plt.title('Histogram of Years of Coding Experience');
 plt.xlabel('Years of Coding Experience');
@@ -289,7 +289,7 @@ plt.rcParams['figure.figsize'] = (10, 5)
 
 
 ```{python}
-# Box plot for work_exp
+# Box plot for 'work_exp'
 sns.boxplot(y=data_dev_survey['work_exp']);
 plt.title('Box Plot of Work Experience');
 plt.ylabel('Work Experience (years)');
@@ -306,7 +306,7 @@ plt.show()
 
 
 ```{python}
-# Scatter plot for years_code_pro vs. converted_comp_yearly
+# Scatter plot for 'years_code_pro' vs. 'converted_comp_yearly'
 sns.scatterplot(x=data_dev_survey['years_code_pro'], 
                 y=data_dev_survey['converted_comp_yearly']);
 plt.title('Scatter Plot of Years of Coding Experience vs. Yearly Compensation');
@@ -318,7 +318,7 @@ plt.show()
 ## Exercise 1.3: Cleaning and Preparing Data with Pandas
 
 ```{python}
-# Histogram for acidity
+# Histogram for 'acidity'
 sns.histplot(coffee_quality['acidity']);
 plt.title('Histogram of Coffee Acidity');
 plt.xlabel('Acidity');
@@ -327,7 +327,7 @@ plt.show()
 ```
 
 ```{python}
-# Box plot for body
+# Box plot for 'body'
 sns.boxplot(y=coffee_quality['body']);
 plt.title('Box Plot of Coffee Body');
 plt.ylabel('Body');
@@ -339,7 +339,7 @@ plt.show()
 # This sets the color of the points to dark with a light grid background
 sns.set_style("darkgrid")
 
-# Scatter plot for body vs. acidity
+# Scatter plot for 'body' vs. 'acidity'
 sns.scatterplot(x=coffee_quality['body'], y=coffee_quality['acidity']);
 plt.title('Scatter Plot of Body vs. Acidity');
 plt.xlabel('Body');
@@ -385,7 +385,7 @@ plt.show()
 ## Exercise 1.4: Sampling Distribution Generation
 
 ```{python}
-# Think of our aroma data as a population to draw from
+# Think of our 'aroma' data as a population to draw from
 population = coffee_quality['aroma'].dropna().values
 
 # Parameters
@@ -434,7 +434,8 @@ plt.show()
 ```
 
 ```{python}
-# Pair plot for selected variables 'years_code_pro', 'work_exp', 'converted_comp_yearly'
+# Pair plot for selected variables 
+# 'years_code_pro', 'work_exp', 'converted_comp_yearly'
 sns.pairplot(data_dev_survey, 
              vars=['years_code_pro', 'work_exp', 'converted_comp_yearly']);
 plt.suptitle('Pair Plot of Selected Variables', y=1);
@@ -509,10 +510,10 @@ coffee_quality['grading_date'] = pd.to_datetime(
   coffee_quality['grading_date']
 )
 
-# Extract the month and year from the grading_date column
+# Extract the month and year from the 'grading_date' column
 coffee_quality['month'] = coffee_quality['grading_date'].dt.to_period('M')
 
-# Aggregate the mean total_cup_points by month
+# Aggregate the mean 'total_cup_points' by month
 monthly_mean = coffee_quality.groupby('month')['total_cup_points'].mean()
 
 # Plot the mean total_cup_points by month as a line chart
@@ -545,20 +546,20 @@ data_dev_survey.info()
 ### Data Visualization
 
 ```{python}
-# Histogram for years_code_pro
+# Histogram for 'years_code_pro'
 sns.histplot(data_dev_survey['years_code_pro']);
 plt.title('Histogram of Years of Coding Experience');
 plt.xlabel('Years of Coding Experience');
 plt.ylabel('Frequency');
 plt.show()
 
-# Box plot for work_exp
+# Box plot for 'work_exp'
 sns.boxplot(y=data_dev_survey['work_exp']);
 plt.title('Box Plot of Work Experience');
 plt.ylabel('Work Experience (years)');
 plt.show()
 
-# Scatter plot for years_code_pro vs. converted_comp_yearly
+# Scatter plot for 'years_code_pro' vs. 'converted_comp_yearly'
 sns.scatterplot(x=data_dev_survey['years_code'],
                 y=data_dev_survey['converted_comp_yearly']);
 plt.title('Scatter Plot of Years of Coding Experience vs. Yearly Compensation');
@@ -592,20 +593,20 @@ coffee_quality = coffee_quality.drop_duplicates()
 ### Data Visualization
 
 ```{python}
-# Histogram for aroma
+# Histogram for 'aroma'
 sns.histplot(coffee_quality['aroma']);
 plt.title('Histogram of Coffee Aroma');
 plt.xlabel('Aroma');
 plt.ylabel('Frequency');
 plt.show()
 
-# Box plot for acidity
+# Box plot for 'acidity'
 sns.boxplot(y=coffee_quality['acidity']);
 plt.title('Box Plot of Coffee Acidity');
 plt.ylabel('Acidity');
 plt.show()
 
-# Scatter plot for aroma vs. total_cup_points
+# Scatter plot for 'aroma' vs. 'total_cup_points'
 sns.scatterplot(x=coffee_quality['aroma'], 
                 y=coffee_quality['total_cup_points']);
 plt.title('Scatter Plot of Aroma vs. Total Cup Points');
@@ -686,19 +687,19 @@ data_dev_survey_imputed = data_dev_survey_imputed[~(
 ```{python}
 from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
-# Normalization on converted_comp_yearly
+# Normalization on 'converted_comp_yearly'
 scaler = MinMaxScaler()
 data_dev_survey_imputed[['converted_comp_yearly']] = scaler.fit_transform(
   data_dev_survey_imputed[['converted_comp_yearly']]
 )
 
-# Standardization on work_exp
+# Standardization on 'work_exp'
 scaler = StandardScaler()
 data_dev_survey_imputed[['work_exp']] = scaler.fit_transform(
   data_dev_survey_imputed[['work_exp']]
 )
 
-# Encoding categorical variables (country)
+# Encoding categorical variables ('country')
 data_dev_survey_imputed = pd.get_dummies(data_dev_survey_imputed, 
                                          columns=['country'])
 ```
@@ -706,20 +707,20 @@ data_dev_survey_imputed = pd.get_dummies(data_dev_survey_imputed,
 ### Data Visualizations on Preprocessed Data
 
 ```{python}
-# Histogram for years_code_pro
+# Histogram for 'years_code_pro'
 sns.histplot(data_dev_survey_imputed['years_code_pro']);
 plt.title('Histogram of Years of Coding Experience');
 plt.xlabel('Years of Coding Experience');
 plt.ylabel('Frequency');
 plt.show()
 
-# Box plot for work_exp
+# Box plot for 'work_exp'
 sns.boxplot(y=data_dev_survey_imputed['work_exp']);
 plt.title('Box Plot of Work Experience');
 plt.ylabel('Work Experience (years)');
 plt.show()
 
-# Scatter plot for years_code_pro vs. converted_comp_yearly
+# Scatter plot for 'years_code_pro' vs. 'converted_comp_yearly'
 sns.scatterplot(x=data_dev_survey_imputed['years_code_pro'],
                 y=data_dev_survey_imputed['converted_comp_yearly']);
 plt.title('Scatter Plot of Years of Coding Experience vs. Yearly Compensation');
@@ -787,7 +788,7 @@ coffee_quality_imputed = coffee_quality_imputed[~(
 ### Data Transformation
 
 ```{python}
-# Normalization on total_cup_points
+# Normalization on 'total_cup_points'
 scaler = MinMaxScaler()
 coffee_quality_imputed[['total_cup_points']] = \
   scaler.fit_transform(coffee_quality_imputed[['total_cup_points']])
@@ -804,7 +805,7 @@ coffee_quality_imputed[['acidity']] = scaler.fit_transform(
 coffee_quality_imputed.loc[:, ['acidity']] = \
   scaler.fit_transform(coffee_quality_imputed[['acidity']])
 
-# Encoding categorical variables (country and continent of origin)
+# Encoding categorical variables ('country' and 'continent_of_origin')
 coffee_quality_imputed = pd.get_dummies(
   coffee_quality_imputed, 
   columns=['country_of_origin', 'continent_of_origin'])
@@ -813,20 +814,20 @@ coffee_quality_imputed = pd.get_dummies(
 ### Data Visualizations on Preprocessed Data
 
 ```{python}
-# Histogram for aroma
+# Histogram for 'aroma'
 sns.histplot(coffee_quality_imputed['aroma']);
 plt.title('Histogram of Coffee Aroma');
 plt.xlabel('Aroma');
 plt.ylabel('Frequency');
 plt.show()
 
-# Box plot for acidity
+# Box plot for 'acidity'
 sns.boxplot(y=coffee_quality_imputed['acidity']);
 plt.title('Box Plot of Coffee Acidity');
 plt.ylabel('Acidity');
 plt.show()
 
-# Scatter plot for aroma vs. total_cup_points
+# Scatter plot for 'aroma' vs. 'total_cup_points'
 sns.scatterplot(x=coffee_quality_imputed['aroma'], 
                 y=coffee_quality_imputed['total_cup_points']);
 plt.title('Scatter Plot of Aroma vs. Total Cup Points');
@@ -867,7 +868,7 @@ plt.show()
 ### Create Scatter Plots for Meaningful Correlations
 
 ```{python}
-# Scatter plot for years_code_pro vs. years_code
+# Scatter plot for 'years_code_pro' vs. 'years_code'
 sns.scatterplot(x=data_dev_survey['years_code_pro'], 
                 y=data_dev_survey['years_code']);
 plt.title('Scatter Plot of Years of Professional Coding Experience vs. Years of Professional Coding Experience');
@@ -875,7 +876,7 @@ plt.xlabel('Years of Professional Coding Experience');
 plt.ylabel('Years of Coding Experience');
 plt.show()
 
-# Scatter plot for work_exp vs. years_code_pro
+# Scatter plot for 'work_exp' vs. 'years_code_pro'
 sns.scatterplot(x=data_dev_survey['work_exp'], 
                 y=data_dev_survey['years_code_pro']);
 plt.title('Scatter Plot of Work Experience vs. Years of Professional Coding Experience');
@@ -892,7 +893,7 @@ plt.show()
 # Select only numeric columns
 numeric_columns = coffee_quality.select_dtypes(include=[np.number])
 
-# Remove clean_cup and sweetness too
+# Remove 'clean_cup' and 'sweetness' too
 numeric_columns = numeric_columns.drop(columns=['clean_cup', 'sweetness'], 
                                        errors='ignore')
 
@@ -917,7 +918,7 @@ plt.show()
 ### Create Scatter Plots for Meaningful Correlations
 
 ```{python}
-# Scatter plot for flavor vs. total_cup_points
+# Scatter plot for 'flavor' vs. 'total_cup_points'
 sns.scatterplot(x=coffee_quality['flavor'], 
                 y=coffee_quality['total_cup_points']);
 plt.title('Scatter Plot of Flavor vs. Total Cup Points');
@@ -925,7 +926,7 @@ plt.xlabel('Flavor');
 plt.ylabel('Total Cup Points');
 plt.show()
 
-# Scatter plot for overall vs. total_cup_points
+# Scatter plot for 'overall' vs. 'total_cup_points'
 sns.scatterplot(x=coffee_quality['overall'], 
                 y=coffee_quality['total_cup_points']);
 plt.title('Scatter Plot of Overall vs. Total Cup Points');
@@ -970,7 +971,7 @@ plt.show()
 ```
 
 
-## Exercise 3.1: 
+## Exercise 3.1: Simulating Distributions
 
 ### Simulating Poisson
 
@@ -1018,7 +1019,7 @@ print(f"P-value: {p_value}")
 ```
 
 ```{python}
-# Two-sample t-test comparing compensation across plans_to_use_ai groups
+# Two-sample t-test comparing compensation across 'plans_to_use_ai' groups
 # Checking for a difference
 using = \
   data_dev_survey[data_dev_survey['plans_to_use_ai'] == 'Using']\
@@ -1038,7 +1039,7 @@ print(f"P-value: {p_value}")
 ## Exercise 3.2: t-tests
 
 ```{python}
-# One-sample t-test checking for evidence that mu flavor < 7.8
+# One-sample t-test checking for evidence that mu 'flavor' < 7.8
 flavor_mean = 7.8
 t_stat, p_value = stats.ttest_1samp(
   coffee_quality['flavor'].dropna(), 
@@ -1051,7 +1052,8 @@ print(f"P-value: {p_value}")
 ```
 
 ```{python}
-# Two-sample t-test checking for difference in Columbia and Brazil total_cup_points
+# Two-sample t-test checking for difference in 
+# Columbia and Brazil 'total_cup_points'
 colombia = coffee_quality[coffee_quality['country_of_origin'] == 'Colombia'] \
                 ['total_cup_points'] \
                 .dropna()
@@ -1075,7 +1077,7 @@ The `*groups` syntax unpacks the lists from the `groups` variable so that each l
 
 ```{python}
 # Perform one-way ANOVA comparing compensation across different levels of
-# remote_work
+# 'remote_work'
 groups = data_dev_survey.groupby('remote_work')['converted_comp_yearly']\
             .apply(list)
 f_stat, p_value = stats.f_oneway(*groups)
@@ -1085,7 +1087,7 @@ print(f"P-value: {p_value}")
 ```
 
 ```{python}
-# Create a contingency table of employment and remote_work
+# Create a contingency table of 'employment' and 'remote_work'
 contingency_table = pd.crosstab(data_dev_survey['employment'], 
                                 data_dev_survey['remote_work'])
 
@@ -1100,7 +1102,7 @@ print(f"P-value: {p}")
 ## Exercise 3.3: Comparative Tests
 
 ```{python}
-# Perform one-way ANOVA comparing total_cup_points across country_of_origin
+# Perform one-way ANOVA comparing 'total_cup_points' across 'country_of_origin'
 groups = coffee_quality.groupby('country_of_origin')['total_cup_points']\
             .apply(list)
 f_stat, p_value = stats.f_oneway(*groups)
@@ -1110,8 +1112,8 @@ print(f"P-value: {p_value}")
 ```
 
 ```{python}
-# Perform a chi-square test of independence for processing_method versus
-# continent_of_origin
+# Perform a chi-square test of independence for 'processing_method' versus
+# 'continent_of_origin'
 
 # Create a contingency table
 contingency_table = pd.crosstab(coffee_quality['processing_method'],
@@ -1129,7 +1131,7 @@ print(f"P-value: {p}")
 ## Walkthrough 3.4: Non-Parametric Tests
 
 ```{python}
-# Perform Mann-Whitney U Test comparing compensation for Remote and In-person
+# Perform Mann-Whitney U Test comparing compensation for 'Remote' and 'In-person'
 group1 = data_dev_survey[data_dev_survey['remote_work'] == 'Remote']\
             ['converted_comp_yearly']\
             .dropna()
@@ -1155,7 +1157,7 @@ print(f"P-value: {p_value}")
 ## Exercise 3.4: Non-Parametric Tests
 
 ```{python}
-# Perform Mann-Whitney U Test comparing total_cup_points for Guatemala
+# Perform Mann-Whitney U Test comparing 'total_cup_points' for Guatemala
 # and Honduras
 group1 = coffee_quality\
     [coffee_quality['country_of_origin'] == 'Guatemala']\
@@ -1173,8 +1175,8 @@ print(f"P-value: {p_value}")
 ```
 
 ```{python}
-# Perform Kruskal-Wallis H Test comparing total_cup_points across 
-# continent_of_origin
+# Perform Kruskal-Wallis H Test comparing 'total_cup_points' across 
+# 'continent_of_origin'
 groups = coffee_quality.groupby('continent_of_origin') \
   ['total_cup_points'] \
   .apply(list)

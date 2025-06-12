@@ -1,5 +1,5 @@
 ---
-title: "Walkthroughs and Exercises for *Fundamentals of Statistics with Python*"
+title: "Walkthroughs and Exercises for Fundamentals of Statistics with Python"
 author: "Dr. Chester Ismay"
 format: ipynb
 engine: knitr
@@ -90,7 +90,7 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
 
 
-# Perform the t-test
+# Perform the t-test looking for a difference in mean salary for the groups
 
 
 # Print the results
@@ -186,7 +186,7 @@ be good to proceed here. If not, scroll up and run it.
 ```
 
 ```{python}
-# Calculate the five-number summary for 'years_code_pro'
+# Calculate the five-number summary for years_code_pro
 
 
 # Print them out
@@ -197,17 +197,17 @@ be good to proceed here. If not, scroll up and run it.
 ## Exercise 1.2: Data Summarizing
 
 ```{python}
-# Calculate center statistics for 'aroma'
+# Calculate center statistics for aroma
 
 ```
 
 ```{python}
-# Calculate spread statistics for 'aroma'
+# Calculate spread statistics for aroma
 
 ```
 
 ```{python}
-# Calculate the five-number summary for 'aroma'
+# Calculate the five-number summary for aroma
 
 ```
 
@@ -262,7 +262,7 @@ be good to proceed here. If not, scroll up and run it.
 ```{python}
 # Think of our data as a population to draw from
 
-# Generate a large sample from the 'converted_comp_yearly' column
+# Generate a large sample from the converted_comp_yearly column
 # Parameters
 
 
@@ -314,7 +314,7 @@ be good to proceed here. If not, scroll up and run it.
 ```
 
 ```{python}
-# Pair plot for selected variables 'years_code_pro', 'work_exp', 'converted_comp_yearly'
+# Pair plot for selected variables years_code_pro, work_exp, converted_comp_yearly
 
 ```
 
@@ -333,7 +333,7 @@ be good to proceed here. If not, scroll up and run it.
 ```{python, eval=FALSE}
 # Select only numeric columns
 
-# Drop the 'clean_cup' and 'sweetness' columns since they are always 10
+# Drop the clean_cup and sweetness columns since they are always 10
 numeric_columns = numeric_columns.drop(columns=['clean_cup', 'sweetness'], errors='ignore')
 
 # Calculate the correlation matrix for numeric columns
