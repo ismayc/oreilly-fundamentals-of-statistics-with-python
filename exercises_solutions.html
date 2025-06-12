@@ -201,6 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<!-- https://ismay-oreilly-fsp.netlify.app/exercises_solutions.html -->
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the packages directly if needed with pip</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the repo's README below for more information</span></span>
@@ -287,21 +288,21 @@ memory usage: 221.9+ KB</code></pre>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the mean of the years_code_pro column</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>np.mean(data_dev_survey[<span class="st">'years_code_pro'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.float64(7.961115807269653)</code></pre>
+<pre><code>7.961115807269653</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the median of the work_exp column</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>np.median(data_dev_survey[<span class="st">'work_exp'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.float64(7.0)</code></pre>
+<pre><code>7.0</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the standard deviation of the converted_comp_yearly column</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>np.std(data_dev_survey[<span class="st">'converted_comp_yearly'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.float64(81861.24268446874)</code></pre>
+<pre><code>81861.24268446874</code></pre>
 </div>
 </div>
 </section>
@@ -422,21 +423,21 @@ memory usage: 48.6+ KB</code></pre>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the mean of the aroma column</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>np.mean(coffee_quality[<span class="st">'aroma'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.float64(7.721062801932368)</code></pre>
+<pre><code>7.721062801932368</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the median of the total_cup_points column</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>np.median(coffee_quality[<span class="st">'total_cup_points'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.float64(83.75)</code></pre>
+<pre><code>83.75</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the standard deviation of the moisture_percentage column</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>np.std(coffee_quality[<span class="st">'moisture_percentage'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.float64(1.2444515707780472)</code></pre>
+<pre><code>1.2444515707780472</code></pre>
 </div>
 </div>
 </section>
@@ -491,7 +492,7 @@ max              13.500000  </code></pre>
 <span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>            [coffee_quality[<span class="st">'continent_of_origin'</span>] <span class="op">==</span> <span class="st">'North America'</span>]<span class="op">\</span></span>
 <span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>            [<span class="st">'total_cup_points'</span>]</span>
 <span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform the t-test</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform the t-test to test for difference in total_cup_points</span></span>
 <span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>t_stat, p_value <span class="op">=</span> stats.ttest_ind(asian, north_american, equal_var<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the results</span></span>
@@ -516,11 +517,11 @@ max              13.500000  </code></pre>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate center statistics for years_code_pro</span></span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>data_dev_survey[<span class="st">'years_code_pro'</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.float64(7.961115807269653)</code></pre>
+<pre><code>7.961115807269653</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>data_dev_survey[<span class="st">'years_code_pro'</span>].median()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.float64(6.0)</code></pre>
+<pre><code>6.0</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>data_dev_survey[<span class="st">'years_code_pro'</span>].mode()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -530,7 +531,7 @@ Name: years_code_pro, dtype: int64</code></pre>
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To extract just the value for mode</span></span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>data_dev_survey[<span class="st">'years_code_pro'</span>].mode()[<span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.int64(2)</code></pre>
+<pre><code>2</code></pre>
 </div>
 </div>
 </section>
@@ -542,15 +543,15 @@ Name: years_code_pro, dtype: int64</code></pre>
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>                        <span class="op">-</span> data_dev_survey[<span class="st">'years_code_pro'</span>].<span class="bu">min</span>()</span>
 <span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>range_years_code_pro</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.int64(50)</code></pre>
+<pre><code>50</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>data_dev_survey[<span class="st">'years_code_pro'</span>].var(ddof<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.float64(51.17615171500372)</code></pre>
+<pre><code>51.17615171500372</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>data_dev_survey[<span class="st">'years_code_pro'</span>].std(ddof<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>np.float64(7.153750884326607)</code></pre>
+<pre><code>7.153750884326607</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -903,18 +904,20 @@ Name: years_code_pro, dtype: int64</code></pre>
 <span id="cb96-3"><a href="#cb96-3" aria-hidden="true" tabindex="-1"></a>  pd.to_datetime(data_dev_survey[<span class="st">'survey_completion_date'</span>])</span>
 <span id="cb96-4"><a href="#cb96-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb96-5"><a href="#cb96-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Count the number of surveys completed each day</span></span>
-<span id="cb96-6"><a href="#cb96-6" aria-hidden="true" tabindex="-1"></a>daily_counts <span class="op">=</span> data_dev_survey[<span class="st">'survey_completion_date'</span>].value_counts().sort_index()</span>
-<span id="cb96-7"><a href="#cb96-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb96-8"><a href="#cb96-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the counts as a line chart</span></span>
-<span id="cb96-9"><a href="#cb96-9" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))<span class="op">;</span></span>
-<span id="cb96-10"><a href="#cb96-10" aria-hidden="true" tabindex="-1"></a>plt.plot(daily_counts.index, daily_counts.values, marker<span class="op">=</span><span class="st">'o'</span>)<span class="op">;</span></span>
-<span id="cb96-11"><a href="#cb96-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Number of Surveys Completed Each Day in May 2023'</span>)<span class="op">;</span></span>
-<span id="cb96-12"><a href="#cb96-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Day Completed'</span>)<span class="op">;</span></span>
-<span id="cb96-13"><a href="#cb96-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Surveys'</span>)<span class="op">;</span></span>
-<span id="cb96-14"><a href="#cb96-14" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">30</span>)<span class="op">;</span></span>
-<span id="cb96-15"><a href="#cb96-15" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)<span class="op">;</span></span>
-<span id="cb96-16"><a href="#cb96-16" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()<span class="op">;</span></span>
-<span id="cb96-17"><a href="#cb96-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb96-6"><a href="#cb96-6" aria-hidden="true" tabindex="-1"></a>daily_counts <span class="op">=</span> data_dev_survey[<span class="st">'survey_completion_date'</span>] <span class="op">\</span></span>
+<span id="cb96-7"><a href="#cb96-7" aria-hidden="true" tabindex="-1"></a>  .value_counts() <span class="op">\</span></span>
+<span id="cb96-8"><a href="#cb96-8" aria-hidden="true" tabindex="-1"></a>  .sort_index()</span>
+<span id="cb96-9"><a href="#cb96-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb96-10"><a href="#cb96-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the counts as a line chart</span></span>
+<span id="cb96-11"><a href="#cb96-11" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))<span class="op">;</span></span>
+<span id="cb96-12"><a href="#cb96-12" aria-hidden="true" tabindex="-1"></a>plt.plot(daily_counts.index, daily_counts.values, marker<span class="op">=</span><span class="st">'o'</span>)<span class="op">;</span></span>
+<span id="cb96-13"><a href="#cb96-13" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Number of Surveys Completed Each Day in May 2023'</span>)<span class="op">;</span></span>
+<span id="cb96-14"><a href="#cb96-14" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Day Completed'</span>)<span class="op">;</span></span>
+<span id="cb96-15"><a href="#cb96-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Surveys'</span>)<span class="op">;</span></span>
+<span id="cb96-16"><a href="#cb96-16" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">30</span>)<span class="op">;</span></span>
+<span id="cb96-17"><a href="#cb96-17" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)<span class="op">;</span></span>
+<span id="cb96-18"><a href="#cb96-18" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()<span class="op">;</span></span>
+<span id="cb96-19"><a href="#cb96-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -980,24 +983,26 @@ Name: years_code_pro, dtype: int64</code></pre>
 <div class="sourceCode cell-code" id="cb99"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the mean total_cup_points for each grading_date</span></span>
 <span id="cb99-2"><a href="#cb99-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb99-3"><a href="#cb99-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to datetime</span></span>
-<span id="cb99-4"><a href="#cb99-4" aria-hidden="true" tabindex="-1"></a>coffee_quality[<span class="st">'grading_date'</span>] <span class="op">=</span> pd.to_datetime(coffee_quality[<span class="st">'grading_date'</span>])</span>
-<span id="cb99-5"><a href="#cb99-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb99-6"><a href="#cb99-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the month and year from the grading_date column</span></span>
-<span id="cb99-7"><a href="#cb99-7" aria-hidden="true" tabindex="-1"></a>coffee_quality[<span class="st">'month'</span>] <span class="op">=</span> coffee_quality[<span class="st">'grading_date'</span>].dt.to_period(<span class="st">'M'</span>)</span>
-<span id="cb99-8"><a href="#cb99-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb99-9"><a href="#cb99-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Aggregate the mean total_cup_points by month</span></span>
-<span id="cb99-10"><a href="#cb99-10" aria-hidden="true" tabindex="-1"></a>monthly_mean <span class="op">=</span> coffee_quality.groupby(<span class="st">'month'</span>)[<span class="st">'total_cup_points'</span>].mean()</span>
-<span id="cb99-11"><a href="#cb99-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb99-12"><a href="#cb99-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the mean total_cup_points by month as a line chart</span></span>
-<span id="cb99-13"><a href="#cb99-13" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))<span class="op">;</span></span>
-<span id="cb99-14"><a href="#cb99-14" aria-hidden="true" tabindex="-1"></a>plt.plot(monthly_mean.index.astype(<span class="bu">str</span>), monthly_mean.values, marker<span class="op">=</span><span class="st">'o'</span>)<span class="op">;</span></span>
-<span id="cb99-15"><a href="#cb99-15" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Mean Total Cup Points by Month Graded'</span>)<span class="op">;</span></span>
-<span id="cb99-16"><a href="#cb99-16" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Month'</span>)<span class="op">;</span></span>
-<span id="cb99-17"><a href="#cb99-17" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Mean Total Cup Points'</span>)<span class="op">;</span></span>
-<span id="cb99-18"><a href="#cb99-18" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)<span class="op">;</span></span>
-<span id="cb99-19"><a href="#cb99-19" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)<span class="op">;</span></span>
-<span id="cb99-20"><a href="#cb99-20" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()<span class="op">;</span></span>
-<span id="cb99-21"><a href="#cb99-21" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb99-4"><a href="#cb99-4" aria-hidden="true" tabindex="-1"></a>coffee_quality[<span class="st">'grading_date'</span>] <span class="op">=</span> pd.to_datetime(</span>
+<span id="cb99-5"><a href="#cb99-5" aria-hidden="true" tabindex="-1"></a>  coffee_quality[<span class="st">'grading_date'</span>]</span>
+<span id="cb99-6"><a href="#cb99-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb99-7"><a href="#cb99-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-8"><a href="#cb99-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the month and year from the grading_date column</span></span>
+<span id="cb99-9"><a href="#cb99-9" aria-hidden="true" tabindex="-1"></a>coffee_quality[<span class="st">'month'</span>] <span class="op">=</span> coffee_quality[<span class="st">'grading_date'</span>].dt.to_period(<span class="st">'M'</span>)</span>
+<span id="cb99-10"><a href="#cb99-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-11"><a href="#cb99-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Aggregate the mean total_cup_points by month</span></span>
+<span id="cb99-12"><a href="#cb99-12" aria-hidden="true" tabindex="-1"></a>monthly_mean <span class="op">=</span> coffee_quality.groupby(<span class="st">'month'</span>)[<span class="st">'total_cup_points'</span>].mean()</span>
+<span id="cb99-13"><a href="#cb99-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-14"><a href="#cb99-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the mean total_cup_points by month as a line chart</span></span>
+<span id="cb99-15"><a href="#cb99-15" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))<span class="op">;</span></span>
+<span id="cb99-16"><a href="#cb99-16" aria-hidden="true" tabindex="-1"></a>plt.plot(monthly_mean.index.astype(<span class="bu">str</span>), monthly_mean.values, marker<span class="op">=</span><span class="st">'o'</span>)<span class="op">;</span></span>
+<span id="cb99-17"><a href="#cb99-17" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Mean Total Cup Points by Month Graded'</span>)<span class="op">;</span></span>
+<span id="cb99-18"><a href="#cb99-18" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Month'</span>)<span class="op">;</span></span>
+<span id="cb99-19"><a href="#cb99-19" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Mean Total Cup Points'</span>)<span class="op">;</span></span>
+<span id="cb99-20"><a href="#cb99-20" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)<span class="op">;</span></span>
+<span id="cb99-21"><a href="#cb99-21" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)<span class="op">;</span></span>
+<span id="cb99-22"><a href="#cb99-22" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()<span class="op">;</span></span>
+<span id="cb99-23"><a href="#cb99-23" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -1047,7 +1052,7 @@ dtype: int64</code></pre>
 <span id="cb102-3"><a href="#cb102-3" aria-hidden="true" tabindex="-1"></a>data_dev_survey.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
-RangeIndex: 1183 entries, 0 to 1182
+Int64Index: 1183 entries, 0 to 1182
 Data columns (total 24 columns):
  #   Column                      Non-Null Count  Dtype         
 ---  ------                      --------------  -----         
@@ -1076,7 +1081,7 @@ Data columns (total 24 columns):
  22  converted_comp_yearly       1183 non-null   int64         
  23  survey_completion_date      1183 non-null   datetime64[ns]
 dtypes: datetime64[ns](1), float64(1), int64(4), object(18)
-memory usage: 221.9+ KB</code></pre>
+memory usage: 231.1+ KB</code></pre>
 </div>
 </div>
 </section>
@@ -1133,22 +1138,22 @@ memory usage: 221.9+ KB</code></pre>
 <pre><code>        response_id   years_code  years_code_pro     work_exp  \
 count   1183.000000  1182.000000     1183.000000  1183.000000   
 mean   43949.774303    12.534687        7.961116     9.650042   
+std    25327.979423     8.384094        7.153751     8.189750   
 min      164.000000     1.000000        0.000000     0.000000   
 25%    22733.000000     7.000000        3.000000     4.000000   
 50%    43305.000000    10.000000        6.000000     7.000000   
 75%    65791.000000    16.000000       10.000000    13.000000   
 max    89072.000000    50.000000       50.000000    48.000000   
-std    25327.979423     8.384094        7.153751     8.189750   
 
-       converted_comp_yearly         survey_completion_date  
-count           1.183000e+03                           1183  
-mean            9.068442e+04  2023-05-15 19:40:43.617920512  
-min             3.000000e+00            2023-05-01 00:00:00  
-25%             4.159300e+04            2023-05-08 00:00:00  
-50%             7.271400e+04            2023-05-16 00:00:00  
-75%             1.200000e+05            2023-05-24 00:00:00  
-max             1.200000e+06            2023-05-31 00:00:00  
-std             8.189586e+04                            NaN  </code></pre>
+       converted_comp_yearly  
+count           1.183000e+03  
+mean            9.068442e+04  
+std             8.189586e+04  
+min             3.000000e+00  
+25%             4.159300e+04  
+50%             7.271400e+04  
+75%             1.200000e+05  
+max             1.200000e+06  </code></pre>
 </div>
 </div>
 </section>
@@ -1249,35 +1254,35 @@ dtype: int64</code></pre>
 <div class="sourceCode cell-code" id="cb115"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb115-1"><a href="#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate summary statistics</span></span>
 <span id="cb115-2"><a href="#cb115-2" aria-hidden="true" tabindex="-1"></a>coffee_quality.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                        grading_date       aroma      flavor  aftertaste  \
-count                            207  207.000000  207.000000  207.000000   
-mean   2022-11-17 11:42:36.521739008    7.721063    7.744734    7.599758   
-min              2022-05-11 00:00:00    6.500000    6.750000    6.670000   
-25%              2022-09-21 00:00:00    7.580000    7.580000    7.420000   
-50%              2022-11-15 00:00:00    7.670000    7.750000    7.580000   
-75%              2023-01-06 00:00:00    7.920000    7.920000    7.750000   
-max              2023-04-28 00:00:00    8.580000    8.500000    8.420000   
-std                              NaN    0.287626    0.279613    0.275911   
+<pre><code>            aroma      flavor  aftertaste    acidity        body     balance  \
+count  207.000000  207.000000  207.000000  207.00000  207.000000  207.000000   
+mean     7.721063    7.744734    7.599758    7.69029    7.640918    7.644058   
+std      0.287626    0.279613    0.275911    0.25951    0.233499    0.256299   
+min      6.500000    6.750000    6.670000    6.83000    6.830000    6.670000   
+25%      7.580000    7.580000    7.420000    7.50000    7.500000    7.500000   
+50%      7.670000    7.750000    7.580000    7.67000    7.670000    7.670000   
+75%      7.920000    7.920000    7.750000    7.87500    7.750000    7.790000   
+max      8.580000    8.500000    8.420000    8.58000    8.250000    8.420000   
 
-         acidity        body     balance  uniformity  clean_cup  sweetness  \
-count  207.00000  207.000000  207.000000  207.000000      207.0      207.0   
-mean     7.69029    7.640918    7.644058    9.990338       10.0       10.0   
-min      6.83000    6.830000    6.670000    8.670000       10.0       10.0   
-25%      7.50000    7.500000    7.500000   10.000000       10.0       10.0   
-50%      7.67000    7.670000    7.670000   10.000000       10.0       10.0   
-75%      7.87500    7.750000    7.790000   10.000000       10.0       10.0   
-max      8.58000    8.250000    8.420000   10.000000       10.0       10.0   
-std      0.25951    0.233499    0.256299    0.103306        0.0        0.0   
+       uniformity  clean_cup  sweetness     overall  total_cup_points  \
+count  207.000000      207.0      207.0  207.000000        207.000000   
+mean     9.990338       10.0       10.0    7.676812         83.706570   
+std      0.103306        0.0        0.0    0.306359          1.730417   
+min      8.670000       10.0       10.0    6.670000         78.000000   
+25%     10.000000       10.0       10.0    7.500000         82.580000   
+50%     10.000000       10.0       10.0    7.670000         83.750000   
+75%     10.000000       10.0       10.0    7.920000         84.830000   
+max     10.000000       10.0       10.0    8.580000         89.330000   
 
-          overall  total_cup_points  moisture_percentage  
-count  207.000000        207.000000           207.000000  
-mean     7.676812         83.706570            10.735266  
-min      6.670000         78.000000             0.000000  
-25%      7.500000         82.580000            10.100000  
-50%      7.670000         83.750000            10.800000  
-75%      7.920000         84.830000            11.500000  
-max      8.580000         89.330000            13.500000  
-std      0.306359          1.730417             1.247468  </code></pre>
+       moisture_percentage  
+count           207.000000  
+mean             10.735266  
+std               1.247468  
+min               0.000000  
+25%              10.100000  
+50%              10.800000  
+75%              11.500000  
+max              13.500000  </code></pre>
 </div>
 </div>
 <hr>
@@ -1292,7 +1297,7 @@ std      0.306359          1.730417             1.247468  </code></pre>
 <span id="cb117-2"><a href="#cb117-2" aria-hidden="true" tabindex="-1"></a>data_dev_survey.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
-RangeIndex: 1183 entries, 0 to 1182
+Int64Index: 1183 entries, 0 to 1182
 Data columns (total 24 columns):
  #   Column                      Non-Null Count  Dtype         
 ---  ------                      --------------  -----         
@@ -1321,7 +1326,7 @@ Data columns (total 24 columns):
  22  converted_comp_yearly       1183 non-null   int64         
  23  survey_completion_date      1183 non-null   datetime64[ns]
 dtypes: datetime64[ns](1), float64(1), int64(4), object(18)
-memory usage: 221.9+ KB</code></pre>
+memory usage: 231.1+ KB</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb119"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb119-1"><a href="#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows of the dataset</span></span>
 <span id="cb119-2"><a href="#cb119-2" aria-hidden="true" tabindex="-1"></a>data_dev_survey.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1658,7 +1663,7 @@ dtype: int64</code></pre>
 <span id="cb132-2"><a href="#cb132-2" aria-hidden="true" tabindex="-1"></a>coffee_quality.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
-RangeIndex: 207 entries, 0 to 206
+Int64Index: 207 entries, 0 to 206
 Data columns (total 31 columns):
  #   Column               Non-Null Count  Dtype         
 ---  ------               --------------  -----         
@@ -1694,7 +1699,7 @@ Data columns (total 31 columns):
  29  certification_body   207 non-null    object        
  30  month                207 non-null    period[M]     
 dtypes: datetime64[ns](1), float64(10), int64(2), object(17), period[M](1)
-memory usage: 50.3+ KB</code></pre>
+memory usage: 51.8+ KB</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb134"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows of the dataset</span></span>
 <span id="cb134-2"><a href="#cb134-2" aria-hidden="true" tabindex="-1"></a>coffee_quality.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1807,14 +1812,17 @@ dtype: int64</code></pre>
 <span id="cb138-2"><a href="#cb138-2" aria-hidden="true" tabindex="-1"></a>coffee_quality_imputed <span class="op">=</span> coffee_quality.copy()</span>
 <span id="cb138-3"><a href="#cb138-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb138-4"><a href="#cb138-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Select only numeric columns</span></span>
-<span id="cb138-5"><a href="#cb138-5" aria-hidden="true" tabindex="-1"></a>numeric_columns <span class="op">=</span> coffee_quality_imputed.select_dtypes(include<span class="op">=</span>[np.number]).columns</span>
-<span id="cb138-6"><a href="#cb138-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb138-7"><a href="#cb138-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Fill missing values in numeric columns with the median</span></span>
-<span id="cb138-8"><a href="#cb138-8" aria-hidden="true" tabindex="-1"></a>coffee_quality_imputed[numeric_columns] <span class="op">=</span> coffee_quality_imputed[numeric_columns]<span class="op">\</span></span>
-<span id="cb138-9"><a href="#cb138-9" aria-hidden="true" tabindex="-1"></a>  .fillna(coffee_quality_imputed[numeric_columns].median())</span>
-<span id="cb138-10"><a href="#cb138-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb138-11"><a href="#cb138-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows of the imputed dataset</span></span>
-<span id="cb138-12"><a href="#cb138-12" aria-hidden="true" tabindex="-1"></a>coffee_quality_imputed.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb138-5"><a href="#cb138-5" aria-hidden="true" tabindex="-1"></a>numeric_columns <span class="op">=</span> coffee_quality_imputed <span class="op">\</span></span>
+<span id="cb138-6"><a href="#cb138-6" aria-hidden="true" tabindex="-1"></a>  .select_dtypes(include<span class="op">=</span>[np.number]) <span class="op">\</span></span>
+<span id="cb138-7"><a href="#cb138-7" aria-hidden="true" tabindex="-1"></a>  .columns</span>
+<span id="cb138-8"><a href="#cb138-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb138-9"><a href="#cb138-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Fill missing values in numeric columns with the median</span></span>
+<span id="cb138-10"><a href="#cb138-10" aria-hidden="true" tabindex="-1"></a>coffee_quality_imputed[numeric_columns] <span class="op">=</span> <span class="op">\</span></span>
+<span id="cb138-11"><a href="#cb138-11" aria-hidden="true" tabindex="-1"></a>  coffee_quality_imputed[numeric_columns] <span class="op">\</span></span>
+<span id="cb138-12"><a href="#cb138-12" aria-hidden="true" tabindex="-1"></a>  .fillna(coffee_quality_imputed[numeric_columns].median())</span>
+<span id="cb138-13"><a href="#cb138-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb138-14"><a href="#cb138-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows of the imputed dataset</span></span>
+<span id="cb138-15"><a href="#cb138-15" aria-hidden="true" tabindex="-1"></a>coffee_quality_imputed.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  country_of_origin continent_of_origin                 farm_name  \
 0          Colombia       South America          Finca El Paraiso   
@@ -2067,11 +2075,12 @@ converted_comp_yearly               1.000000  </code></pre>
 </div>
 </div>
 <div class="sourceCode cell-code" id="cb151"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb151-1"><a href="#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Scatter plot for work_exp vs. years_code_pro</span></span>
-<span id="cb151-2"><a href="#cb151-2" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span>data_dev_survey[<span class="st">'work_exp'</span>], y<span class="op">=</span>data_dev_survey[<span class="st">'years_code_pro'</span>])<span class="op">;</span></span>
-<span id="cb151-3"><a href="#cb151-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot of Work Experience vs. Years of Professional Coding Experience'</span>)<span class="op">;</span></span>
-<span id="cb151-4"><a href="#cb151-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Work Experience'</span>)<span class="op">;</span></span>
-<span id="cb151-5"><a href="#cb151-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Years of Professional Coding Experience'</span>)<span class="op">;</span></span>
-<span id="cb151-6"><a href="#cb151-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb151-2"><a href="#cb151-2" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span>data_dev_survey[<span class="st">'work_exp'</span>], </span>
+<span id="cb151-3"><a href="#cb151-3" aria-hidden="true" tabindex="-1"></a>                y<span class="op">=</span>data_dev_survey[<span class="st">'years_code_pro'</span>])<span class="op">;</span></span>
+<span id="cb151-4"><a href="#cb151-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Scatter Plot of Work Experience vs. Years of Professional Coding Experience'</span>)<span class="op">;</span></span>
+<span id="cb151-5"><a href="#cb151-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Work Experience'</span>)<span class="op">;</span></span>
+<span id="cb151-6"><a href="#cb151-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Years of Professional Coding Experience'</span>)<span class="op">;</span></span>
+<span id="cb151-7"><a href="#cb151-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -2306,15 +2315,17 @@ moisture_percentage             1.000000  </code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb165"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb165-1"><a href="#cb165-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Two-sample t-test comparing compensation across plans_to_use_ai groups</span></span>
 <span id="cb165-2"><a href="#cb165-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Checking for a difference</span></span>
-<span id="cb165-3"><a href="#cb165-3" aria-hidden="true" tabindex="-1"></a>using <span class="op">=</span> data_dev_survey[data_dev_survey[<span class="st">'plans_to_use_ai'</span>] <span class="op">==</span> <span class="st">'Using'</span>]<span class="op">\</span></span>
-<span id="cb165-4"><a href="#cb165-4" aria-hidden="true" tabindex="-1"></a>          [<span class="st">'converted_comp_yearly'</span>]<span class="op">\</span></span>
-<span id="cb165-5"><a href="#cb165-5" aria-hidden="true" tabindex="-1"></a>          .dropna()</span>
-<span id="cb165-6"><a href="#cb165-6" aria-hidden="true" tabindex="-1"></a>plan_to_use <span class="op">=</span> data_dev_survey[data_dev_survey[<span class="st">'plans_to_use_ai'</span>] <span class="op">==</span> <span class="st">'Plan to use'</span>]<span class="op">\</span></span>
-<span id="cb165-7"><a href="#cb165-7" aria-hidden="true" tabindex="-1"></a>          [<span class="st">'converted_comp_yearly'</span>]<span class="op">\</span></span>
-<span id="cb165-8"><a href="#cb165-8" aria-hidden="true" tabindex="-1"></a>          .dropna()</span>
-<span id="cb165-9"><a href="#cb165-9" aria-hidden="true" tabindex="-1"></a>t_stat, p_value <span class="op">=</span> stats.ttest_ind(using, plan_to_use, equal_var<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb165-10"><a href="#cb165-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb165-11"><a href="#cb165-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T-statistic: </span><span class="sc">{</span>t_stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb165-3"><a href="#cb165-3" aria-hidden="true" tabindex="-1"></a>using <span class="op">=</span> <span class="op">\</span></span>
+<span id="cb165-4"><a href="#cb165-4" aria-hidden="true" tabindex="-1"></a>  data_dev_survey[data_dev_survey[<span class="st">'plans_to_use_ai'</span>] <span class="op">==</span> <span class="st">'Using'</span>]<span class="op">\</span></span>
+<span id="cb165-5"><a href="#cb165-5" aria-hidden="true" tabindex="-1"></a>          [<span class="st">'converted_comp_yearly'</span>]<span class="op">\</span></span>
+<span id="cb165-6"><a href="#cb165-6" aria-hidden="true" tabindex="-1"></a>          .dropna()</span>
+<span id="cb165-7"><a href="#cb165-7" aria-hidden="true" tabindex="-1"></a>plan_to_use <span class="op">=</span> <span class="op">\</span></span>
+<span id="cb165-8"><a href="#cb165-8" aria-hidden="true" tabindex="-1"></a>  data_dev_survey[data_dev_survey[<span class="st">'plans_to_use_ai'</span>] <span class="op">==</span> <span class="st">'Plan to use'</span>]<span class="op">\</span></span>
+<span id="cb165-9"><a href="#cb165-9" aria-hidden="true" tabindex="-1"></a>          [<span class="st">'converted_comp_yearly'</span>]<span class="op">\</span></span>
+<span id="cb165-10"><a href="#cb165-10" aria-hidden="true" tabindex="-1"></a>          .dropna()</span>
+<span id="cb165-11"><a href="#cb165-11" aria-hidden="true" tabindex="-1"></a>t_stat, p_value <span class="op">=</span> stats.ttest_ind(using, plan_to_use, equal_var<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb165-12"><a href="#cb165-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb165-13"><a href="#cb165-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T-statistic: </span><span class="sc">{</span>t_stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>T-statistic: 0.9293366153676751</code></pre>
 </div>
@@ -2332,9 +2343,10 @@ moisture_percentage             1.000000  </code></pre>
 <span id="cb169-3"><a href="#cb169-3" aria-hidden="true" tabindex="-1"></a>t_stat, p_value <span class="op">=</span> stats.ttest_1samp(</span>
 <span id="cb169-4"><a href="#cb169-4" aria-hidden="true" tabindex="-1"></a>  coffee_quality[<span class="st">'flavor'</span>].dropna(), </span>
 <span id="cb169-5"><a href="#cb169-5" aria-hidden="true" tabindex="-1"></a>  flavor_mean,</span>
-<span id="cb169-6"><a href="#cb169-6" aria-hidden="true" tabindex="-1"></a>  alternative<span class="op">=</span><span class="st">'less'</span>)</span>
-<span id="cb169-7"><a href="#cb169-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb169-8"><a href="#cb169-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T-statistic: </span><span class="sc">{</span>t_stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb169-6"><a href="#cb169-6" aria-hidden="true" tabindex="-1"></a>  alternative<span class="op">=</span><span class="st">'less'</span></span>
+<span id="cb169-7"><a href="#cb169-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb169-8"><a href="#cb169-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb169-9"><a href="#cb169-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"T-statistic: </span><span class="sc">{</span>t_stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>T-statistic: -2.8437004395767462</code></pre>
 </div>
@@ -2345,10 +2357,10 @@ moisture_percentage             1.000000  </code></pre>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb173"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb173-1"><a href="#cb173-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Two-sample t-test checking for difference in Columbia and Brazil total_cup_points</span></span>
-<span id="cb173-2"><a href="#cb173-2" aria-hidden="true" tabindex="-1"></a>colombia <span class="op">=</span> coffee_quality[coffee_quality[<span class="st">'country_of_origin'</span>] <span class="op">==</span> <span class="st">'Colombia'</span>]<span class="op">\</span></span>
-<span id="cb173-3"><a href="#cb173-3" aria-hidden="true" tabindex="-1"></a>                [<span class="st">'total_cup_points'</span>]<span class="op">\</span></span>
+<span id="cb173-2"><a href="#cb173-2" aria-hidden="true" tabindex="-1"></a>colombia <span class="op">=</span> coffee_quality[coffee_quality[<span class="st">'country_of_origin'</span>] <span class="op">==</span> <span class="st">'Colombia'</span>] <span class="op">\</span></span>
+<span id="cb173-3"><a href="#cb173-3" aria-hidden="true" tabindex="-1"></a>                [<span class="st">'total_cup_points'</span>] <span class="op">\</span></span>
 <span id="cb173-4"><a href="#cb173-4" aria-hidden="true" tabindex="-1"></a>                .dropna()</span>
-<span id="cb173-5"><a href="#cb173-5" aria-hidden="true" tabindex="-1"></a>brazil <span class="op">=</span> coffee_quality[coffee_quality[<span class="st">'country_of_origin'</span>] <span class="op">==</span> <span class="st">'Brazil'</span>]<span class="op">\</span></span>
+<span id="cb173-5"><a href="#cb173-5" aria-hidden="true" tabindex="-1"></a>brazil <span class="op">=</span> coffee_quality[coffee_quality[<span class="st">'country_of_origin'</span>] <span class="op">==</span> <span class="st">'Brazil'</span>] <span class="op">\</span></span>
 <span id="cb173-6"><a href="#cb173-6" aria-hidden="true" tabindex="-1"></a>                [<span class="st">'total_cup_points'</span>].<span class="op">\</span></span>
 <span id="cb173-7"><a href="#cb173-7" aria-hidden="true" tabindex="-1"></a>                dropna()</span>
 <span id="cb173-8"><a href="#cb173-8" aria-hidden="true" tabindex="-1"></a>t_stat, p_value <span class="op">=</span> stats.ttest_ind(colombia, brazil, equal_var<span class="op">=</span><span class="va">False</span>)</span>
@@ -2504,10 +2516,12 @@ moisture_percentage             1.000000  </code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb205"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb205-1"><a href="#cb205-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform Kruskal-Wallis H Test comparing total_cup_points across </span></span>
 <span id="cb205-2"><a href="#cb205-2" aria-hidden="true" tabindex="-1"></a><span class="co"># continent_of_origin</span></span>
-<span id="cb205-3"><a href="#cb205-3" aria-hidden="true" tabindex="-1"></a>groups <span class="op">=</span> coffee_quality.groupby(<span class="st">'continent_of_origin'</span>)[<span class="st">'total_cup_points'</span>].<span class="bu">apply</span>(<span class="bu">list</span>)</span>
-<span id="cb205-4"><a href="#cb205-4" aria-hidden="true" tabindex="-1"></a>stat, p_value <span class="op">=</span> stats.kruskal(<span class="op">*</span>groups)</span>
-<span id="cb205-5"><a href="#cb205-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb205-6"><a href="#cb205-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Kruskal-Wallis H Statistic: </span><span class="sc">{</span>stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb205-3"><a href="#cb205-3" aria-hidden="true" tabindex="-1"></a>groups <span class="op">=</span> coffee_quality.groupby(<span class="st">'continent_of_origin'</span>) <span class="op">\</span></span>
+<span id="cb205-4"><a href="#cb205-4" aria-hidden="true" tabindex="-1"></a>  [<span class="st">'total_cup_points'</span>] <span class="op">\</span></span>
+<span id="cb205-5"><a href="#cb205-5" aria-hidden="true" tabindex="-1"></a>  .<span class="bu">apply</span>(<span class="bu">list</span>)</span>
+<span id="cb205-6"><a href="#cb205-6" aria-hidden="true" tabindex="-1"></a>stat, p_value <span class="op">=</span> stats.kruskal(<span class="op">*</span>groups)</span>
+<span id="cb205-7"><a href="#cb205-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb205-8"><a href="#cb205-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Kruskal-Wallis H Statistic: </span><span class="sc">{</span>stat<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Kruskal-Wallis H Statistic: 18.1515777694049</code></pre>
 </div>

@@ -152,7 +152,7 @@ be good to proceed here. If not, scroll up and run it.
 # Separate the data into two groups
 
 
-# Perform the t-test
+# Perform the t-test to test for difference in total_cup_points
 
 
 # Print the results

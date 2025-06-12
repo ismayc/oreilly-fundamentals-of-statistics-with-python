@@ -14,6 +14,8 @@ format:
 engine: knitr
 ---
 
+<!-- https://ismay-oreilly-fsp.netlify.app/exercises_solutions.html -->
+
 ```{python, eval=FALSE}
 # Install the packages directly if needed with pip
 # Check the repo's README below for more information
@@ -168,7 +170,7 @@ north_american = coffee_quality\
             [coffee_quality['continent_of_origin'] == 'North America']\
             ['total_cup_points']
 
-# Perform the t-test
+# Perform the t-test to test for difference in total_cup_points
 t_stat, p_value = stats.ttest_ind(asian, north_american, equal_var=False)
 
 # Print the results
@@ -445,7 +447,9 @@ data_dev_survey['survey_completion_date'] = \
   pd.to_datetime(data_dev_survey['survey_completion_date'])
 
 # Count the number of surveys completed each day
-daily_counts = data_dev_survey['survey_completion_date'].value_counts().sort_index()
+daily_counts = data_dev_survey['survey_completion_date'] \
+  .value_counts() \
+  .sort_index()
 
 # Plot the counts as a line chart
 plt.figure(figsize=(12, 6));
@@ -501,7 +505,9 @@ plt.show()
 # Plot the mean total_cup_points for each grading_date
 
 # Convert to datetime
-coffee_quality['grading_date'] = pd.to_datetime(coffee_quality['grading_date'])
+coffee_quality['grading_date'] = pd.to_datetime(
+  coffee_quality['grading_date']
+)
 
 # Extract the month and year from the grading_date column
 coffee_quality['month'] = coffee_quality['grading_date'].dt.to_period('M')
@@ -745,10 +751,13 @@ coffee_quality.isnull().sum()
 coffee_quality_imputed = coffee_quality.copy()
 
 # Select only numeric columns
-numeric_columns = coffee_quality_imputed.select_dtypes(include=[np.number]).columns
+numeric_columns = coffee_quality_imputed \
+  .select_dtypes(include=[np.number]) \
+  .columns
 
 # Fill missing values in numeric columns with the median
-coffee_quality_imputed[numeric_columns] = coffee_quality_imputed[numeric_columns]\
+coffee_quality_imputed[numeric_columns] = \
+  coffee_quality_imputed[numeric_columns] \
   .fillna(coffee_quality_imputed[numeric_columns].median())
 
 # Display the first few rows of the imputed dataset
@@ -867,7 +876,8 @@ plt.ylabel('Years of Coding Experience');
 plt.show()
 
 # Scatter plot for work_exp vs. years_code_pro
-sns.scatterplot(x=data_dev_survey['work_exp'], y=data_dev_survey['years_code_pro']);
+sns.scatterplot(x=data_dev_survey['work_exp'], 
+                y=data_dev_survey['years_code_pro']);
 plt.title('Scatter Plot of Work Experience vs. Years of Professional Coding Experience');
 plt.xlabel('Work Experience');
 plt.ylabel('Years of Professional Coding Experience');
@@ -1010,10 +1020,12 @@ print(f"P-value: {p_value}")
 ```{python}
 # Two-sample t-test comparing compensation across plans_to_use_ai groups
 # Checking for a difference
-using = data_dev_survey[data_dev_survey['plans_to_use_ai'] == 'Using']\
+using = \
+  data_dev_survey[data_dev_survey['plans_to_use_ai'] == 'Using']\
           ['converted_comp_yearly']\
           .dropna()
-plan_to_use = data_dev_survey[data_dev_survey['plans_to_use_ai'] == 'Plan to use']\
+plan_to_use = \
+  data_dev_survey[data_dev_survey['plans_to_use_ai'] == 'Plan to use']\
           ['converted_comp_yearly']\
           .dropna()
 t_stat, p_value = stats.ttest_ind(using, plan_to_use, equal_var=False)
@@ -1031,7 +1043,8 @@ flavor_mean = 7.8
 t_stat, p_value = stats.ttest_1samp(
   coffee_quality['flavor'].dropna(), 
   flavor_mean,
-  alternative='less')
+  alternative='less'
+)
 
 print(f"T-statistic: {t_stat}")
 print(f"P-value: {p_value}")
@@ -1039,10 +1052,10 @@ print(f"P-value: {p_value}")
 
 ```{python}
 # Two-sample t-test checking for difference in Columbia and Brazil total_cup_points
-colombia = coffee_quality[coffee_quality['country_of_origin'] == 'Colombia']\
-                ['total_cup_points']\
+colombia = coffee_quality[coffee_quality['country_of_origin'] == 'Colombia'] \
+                ['total_cup_points'] \
                 .dropna()
-brazil = coffee_quality[coffee_quality['country_of_origin'] == 'Brazil']\
+brazil = coffee_quality[coffee_quality['country_of_origin'] == 'Brazil'] \
                 ['total_cup_points'].\
                 dropna()
 t_stat, p_value = stats.ttest_ind(colombia, brazil, equal_var=False)
@@ -1162,7 +1175,9 @@ print(f"P-value: {p_value}")
 ```{python}
 # Perform Kruskal-Wallis H Test comparing total_cup_points across 
 # continent_of_origin
-groups = coffee_quality.groupby('continent_of_origin')['total_cup_points'].apply(list)
+groups = coffee_quality.groupby('continent_of_origin') \
+  ['total_cup_points'] \
+  .apply(list)
 stat, p_value = stats.kruskal(*groups)
 
 print(f"Kruskal-Wallis H Statistic: {stat}")
