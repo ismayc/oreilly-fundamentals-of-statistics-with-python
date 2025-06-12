@@ -3,7 +3,7 @@
 # Course content
 
 The major files in this repository are
-- `slides_2025-02.pdf`: PDF version of the slides used in this course to motivate the code.
+- `slides.pdf`: PDF version of the slides used in this course to motivate the code.
 - `data_dev_survey.csv`: Data for code walkthroughs.
 - `coffee_quality.csv`: Data for student exercises.
 - `exercises.ipynb`: A Jupyter Notebook with pseudocode/instructions provide to be filled in for code walkthroughs and student exercises
