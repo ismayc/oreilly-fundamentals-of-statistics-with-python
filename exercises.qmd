@@ -214,7 +214,7 @@ be good to proceed here. If not, scroll up and run it.
 
 ---
 
-## Walkthrough 1.3: Cleaning and Preparing Data with Pandas
+## Walkthrough 1.3: Data Visualization
 
 ```{python}
 # Histogram for years_code_pro
@@ -237,7 +237,7 @@ be good to proceed here. If not, scroll up and run it.
 
 ```
 
-## Exercise 1.3: Cleaning and Preparing Data with Pandas
+## Exercise 1.3: Data Visualization
 
 ```{python}
 # Histogram for acidity
