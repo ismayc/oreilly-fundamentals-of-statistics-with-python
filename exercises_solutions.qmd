@@ -2,16 +2,17 @@
 title: "Walkthroughs and Exercises for Fundamentals of Statistics with Python"
 author: "Dr. Chester Ismay"
 format: 
-  html:
-    toc: true
-    toc-float: true
-    toc-location: left
-    fig-width: 10
-    fig-height: 5
+  # html:
+  #   toc: true
+  #   toc-float: true
+  #   toc-location: left
+  #   fig-width: 10
+  #   fig-height: 5
+  #   engine: knitr
   ipynb:
     fig-width: 10
     fig-height: 5
-engine: knitr
+    engine: jupyter
 ---
 
 <!-- https://ismay-oreilly-fsp.netlify.app/exercises_solutions.html -->
