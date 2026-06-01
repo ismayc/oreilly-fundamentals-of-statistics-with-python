@@ -179,3 +179,9 @@ cython_debug/
 #.idea/
 .Rproj.user
 /web_deploy/
+
+# iCloud Drive conflict copies (e.g. "index 2.html") and placeholder files
+* [0-9].*
+* [0-9]
+*.icloud
+.jupyterlite.doit.db
