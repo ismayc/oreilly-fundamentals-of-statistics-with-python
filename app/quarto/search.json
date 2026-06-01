@@ -11,7 +11,7 @@
     "href": "solutions.html#walkthrough-1.1-getting-started",
     "title": "Solutions — Fundamentals of Statistics with Python",
     "section": "Walkthrough 1.1: Getting Started",
-    "text": "Walkthrough 1.1: Getting Started\n\nSetting Up the Python Environment\nIf you haven’t already installed Python, Jupyter, and the necessary packages, there are instructions on the course repo in the README to do so here.\nIf you aren’t able to do this on your machine, you may want to check out Google Colab. It’s a free service that allows you to run Jupyter notebooks in the cloud. Alternatively, I’ve set up some temporary notebooks on Binder ( that you can work with online as well.\n\n\n\n\n\n\n\n\nExploring a dataset\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPerforming basic statistical functions using NumPy, Pandas, and SciPy.\n\nUsing NumPy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Pandas\n\n\n\n\n\n\n\n\nUsing SciPy"
+    "text": "Walkthrough 1.1: Getting Started\n\nSetting Up the Python Environment\nIf you haven’t already installed Python, Jupyter, and the necessary packages, there are instructions on the course repo in the README to do so here.\nIf you aren’t able to do this on your machine, you may want to check out Google Colab. It’s a free service that allows you to run Jupyter notebooks in the cloud.\n\n\n\n\n\n\n\n\nExploring a dataset\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPerforming basic statistical functions using NumPy, Pandas, and SciPy.\n\nUsing NumPy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Pandas\n\n\n\n\n\n\n\n\nUsing SciPy"
   },
   {
     "objectID": "solutions.html#exercise-1.1-getting-started",
@@ -207,7 +207,7 @@
     "href": "exercises.html#walkthrough-1.1-getting-started",
     "title": "Walkthroughs & Exercises — Fundamentals of Statistics with Python",
     "section": "Walkthrough 1.1: Getting Started",
-    "text": "Walkthrough 1.1: Getting Started\n\nSetting Up the Python Environment\nIf you haven’t already installed Python, Jupyter, and the necessary packages, there are instructions on the course repo in the README to do so here.\nIf you aren’t able to do this on your machine, you may want to check out Google Colab. It’s a free service that allows you to run Jupyter notebooks in the cloud. Alternatively, I’ve set up some temporary notebooks on Binder () that you can work with online as well.\n\n\n\n\n\n\n\n\nExploring a dataset\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPerforming basic statistical functions using NumPy, Pandas, and SciPy.\n\nUsing NumPy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Pandas\n\n\n\n\n\n\n\n\nUsing SciPy"
+    "text": "Walkthrough 1.1: Getting Started\n\nSetting Up the Python Environment\nIf you haven’t already installed Python, Jupyter, and the necessary packages, there are instructions on the course repo in the README to do so here.\nIf you aren’t able to do this on your machine, you may want to check out Google Colab. It’s a free service that allows you to run Jupyter notebooks in the cloud.\n\n\n\n\n\n\n\n\nExploring a dataset\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPerforming basic statistical functions using NumPy, Pandas, and SciPy.\n\nUsing NumPy\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Pandas\n\n\n\n\n\n\n\n\nUsing SciPy"
   },
   {
     "objectID": "exercises.html#exercise-1.1-getting-started",
