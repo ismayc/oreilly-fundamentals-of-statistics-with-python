@@ -1,11 +1,19 @@
 ---
 title: "Walkthroughs and Exercises for Fundamentals of Statistics with Python"
 author: "Dr. Chester Ismay"
-format: ipynb
-engine: knitr
+format:
+  html:
+    theme: flatly
+    toc: true
+    toc-floating: true
+  ipynb: default
+engine: jupyter
+execute:
+  warning: false
 ---
 
-```{python, eval=FALSE}
+```{python}
+#| eval: false
 # Install the packages directly if needed with pip
 # Check the repo's README below for more information
 !pip install numpy pandas scipy matplotlib seaborn statsmodels scikit-learn jupyter
@@ -30,9 +38,9 @@ InteractiveShell.ast_node_interactivity = "all"
 
 ### Setting Up the Python Environment
 
-If you haven't already installed Python, Jupyter, and the necessary packages, there are instructions on the course repo in the README to do so [here](https://github.com/ismayc/oreilly-fundamentals-of-statistics-with-python/blob/main/README.md). 
+If you haven't already installed Python, Jupyter, and the necessary packages, there are instructions on the course repo in the README to do so [here](https://github.com/ismayc/oreilly-fundamentals-of-statistics-with-python/blob/main/README.md).
 
-If you aren't able to do this on your machine, you may want to check out [Google Colab](https://colab.research.google.com/). It's a free service that allows you to run Jupyter notebooks in the cloud. 
+If you aren't able to do this on your machine, you may want to check out [Google Colab](https://colab.research.google.com/). It's a free service that allows you to run Jupyter notebooks in the cloud.
 
 ```{python}
 # Importing libraries/modules and aliasing them as needed
@@ -76,6 +84,8 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
 ```
 
+> **Common Pitfall:** `np.std()` defaults to the population standard deviation (`ddof=0`), while `pandas` `.std()` defaults to the sample standard deviation (`ddof=1`). If you are treating your data as a sample, pass `ddof=1` to `np.std()` so the two agree. Mixing the defaults is a common source of slightly different numbers.
+
 #### Using Pandas
 
 ```{python}
@@ -103,7 +113,7 @@ from sklearn.preprocessing import MinMaxScaler, StandardScaler
 
 ### Setting Up the Python Environment
 
-If you ran the `# Importing libraries and aliasing them` code above, you should 
+If you ran the `# Importing libraries and aliasing them` code above, you should
 be good to proceed here. If not, scroll up and run it.
 
 ### Exploring a dataset
@@ -166,7 +176,7 @@ be good to proceed here. If not, scroll up and run it.
 
 ## Walkthrough 1.2: Data Summarizing
 
-### Compute and interpret measures of central tendency 
+### Compute and interpret measures of central tendency
 
 ```{python}
 # Calculate center statistics for years_code_pro
@@ -175,6 +185,8 @@ be good to proceed here. If not, scroll up and run it.
 # To extract just the value for mode
 
 ```
+
+> **Common Pitfall:** `.mode()` returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with `[0]` grabs the first mode, but remember the others may exist -- do not assume the mode is always unique.
 
 ### Compute and interpret measures of variation
 
@@ -259,6 +271,8 @@ be good to proceed here. If not, scroll up and run it.
 
 ## Walkthrough 1.4: Sampling Distribution Generation
 
+> **Common Pitfall:** Do not confuse the standard deviation of the raw data with the standard deviation of the sample means (the standard error). The histogram below shows the spread of sample means, which is much narrower than the spread of the original population. By the Central Limit Theorem, the sampling distribution of the mean becomes approximately normal as the sample size grows, even when the population itself is skewed.
+
 ```{python}
 # Think of our data as a population to draw from
 
@@ -297,6 +311,16 @@ be good to proceed here. If not, scroll up and run it.
 
 ```
 
+### Self-Check
+
+By the end of this week, you should be able to:
+
+- [ ] Load a dataset and inspect its structure with `.info()` and `.describe()`.
+- [ ] Compute measures of center (mean, median, mode) and spread (range, variance, standard deviation) and explain what each tells you.
+- [ ] Choose the sample versus population standard deviation by setting `ddof` correctly.
+- [ ] Build the five-number summary and read a box plot, histogram, and scatter plot.
+- [ ] Simulate a sampling distribution of the mean and describe how the Central Limit Theorem applies.
+- [ ] Run a basic two-sample t-test with `scipy.stats` and read its t-statistic and p-value.
 
 ---
 
@@ -330,7 +354,8 @@ be good to proceed here. If not, scroll up and run it.
 
 ## Exercise 2.1: Advanced Plots
 
-```{python, eval=FALSE}
+```{python}
+#| eval: false
 # Select only numeric columns
 
 # Drop the clean_cup and sweetness columns since they are always 10
@@ -349,7 +374,8 @@ numeric_columns = numeric_columns.drop(columns=['clean_cup', 'sweetness'], error
 ```
 
 
-```{python, eval=FALSE}
+```{python}
+#| eval: false
 # Plot the mean total_cup_points for each grading_date
 
 # Convert to datetime
@@ -468,6 +494,8 @@ coffee_quality['month'] = coffee_quality['grading_date'].dt.to_period('M')
 
 ### Handling Outliers
 
+> **Common Pitfall:** The `1.5 * IQR` rule flags points as potential outliers, but a flagged value is not automatically an error. Dropping every flagged row can throw away legitimate data and bias your results. Inspect outliers before removing them, and document why you removed any.
+
 ```{python}
 # Select only numeric columns
 
@@ -580,6 +608,8 @@ coffee_quality['month'] = coffee_quality['grading_date'].dt.to_period('M')
 
 ## Walkthrough 2.4: Correlations
 
+> **Common Pitfall:** Correlation measures only the strength of a linear association, and a strong correlation does not imply that one variable causes the other. Two variables can be highly correlated because of a third, lurking variable. Also, `.corr()` (Pearson) can miss strong non-linear relationships, so always pair it with a scatter plot.
+
 ### Correlation Matrix
 
 ```{python}
@@ -641,6 +671,15 @@ coffee_quality['month'] = coffee_quality['grading_date'].dt.to_period('M')
 
 ```
 
+### Self-Check
+
+By the end of this week, you should be able to:
+
+- [ ] Build advanced visualizations (correlation heatmaps, pair plots, and time series line charts) to explore relationships.
+- [ ] Carry out a basic exploratory data analysis: check for missing values, remove duplicates, and summarize variables.
+- [ ] Preprocess data by imputing missing values, handling outliers with the IQR rule, scaling features, and encoding categorical variables.
+- [ ] Compute and interpret a correlation matrix while remembering that correlation does not imply causation.
+- [ ] Explain why a scatter plot should accompany any correlation coefficient.
 
 ---
 
@@ -667,7 +706,7 @@ coffee_quality['month'] = coffee_quality['grading_date'].dt.to_period('M')
 ```
 
 
-## Exercise 3.1: 
+## Exercise 3.1:
 
 ### Simulating Poisson
 
@@ -693,6 +732,10 @@ coffee_quality['month'] = coffee_quality['grading_date'].dt.to_period('M')
 ---
 
 ## Walkthrough 3.2: t-tests
+
+> **Common Pitfall:** A p-value is not the probability that the null hypothesis is true. It is the probability of seeing data at least as extreme as yours if the null hypothesis were true. A small p-value is evidence against the null, not a statement about how likely the null is.
+
+> **Common Pitfall:** The `alternative` argument controls whether the test is one-tailed (`'greater'` or `'less'`) or two-tailed (`'two-sided'`, the default). Pick the direction before you see the data, based on the question. A one-tailed test only detects an effect in the specified direction, so using the wrong tail can hide a real effect.
 
 ```{python}
 # One-sample t-test checking for evidence that mu compensation > 85000
@@ -760,6 +803,8 @@ coffee_quality['month'] = coffee_quality['grading_date'].dt.to_period('M')
 
 ## Walkthrough 3.4: Non-Parametric Tests
 
+> **Common Pitfall:** Non-parametric tests like Mann-Whitney U and Kruskal-Wallis do not assume normally distributed data, which makes them useful for skewed data such as salaries. But they compare distributions (ranks/medians) rather than means, so do not report them as tests of the difference in means. Reach for them when the normality assumption of a t-test or ANOVA is clearly violated.
+
 ```{python}
 # Perform Mann-Whitney U Test comparing compensation for Remote and In-person
 
@@ -780,8 +825,17 @@ coffee_quality['month'] = coffee_quality['grading_date'].dt.to_period('M')
 ```
 
 ```{python}
-# Perform Kruskal-Wallis H Test comparing total_cup_points across 
+# Perform Kruskal-Wallis H Test comparing total_cup_points across
 # continent_of_origin
 
 ```
 
+### Self-Check
+
+By the end of this week, you should be able to:
+
+- [ ] Simulate common distributions (binomial, normal, Poisson, exponential) and recognize their typical shapes.
+- [ ] Run one-sample and two-sample t-tests and choose a one-tailed or two-tailed alternative appropriately.
+- [ ] Interpret a p-value correctly as evidence against the null hypothesis, not as the probability the null is true.
+- [ ] Apply ANOVA and the chi-square test of independence to compare groups and categorical variables.
+- [ ] Choose non-parametric tests (Mann-Whitney U, Kruskal-Wallis) when the assumptions of parametric tests are violated.

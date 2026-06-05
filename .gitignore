@@ -186,3 +186,8 @@ cython_debug/
 * [0-9]
 *.icloud
 .jupyterlite.doit.db
+
+*.pptx
+
+# Annotated instructor edition (local working file, not committed)
+*with_notes*

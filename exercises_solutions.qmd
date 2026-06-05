@@ -1,23 +1,21 @@
 ---
 title: "Walkthroughs and Exercises for Fundamentals of Statistics with Python"
 author: "Dr. Chester Ismay"
-format: 
-  # html:
-  #   toc: true
-  #   toc-float: true
-  #   toc-location: left
-  #   fig-width: 10
-  #   fig-height: 5
-  #   engine: knitr
-  ipynb:
-    fig-width: 10
-    fig-height: 5
-    engine: jupyter
+format:
+  html:
+    theme: flatly
+    toc: true
+    toc-floating: true
+  ipynb: default
+engine: jupyter
+execute:
+  warning: false
 ---
 
 <!-- https://ismay-oreilly-fsp.netlify.app/exercises_solutions.html -->
 
-```{python, eval=FALSE}
+```{python}
+#| eval: false
 # Install the packages directly if needed with pip
 # Check the repo's README below for more information
 !pip install numpy pandas scipy matplotlib seaborn statsmodels scikit-learn jupyter
@@ -42,9 +40,9 @@ InteractiveShell.ast_node_interactivity = "all"
 
 ### Setting Up the Python Environment
 
-If you haven't already installed Python, Jupyter, and the necessary packages, there are instructions on the course repo in the README to do so [here](https://github.com/ismayc/oreilly-fundamentals-of-statistics-with-python/blob/main/README.md). 
+If you haven't already installed Python, Jupyter, and the necessary packages, there are instructions on the course repo in the README to do so [here](https://github.com/ismayc/oreilly-fundamentals-of-statistics-with-python/blob/main/README.md).
 
-If you aren't able to do this on your machine, you may want to check out [Google Colab](https://colab.research.google.com/). It's a free service that allows you to run Jupyter notebooks in the cloud. 
+If you aren't able to do this on your machine, you may want to check out [Google Colab](https://colab.research.google.com/). It's a free service that allows you to run Jupyter notebooks in the cloud.
 
 ```{python}
 # Importing libraries/modules and aliasing them as needed
@@ -88,6 +86,8 @@ np.median(data_dev_survey['work_exp'])
 np.std(data_dev_survey['converted_comp_yearly'])
 ```
 
+> **Common Pitfall:** `np.std()` defaults to the population standard deviation (`ddof=0`), while `pandas` `.std()` defaults to the sample standard deviation (`ddof=1`). If you are treating your data as a sample, pass `ddof=1` to `np.std()` so the two agree. Mixing the defaults is a common source of slightly different numbers.
+
 #### Using Pandas
 
 ```{python}
@@ -117,7 +117,7 @@ print(f"P-value: {p_value}")
 
 ### Setting Up the Python Environment
 
-If you ran the `# Importing libraries and aliasing them` code above, you should 
+If you ran the `# Importing libraries and aliasing them` code above, you should
 be good to proceed here. If not, scroll up and run it.
 
 ### Exploring a dataset
@@ -185,7 +185,7 @@ print(f"P-value: {p_value}")
 
 ## Walkthrough 1.2: Data Summarizing
 
-### Compute and interpret measures of central tendency 
+### Compute and interpret measures of central tendency
 
 ```{python}
 # Calculate center statistics for years_code_pro
@@ -196,6 +196,8 @@ data_dev_survey['years_code_pro'].mode()
 # To extract just the value for mode
 data_dev_survey['years_code_pro'].mode()[0]
 ```
+
+> **Common Pitfall:** `.mode()` returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with `[0]` grabs the first mode, but remember the others may exist -- do not assume the mode is always unique.
 
 ### Compute and interpret measures of variation
 
@@ -309,7 +311,7 @@ plt.show()
 
 ```{python}
 # Scatter plot for 'years_code_pro' vs. 'converted_comp_yearly'
-sns.scatterplot(x=data_dev_survey['years_code_pro'], 
+sns.scatterplot(x=data_dev_survey['years_code_pro'],
                 y=data_dev_survey['converted_comp_yearly']);
 plt.title('Scatter Plot of Years of Coding Experience vs. Yearly Compensation');
 plt.xlabel('Years of Coding Experience');
@@ -353,6 +355,8 @@ plt.show()
 ---
 
 ## Walkthrough 1.4: Sampling Distribution Generation
+
+> **Common Pitfall:** Do not confuse the standard deviation of the raw data with the standard deviation of the sample means (the standard error). The histogram below shows the spread of sample means, which is much narrower than the spread of the original population. By the Central Limit Theorem, the sampling distribution of the mean becomes approximately normal as the sample size grows, even when the population itself is skewed.
 
 ```{python}
 # Think of our data as a population to draw from
@@ -414,6 +418,16 @@ plt.tight_layout();
 plt.show()
 ```
 
+### Self-Check
+
+By the end of this week, you should be able to:
+
+- [ ] Load a dataset and inspect its structure with `.info()` and `.describe()`.
+- [ ] Compute measures of center (mean, median, mode) and spread (range, variance, standard deviation) and explain what each tells you.
+- [ ] Choose the sample versus population standard deviation by setting `ddof` correctly.
+- [ ] Build the five-number summary and read a box plot, histogram, and scatter plot.
+- [ ] Simulate a sampling distribution of the mean and describe how the Central Limit Theorem applies.
+- [ ] Run a basic two-sample t-test with `scipy.stats` and read its t-statistic and p-value.
 
 ---
 
@@ -430,15 +444,15 @@ correlation_matrix = numeric_columns.corr()
 
 # Heatmap for correlation matrix
 plt.figure(figsize=(10, 8));
-sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f'); 
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f');
 plt.title('Heatmap of Correlation Matrix');
 plt.show()
 ```
 
 ```{python}
-# Pair plot for selected variables 
+# Pair plot for selected variables
 # 'years_code_pro', 'work_exp', 'converted_comp_yearly'
-sns.pairplot(data_dev_survey, 
+sns.pairplot(data_dev_survey,
              vars=['years_code_pro', 'work_exp', 'converted_comp_yearly']);
 plt.suptitle('Pair Plot of Selected Variables', y=1);
 plt.show()
@@ -473,7 +487,7 @@ plt.show()
 numeric_columns = coffee_quality.select_dtypes(include=[np.number])
 
 # Drop the 'clean_cup' and 'sweetness' columns since they are always 10
-numeric_columns = numeric_columns.drop(columns=['clean_cup', 'sweetness'], 
+numeric_columns = numeric_columns.drop(columns=['clean_cup', 'sweetness'],
                                        errors='ignore')
 
 # Calculate the correlation matrix for numeric columns
@@ -609,7 +623,7 @@ plt.ylabel('Acidity');
 plt.show()
 
 # Scatter plot for 'aroma' vs. 'total_cup_points'
-sns.scatterplot(x=coffee_quality['aroma'], 
+sns.scatterplot(x=coffee_quality['aroma'],
                 y=coffee_quality['total_cup_points']);
 plt.title('Scatter Plot of Aroma vs. Total Cup Points');
 plt.xlabel('Aroma');
@@ -666,6 +680,8 @@ data_dev_survey_imputed.head()
 
 ### Handling Outliers
 
+> **Common Pitfall:** The `1.5 * IQR` rule flags points as potential outliers, but a flagged value is not automatically an error. Dropping every flagged row can throw away legitimate data and bias your results. Inspect outliers before removing them, and document why you removed any.
+
 ```{python}
 # Select only numeric columns
 numeric_data = data_dev_survey_imputed.select_dtypes(include=[np.number])
@@ -702,7 +718,7 @@ data_dev_survey_imputed[['work_exp']] = scaler.fit_transform(
 )
 
 # Encoding categorical variables ('country')
-data_dev_survey_imputed = pd.get_dummies(data_dev_survey_imputed, 
+data_dev_survey_imputed = pd.get_dummies(data_dev_survey_imputed,
                                          columns=['country'])
 ```
 
@@ -809,7 +825,7 @@ coffee_quality_imputed.loc[:, ['acidity']] = \
 
 # Encoding categorical variables ('country' and 'continent_of_origin')
 coffee_quality_imputed = pd.get_dummies(
-  coffee_quality_imputed, 
+  coffee_quality_imputed,
   columns=['country_of_origin', 'continent_of_origin'])
 ```
 
@@ -830,7 +846,7 @@ plt.ylabel('Acidity');
 plt.show()
 
 # Scatter plot for 'aroma' vs. 'total_cup_points'
-sns.scatterplot(x=coffee_quality_imputed['aroma'], 
+sns.scatterplot(x=coffee_quality_imputed['aroma'],
                 y=coffee_quality_imputed['total_cup_points']);
 plt.title('Scatter Plot of Aroma vs. Total Cup Points');
 plt.xlabel('Aroma');
@@ -843,6 +859,8 @@ plt.show()
 ---
 
 ## Walkthrough 2.4: Correlations
+
+> **Common Pitfall:** Correlation measures only the strength of a linear association, and a strong correlation does not imply that one variable causes the other. Two variables can be highly correlated because of a third, lurking variable. Also, `.corr()` (Pearson) can miss strong non-linear relationships, so always pair it with a scatter plot.
 
 ### Correlation Matrix
 
@@ -871,7 +889,7 @@ plt.show()
 
 ```{python}
 # Scatter plot for 'years_code_pro' vs. 'years_code'
-sns.scatterplot(x=data_dev_survey['years_code_pro'], 
+sns.scatterplot(x=data_dev_survey['years_code_pro'],
                 y=data_dev_survey['years_code']);
 plt.title('Scatter Plot of Years of Professional Coding Experience vs. Years of Professional Coding Experience');
 plt.xlabel('Years of Professional Coding Experience');
@@ -879,7 +897,7 @@ plt.ylabel('Years of Coding Experience');
 plt.show()
 
 # Scatter plot for 'work_exp' vs. 'years_code_pro'
-sns.scatterplot(x=data_dev_survey['work_exp'], 
+sns.scatterplot(x=data_dev_survey['work_exp'],
                 y=data_dev_survey['years_code_pro']);
 plt.title('Scatter Plot of Work Experience vs. Years of Professional Coding Experience');
 plt.xlabel('Work Experience');
@@ -896,7 +914,7 @@ plt.show()
 numeric_columns = coffee_quality.select_dtypes(include=[np.number])
 
 # Remove 'clean_cup' and 'sweetness' too
-numeric_columns = numeric_columns.drop(columns=['clean_cup', 'sweetness'], 
+numeric_columns = numeric_columns.drop(columns=['clean_cup', 'sweetness'],
                                        errors='ignore')
 
 # Calculate the correlation matrix
@@ -921,7 +939,7 @@ plt.show()
 
 ```{python}
 # Scatter plot for 'flavor' vs. 'total_cup_points'
-sns.scatterplot(x=coffee_quality['flavor'], 
+sns.scatterplot(x=coffee_quality['flavor'],
                 y=coffee_quality['total_cup_points']);
 plt.title('Scatter Plot of Flavor vs. Total Cup Points');
 plt.xlabel('Flavor');
@@ -929,7 +947,7 @@ plt.ylabel('Total Cup Points');
 plt.show()
 
 # Scatter plot for 'overall' vs. 'total_cup_points'
-sns.scatterplot(x=coffee_quality['overall'], 
+sns.scatterplot(x=coffee_quality['overall'],
                 y=coffee_quality['total_cup_points']);
 plt.title('Scatter Plot of Overall vs. Total Cup Points');
 plt.xlabel('Overall');
@@ -937,6 +955,15 @@ plt.ylabel('Total Cup Points');
 plt.show()
 ```
 
+### Self-Check
+
+By the end of this week, you should be able to:
+
+- [ ] Build advanced visualizations (correlation heatmaps, pair plots, and time series line charts) to explore relationships.
+- [ ] Carry out a basic exploratory data analysis: check for missing values, remove duplicates, and summarize variables.
+- [ ] Preprocess data by imputing missing values, handling outliers with the IQR rule, scaling features, and encoding categorical variables.
+- [ ] Compute and interpret a correlation matrix while remembering that correlation does not imply causation.
+- [ ] Explain why a scatter plot should accompany any correlation coefficient.
 
 ---
 
@@ -1008,11 +1035,15 @@ plt.show()
 
 ## Walkthrough 3.2: t-tests
 
+> **Common Pitfall:** A p-value is not the probability that the null hypothesis is true. It is the probability of seeing data at least as extreme as yours if the null hypothesis were true. A small p-value is evidence against the null, not a statement about how likely the null is.
+
+> **Common Pitfall:** The `alternative` argument controls whether the test is one-tailed (`'greater'` or `'less'`) or two-tailed (`'two-sided'`, the default). Pick the direction before you see the data, based on the question. A one-tailed test only detects an effect in the specified direction, so using the wrong tail can hide a real effect.
+
 ```{python}
 # One-sample t-test checking for evidence that mu compensation > 85000
 salary_mean = 85000
 t_stat, p_value = stats.ttest_1samp(
-  data_dev_survey['converted_comp_yearly'].dropna(), 
+  data_dev_survey['converted_comp_yearly'].dropna(),
   popmean = salary_mean,
   alternative='greater')
 
@@ -1044,7 +1075,7 @@ print(f"P-value: {p_value}")
 # One-sample t-test checking for evidence that mu 'flavor' < 7.8
 flavor_mean = 7.8
 t_stat, p_value = stats.ttest_1samp(
-  coffee_quality['flavor'].dropna(), 
+  coffee_quality['flavor'].dropna(),
   flavor_mean,
   alternative='less'
 )
@@ -1054,7 +1085,7 @@ print(f"P-value: {p_value}")
 ```
 
 ```{python}
-# Two-sample t-test checking for difference in 
+# Two-sample t-test checking for difference in
 # Columbia and Brazil 'total_cup_points'
 colombia = coffee_quality[coffee_quality['country_of_origin'] == 'Colombia'] \
                 ['total_cup_points'] \
@@ -1090,7 +1121,7 @@ print(f"P-value: {p_value}")
 
 ```{python}
 # Create a contingency table of 'employment' and 'remote_work'
-contingency_table = pd.crosstab(data_dev_survey['employment'], 
+contingency_table = pd.crosstab(data_dev_survey['employment'],
                                 data_dev_survey['remote_work'])
 
 # Perform chi-square test
@@ -1131,6 +1162,8 @@ print(f"P-value: {p}")
 ---
 
 ## Walkthrough 3.4: Non-Parametric Tests
+
+> **Common Pitfall:** Non-parametric tests like Mann-Whitney U and Kruskal-Wallis do not assume normally distributed data, which makes them useful for skewed data such as salaries. But they compare distributions (ranks/medians) rather than means, so do not report them as tests of the difference in means. Reach for them when the normality assumption of a t-test or ANOVA is clearly violated.
 
 ```{python}
 # Perform Mann-Whitney U Test comparing compensation for 'Remote' and 'In-person'
@@ -1177,7 +1210,7 @@ print(f"P-value: {p_value}")
 ```
 
 ```{python}
-# Perform Kruskal-Wallis H Test comparing 'total_cup_points' across 
+# Perform Kruskal-Wallis H Test comparing 'total_cup_points' across
 # 'continent_of_origin'
 groups = coffee_quality.groupby('continent_of_origin') \
   ['total_cup_points'] \
@@ -1188,3 +1221,12 @@ print(f"Kruskal-Wallis H Statistic: {stat}")
 print(f"P-value: {p_value}")
 ```
 
+### Self-Check
+
+By the end of this week, you should be able to:
+
+- [ ] Simulate common distributions (binomial, normal, Poisson, exponential) and recognize their typical shapes.
+- [ ] Run one-sample and two-sample t-tests and choose a one-tailed or two-tailed alternative appropriately.
+- [ ] Interpret a p-value correctly as evidence against the null hypothesis, not as the probability the null is true.
+- [ ] Apply ANOVA and the chi-square test of independence to compare groups and categorical variables.
+- [ ] Choose non-parametric tests (Mann-Whitney U, Kruskal-Wallis) when the assumptions of parametric tests are violated.

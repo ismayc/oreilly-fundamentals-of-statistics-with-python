@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -40,10 +40,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2a94e267ed9e6da577b6a3e2b72a2871.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-6e5d3d8f06bab3c9fe439197eeba8315.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/live-runtime/live-runtime.js" type="module"></script>
 <link href="site_libs/quarto-contrib/live-runtime/live-runtime.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -153,7 +153,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#walkthrough-1.3-data-visualization" id="toc-walkthrough-1.3-data-visualization" class="nav-link" data-scroll-target="#walkthrough-1.3-data-visualization">Walkthrough 1.3: Data Visualization</a></li>
   <li><a href="#exercise-1.3-data-visualization" id="toc-exercise-1.3-data-visualization" class="nav-link" data-scroll-target="#exercise-1.3-data-visualization">Exercise 1.3: Data Visualization</a></li>
   <li><a href="#walkthrough-1.4-sampling-distribution-generation" id="toc-walkthrough-1.4-sampling-distribution-generation" class="nav-link" data-scroll-target="#walkthrough-1.4-sampling-distribution-generation">Walkthrough 1.4: Sampling Distribution Generation</a></li>
-  <li><a href="#exercise-1.4-sampling-distribution-generation" id="toc-exercise-1.4-sampling-distribution-generation" class="nav-link" data-scroll-target="#exercise-1.4-sampling-distribution-generation">Exercise 1.4: Sampling Distribution Generation</a></li>
+  <li><a href="#exercise-1.4-sampling-distribution-generation" id="toc-exercise-1.4-sampling-distribution-generation" class="nav-link" data-scroll-target="#exercise-1.4-sampling-distribution-generation">Exercise 1.4: Sampling Distribution Generation</a>
+  <ul class="collapse">
+  <li><a href="#self-check" id="toc-self-check" class="nav-link" data-scroll-target="#self-check">Self-Check</a></li>
+  </ul></li>
   </ul></li>
   <li><a href="#week-2" id="toc-week-2" class="nav-link" data-scroll-target="#week-2">Week 2</a>
   <ul class="collapse">
@@ -198,6 +201,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#correlation-matrix-1" id="toc-correlation-matrix-1" class="nav-link" data-scroll-target="#correlation-matrix-1">Correlation Matrix</a></li>
   <li><a href="#visualize-correlations-1" id="toc-visualize-correlations-1" class="nav-link" data-scroll-target="#visualize-correlations-1">Visualize Correlations</a></li>
   <li><a href="#create-scatter-plots-for-meaningful-correlations-1" id="toc-create-scatter-plots-for-meaningful-correlations-1" class="nav-link" data-scroll-target="#create-scatter-plots-for-meaningful-correlations-1">Create Scatter Plots for Meaningful Correlations</a></li>
+  <li><a href="#self-check-1" id="toc-self-check-1" class="nav-link" data-scroll-target="#self-check-1">Self-Check</a></li>
   </ul></li>
   </ul></li>
   <li><a href="#week-3" id="toc-week-3" class="nav-link" data-scroll-target="#week-3">Week 3</a>
@@ -217,7 +221,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#walkthrough-3.3-comparative-tests" id="toc-walkthrough-3.3-comparative-tests" class="nav-link" data-scroll-target="#walkthrough-3.3-comparative-tests">Walkthrough 3.3: Comparative Tests</a></li>
   <li><a href="#exercise-3.3-comparative-tests" id="toc-exercise-3.3-comparative-tests" class="nav-link" data-scroll-target="#exercise-3.3-comparative-tests">Exercise 3.3: Comparative Tests</a></li>
   <li><a href="#walkthrough-3.4-non-parametric-tests" id="toc-walkthrough-3.4-non-parametric-tests" class="nav-link" data-scroll-target="#walkthrough-3.4-non-parametric-tests">Walkthrough 3.4: Non-Parametric Tests</a></li>
-  <li><a href="#exercise-3.4-non-parametric-tests" id="toc-exercise-3.4-non-parametric-tests" class="nav-link" data-scroll-target="#exercise-3.4-non-parametric-tests">Exercise 3.4: Non-Parametric Tests</a></li>
+  <li><a href="#exercise-3.4-non-parametric-tests" id="toc-exercise-3.4-non-parametric-tests" class="nav-link" data-scroll-target="#exercise-3.4-non-parametric-tests">Exercise 3.4: Non-Parametric Tests</a>
+  <ul class="collapse">
+  <li><a href="#self-check-2" id="toc-self-check-2" class="nav-link" data-scroll-target="#self-check-2">Self-Check</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -345,6 +352,9 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBDYWxjdWxhdGUgdGhlIG1l
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBDYWxjdWxhdGUgdGhlIHN0YW5kYXJkIGRldmlhdGlvbiBvZiB0aGUgJ2NvbnZlcnRlZF9jb21wX3llYXJseScgY29sdW1uXG5ucC5zdGQoZGF0YV9kZXZfc3VydmV5Wydjb252ZXJ0ZWRfY29tcF95ZWFybHknXSkifQ==
 </script>
 </div>
+<blockquote class="blockquote">
+<p><strong>Common Pitfall:</strong> <code>np.std()</code> defaults to the population standard deviation (<code>ddof=0</code>), while <code>pandas</code> <code>.std()</code> defaults to the sample standard deviation (<code>ddof=1</code>). If you are treating your data as a sample, pass <code>ddof=1</code> to <code>np.std()</code> so the two agree. Mixing the defaults is a common source of slightly different numbers.</p>
+</blockquote>
 </section>
 <section id="using-pandas" class="level4">
 <h4 class="anchored" data-anchor-id="using-pandas">Using Pandas</h4>
@@ -461,6 +471,9 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBGb2N1cyBvbiBvbmx5IEFz
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBDYWxjdWxhdGUgY2VudGVyIHN0YXRpc3RpY3MgZm9yIHllYXJzX2NvZGVfcHJvXG5kYXRhX2Rldl9zdXJ2ZXlbJ3llYXJzX2NvZGVfcHJvJ10ubWVhbigpXG5kYXRhX2Rldl9zdXJ2ZXlbJ3llYXJzX2NvZGVfcHJvJ10ubWVkaWFuKClcbmRhdGFfZGV2X3N1cnZleVsneWVhcnNfY29kZV9wcm8nXS5tb2RlKClcblxuIyBUbyBleHRyYWN0IGp1c3QgdGhlIHZhbHVlIGZvciBtb2RlXG5kYXRhX2Rldl9zdXJ2ZXlbJ3llYXJzX2NvZGVfcHJvJ10ubW9kZSgpWzBdIn0=
 </script>
 </div>
+<blockquote class="blockquote">
+<p><strong>Common Pitfall:</strong> <code>.mode()</code> returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with <code>[0]</code> grabs the first mode, but remember the others may exist – do not assume the mode is always unique.</p>
+</blockquote>
 </section>
 <section id="compute-and-interpret-measures-of-variation" class="level3">
 <h3 class="anchored" data-anchor-id="compute-and-interpret-measures-of-variation">Compute and interpret measures of variation</h3>
@@ -549,7 +562,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBDYW4gYWxzbyBtYWtlIGl0
 
 </div>
 <script type="pyodide-27-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTY2F0dGVyIHBsb3QgZm9yICd5ZWFyc19jb2RlX3BybycgdnMuICdjb252ZXJ0ZWRfY29tcF95ZWFybHknXG5zbnMuc2NhdHRlcnBsb3QoeD1kYXRhX2Rldl9zdXJ2ZXlbJ3llYXJzX2NvZGVfcHJvJ10sIFxuICAgICAgICAgICAgICAgIHk9ZGF0YV9kZXZfc3VydmV5Wydjb252ZXJ0ZWRfY29tcF95ZWFybHknXSk7XG5wbHQudGl0bGUoJ1NjYXR0ZXIgUGxvdCBvZiBZZWFycyBvZiBDb2RpbmcgRXhwZXJpZW5jZSB2cy4gWWVhcmx5IENvbXBlbnNhdGlvbicpO1xucGx0LnhsYWJlbCgnWWVhcnMgb2YgQ29kaW5nIEV4cGVyaWVuY2UnKTtcbnBsdC55bGFiZWwoJ1llYXJseSBDb21wZW5zYXRpb24nKTtcbnBsdC5zaG93KCkifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTY2F0dGVyIHBsb3QgZm9yICd5ZWFyc19jb2RlX3BybycgdnMuICdjb252ZXJ0ZWRfY29tcF95ZWFybHknXG5zbnMuc2NhdHRlcnBsb3QoeD1kYXRhX2Rldl9zdXJ2ZXlbJ3llYXJzX2NvZGVfcHJvJ10sXG4gICAgICAgICAgICAgICAgeT1kYXRhX2Rldl9zdXJ2ZXlbJ2NvbnZlcnRlZF9jb21wX3llYXJseSddKTtcbnBsdC50aXRsZSgnU2NhdHRlciBQbG90IG9mIFllYXJzIG9mIENvZGluZyBFeHBlcmllbmNlIHZzLiBZZWFybHkgQ29tcGVuc2F0aW9uJyk7XG5wbHQueGxhYmVsKCdZZWFycyBvZiBDb2RpbmcgRXhwZXJpZW5jZScpO1xucGx0LnlsYWJlbCgnWWVhcmx5IENvbXBlbnNhdGlvbicpO1xucGx0LnNob3coKSJ9
 </script>
 </div>
 </section>
@@ -583,6 +596,9 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTZXQgdGhlIFNlYWJvcm4g
 </section>
 <section id="walkthrough-1.4-sampling-distribution-generation" class="level2">
 <h2 class="anchored" data-anchor-id="walkthrough-1.4-sampling-distribution-generation">Walkthrough 1.4: Sampling Distribution Generation</h2>
+<blockquote class="blockquote">
+<p><strong>Common Pitfall:</strong> Do not confuse the standard deviation of the raw data with the standard deviation of the sample means (the standard error). The histogram below shows the spread of sample means, which is much narrower than the spread of the original population. By the Central Limit Theorem, the sampling distribution of the mean becomes approximately normal as the sample size grows, even when the population itself is skewed.</p>
+</blockquote>
 <div>
 <div id="pyodide-31" class="exercise-cell">
 
@@ -602,7 +618,19 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBUaGluayBvZiBvdXIgZGF0
 eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBUaGluayBvZiBvdXIgJ2Fyb21hJyBkYXRhIGFzIGEgcG9wdWxhdGlvbiB0byBkcmF3IGZyb21cbnBvcHVsYXRpb24gPSBjb2ZmZWVfcXVhbGl0eVsnYXJvbWEnXS5kcm9wbmEoKS52YWx1ZXNcblxuIyBQYXJhbWV0ZXJzXG5zYW1wbGVfc2l6ZSA9IDUwXG5udW1fc2FtcGxlcyA9IDEwMDBcblxuIyBTZXQgcmFuZG9tIHNlZWRcbm5wLnJhbmRvbS5zZWVkKDIwMjQpXG5cbiMgU2ltdWxhdGUgc2FtcGxpbmcgZGlzdHJpYnV0aW9uIG9mIHRoZSBtZWFuXG5zYW1wbGVfbWVhbnMgPSBbXVxuZm9yIF8gaW4gcmFuZ2UobnVtX3NhbXBsZXMpOlxuICAgIHNhbXBsZSA9IG5wLnJhbmRvbS5jaG9pY2UocG9wdWxhdGlvbiwgc2FtcGxlX3NpemUpXG4gICAgc2FtcGxlX21lYW5zLmFwcGVuZChucC5tZWFuKHNhbXBsZSkpXG5cbiMgUGxvdCB0aGUgc2FtcGxpbmcgZGlzdHJpYnV0aW9uIG9mIHRoZSBzYW1wbGUgbWVhbnNcbnBsdC5oaXN0KHNhbXBsZV9tZWFucywgYmlucz0zMCwgZWRnZWNvbG9yPSdrJywgYWxwaGE9MC43KTtcbnBsdC50aXRsZSgnU2FtcGxpbmcgRGlzdHJpYnV0aW9uIG9mIHRoZSBNZWFuIChTYW1wbGUgU2l6ZSA9IDUwKScpO1xucGx0LnhsYWJlbCgnU2FtcGxlIE1lYW4nKTtcbnBsdC55bGFiZWwoJ0ZyZXF1ZW5jeScpO1xucGx0Lnh0aWNrcyhyb3RhdGlvbj0zMCk7XG4jIEFkanVzdCBsYXlvdXQgc28gbGFiZWxzIGFyZSBub3QgY3V0IG9mZlxucGx0LnRpZ2h0X2xheW91dCgpO1xucGx0LnNob3coKSJ9
 </script>
 </div>
+<section id="self-check" class="level3">
+<h3 class="anchored" data-anchor-id="self-check">Self-Check</h3>
+<p>By the end of this week, you should be able to:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Load a dataset and inspect its structure with <code>.info()</code> and <code>.describe()</code>.</label></li>
+<li><label><input type="checkbox">Compute measures of center (mean, median, mode) and spread (range, variance, standard deviation) and explain what each tells you.</label></li>
+<li><label><input type="checkbox">Choose the sample versus population standard deviation by setting <code>ddof</code> correctly.</label></li>
+<li><label><input type="checkbox">Build the five-number summary and read a box plot, histogram, and scatter plot.</label></li>
+<li><label><input type="checkbox">Simulate a sampling distribution of the mean and describe how the Central Limit Theorem applies.</label></li>
+<li><label><input type="checkbox">Run a basic two-sample t-test with <code>scipy.stats</code> and read its t-statistic and p-value.</label></li>
+</ul>
 <hr>
+</section>
 </section>
 </section>
 <section id="week-2" class="level1">
@@ -614,7 +642,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBUaGluayBvZiBvdXIgJ2Fy
 
 </div>
 <script type="pyodide-33-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTZWxlY3Qgb25seSBudW1lcmljIGNvbHVtbnNcbm51bWVyaWNfY29sdW1ucyA9IGRhdGFfZGV2X3N1cnZleS5zZWxlY3RfZHR5cGVzKGluY2x1ZGU9W25wLm51bWJlcl0pXG5cbiMgQ2FsY3VsYXRlIHRoZSBjb3JyZWxhdGlvbiBtYXRyaXggZm9yIG51bWVyaWMgY29sdW1uc1xuY29ycmVsYXRpb25fbWF0cml4ID0gbnVtZXJpY19jb2x1bW5zLmNvcnIoKVxuXG4jIEhlYXRtYXAgZm9yIGNvcnJlbGF0aW9uIG1hdHJpeFxucGx0LmZpZ3VyZShmaWdzaXplPSgxMCwgOCkpO1xuc25zLmhlYXRtYXAoY29ycmVsYXRpb25fbWF0cml4LCBhbm5vdD1UcnVlLCBjbWFwPSdjb29sd2FybScsIGZtdD0nLjJmJyk7IFxucGx0LnRpdGxlKCdIZWF0bWFwIG9mIENvcnJlbGF0aW9uIE1hdHJpeCcpO1xucGx0LnNob3coKSJ9
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTZWxlY3Qgb25seSBudW1lcmljIGNvbHVtbnNcbm51bWVyaWNfY29sdW1ucyA9IGRhdGFfZGV2X3N1cnZleS5zZWxlY3RfZHR5cGVzKGluY2x1ZGU9W25wLm51bWJlcl0pXG5cbiMgQ2FsY3VsYXRlIHRoZSBjb3JyZWxhdGlvbiBtYXRyaXggZm9yIG51bWVyaWMgY29sdW1uc1xuY29ycmVsYXRpb25fbWF0cml4ID0gbnVtZXJpY19jb2x1bW5zLmNvcnIoKVxuXG4jIEhlYXRtYXAgZm9yIGNvcnJlbGF0aW9uIG1hdHJpeFxucGx0LmZpZ3VyZShmaWdzaXplPSgxMCwgOCkpO1xuc25zLmhlYXRtYXAoY29ycmVsYXRpb25fbWF0cml4LCBhbm5vdD1UcnVlLCBjbWFwPSdjb29sd2FybScsIGZtdD0nLjJmJyk7XG5wbHQudGl0bGUoJ0hlYXRtYXAgb2YgQ29ycmVsYXRpb24gTWF0cml4Jyk7XG5wbHQuc2hvdygpIn0=
 </script>
 </div>
 <div>
@@ -622,7 +650,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTZWxlY3Qgb25seSBudW1l
 
 </div>
 <script type="pyodide-34-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBQYWlyIHBsb3QgZm9yIHNlbGVjdGVkIHZhcmlhYmxlcyBcbiMgJ3llYXJzX2NvZGVfcHJvJywgJ3dvcmtfZXhwJywgJ2NvbnZlcnRlZF9jb21wX3llYXJseSdcbnNucy5wYWlycGxvdChkYXRhX2Rldl9zdXJ2ZXksIFxuICAgICAgICAgICAgIHZhcnM9Wyd5ZWFyc19jb2RlX3BybycsICd3b3JrX2V4cCcsICdjb252ZXJ0ZWRfY29tcF95ZWFybHknXSk7XG5wbHQuc3VwdGl0bGUoJ1BhaXIgUGxvdCBvZiBTZWxlY3RlZCBWYXJpYWJsZXMnLCB5PTEpO1xucGx0LnNob3coKSJ9
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBQYWlyIHBsb3QgZm9yIHNlbGVjdGVkIHZhcmlhYmxlc1xuIyAneWVhcnNfY29kZV9wcm8nLCAnd29ya19leHAnLCAnY29udmVydGVkX2NvbXBfeWVhcmx5J1xuc25zLnBhaXJwbG90KGRhdGFfZGV2X3N1cnZleSxcbiAgICAgICAgICAgICB2YXJzPVsneWVhcnNfY29kZV9wcm8nLCAnd29ya19leHAnLCAnY29udmVydGVkX2NvbXBfeWVhcmx5J10pO1xucGx0LnN1cHRpdGxlKCdQYWlyIFBsb3Qgb2YgU2VsZWN0ZWQgVmFyaWFibGVzJywgeT0xKTtcbnBsdC5zaG93KCkifQ==
 </script>
 </div>
 <div>
@@ -641,7 +669,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBUaW1lIHNlcmllcyBwbG90
 
 </div>
 <script type="pyodide-36-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTZWxlY3Qgb25seSBudW1lcmljIGNvbHVtbnNcbm51bWVyaWNfY29sdW1ucyA9IGNvZmZlZV9xdWFsaXR5LnNlbGVjdF9kdHlwZXMoaW5jbHVkZT1bbnAubnVtYmVyXSlcblxuIyBEcm9wIHRoZSAnY2xlYW5fY3VwJyBhbmQgJ3N3ZWV0bmVzcycgY29sdW1ucyBzaW5jZSB0aGV5IGFyZSBhbHdheXMgMTBcbm51bWVyaWNfY29sdW1ucyA9IG51bWVyaWNfY29sdW1ucy5kcm9wKGNvbHVtbnM9WydjbGVhbl9jdXAnLCAnc3dlZXRuZXNzJ10sIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZXJyb3JzPSdpZ25vcmUnKVxuXG4jIENhbGN1bGF0ZSB0aGUgY29ycmVsYXRpb24gbWF0cml4IGZvciBudW1lcmljIGNvbHVtbnNcbmNvcnJlbGF0aW9uX21hdHJpeCA9IG51bWVyaWNfY29sdW1ucy5jb3JyKClcblxuIyBIZWF0bWFwIGZvciBjb3JyZWxhdGlvbiBtYXRyaXhcbnBsdC5maWd1cmUoZmlnc2l6ZT0oMTAsIDgpKTtcbnNucy5oZWF0bWFwKGNvcnJlbGF0aW9uX21hdHJpeCwgYW5ub3Q9VHJ1ZSwgY21hcD0nY29vbHdhcm0nLCBmbXQ9Jy4yZicpO1xucGx0LnRpdGxlKCdIZWF0bWFwIG9mIENvcnJlbGF0aW9uIE1hdHJpeCcpO1xucGx0LnNob3coKSJ9
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTZWxlY3Qgb25seSBudW1lcmljIGNvbHVtbnNcbm51bWVyaWNfY29sdW1ucyA9IGNvZmZlZV9xdWFsaXR5LnNlbGVjdF9kdHlwZXMoaW5jbHVkZT1bbnAubnVtYmVyXSlcblxuIyBEcm9wIHRoZSAnY2xlYW5fY3VwJyBhbmQgJ3N3ZWV0bmVzcycgY29sdW1ucyBzaW5jZSB0aGV5IGFyZSBhbHdheXMgMTBcbm51bWVyaWNfY29sdW1ucyA9IG51bWVyaWNfY29sdW1ucy5kcm9wKGNvbHVtbnM9WydjbGVhbl9jdXAnLCAnc3dlZXRuZXNzJ10sXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlcnJvcnM9J2lnbm9yZScpXG5cbiMgQ2FsY3VsYXRlIHRoZSBjb3JyZWxhdGlvbiBtYXRyaXggZm9yIG51bWVyaWMgY29sdW1uc1xuY29ycmVsYXRpb25fbWF0cml4ID0gbnVtZXJpY19jb2x1bW5zLmNvcnIoKVxuXG4jIEhlYXRtYXAgZm9yIGNvcnJlbGF0aW9uIG1hdHJpeFxucGx0LmZpZ3VyZShmaWdzaXplPSgxMCwgOCkpO1xuc25zLmhlYXRtYXAoY29ycmVsYXRpb25fbWF0cml4LCBhbm5vdD1UcnVlLCBjbWFwPSdjb29sd2FybScsIGZtdD0nLjJmJyk7XG5wbHQudGl0bGUoJ0hlYXRtYXAgb2YgQ29ycmVsYXRpb24gTWF0cml4Jyk7XG5wbHQuc2hvdygpIn0=
 </script>
 </div>
 <div>
@@ -731,7 +759,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBDaGVjayBmb3IgbWlzc2lu
 
 </div>
 <script type="pyodide-43-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBIaXN0b2dyYW0gZm9yICdhcm9tYSdcbnNucy5oaXN0cGxvdChjb2ZmZWVfcXVhbGl0eVsnYXJvbWEnXSk7XG5wbHQudGl0bGUoJ0hpc3RvZ3JhbSBvZiBDb2ZmZWUgQXJvbWEnKTtcbnBsdC54bGFiZWwoJ0Fyb21hJyk7XG5wbHQueWxhYmVsKCdGcmVxdWVuY3knKTtcbnBsdC5zaG93KClcblxuIyBCb3ggcGxvdCBmb3IgJ2FjaWRpdHknXG5zbnMuYm94cGxvdCh5PWNvZmZlZV9xdWFsaXR5WydhY2lkaXR5J10pO1xucGx0LnRpdGxlKCdCb3ggUGxvdCBvZiBDb2ZmZWUgQWNpZGl0eScpO1xucGx0LnlsYWJlbCgnQWNpZGl0eScpO1xucGx0LnNob3coKVxuXG4jIFNjYXR0ZXIgcGxvdCBmb3IgJ2Fyb21hJyB2cy4gJ3RvdGFsX2N1cF9wb2ludHMnXG5zbnMuc2NhdHRlcnBsb3QoeD1jb2ZmZWVfcXVhbGl0eVsnYXJvbWEnXSwgXG4gICAgICAgICAgICAgICAgeT1jb2ZmZWVfcXVhbGl0eVsndG90YWxfY3VwX3BvaW50cyddKTtcbnBsdC50aXRsZSgnU2NhdHRlciBQbG90IG9mIEFyb21hIHZzLiBUb3RhbCBDdXAgUG9pbnRzJyk7XG5wbHQueGxhYmVsKCdBcm9tYScpO1xucGx0LnlsYWJlbCgnVG90YWwgQ3VwIFBvaW50cycpO1xucGx0LnNob3coKSJ9
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBIaXN0b2dyYW0gZm9yICdhcm9tYSdcbnNucy5oaXN0cGxvdChjb2ZmZWVfcXVhbGl0eVsnYXJvbWEnXSk7XG5wbHQudGl0bGUoJ0hpc3RvZ3JhbSBvZiBDb2ZmZWUgQXJvbWEnKTtcbnBsdC54bGFiZWwoJ0Fyb21hJyk7XG5wbHQueWxhYmVsKCdGcmVxdWVuY3knKTtcbnBsdC5zaG93KClcblxuIyBCb3ggcGxvdCBmb3IgJ2FjaWRpdHknXG5zbnMuYm94cGxvdCh5PWNvZmZlZV9xdWFsaXR5WydhY2lkaXR5J10pO1xucGx0LnRpdGxlKCdCb3ggUGxvdCBvZiBDb2ZmZWUgQWNpZGl0eScpO1xucGx0LnlsYWJlbCgnQWNpZGl0eScpO1xucGx0LnNob3coKVxuXG4jIFNjYXR0ZXIgcGxvdCBmb3IgJ2Fyb21hJyB2cy4gJ3RvdGFsX2N1cF9wb2ludHMnXG5zbnMuc2NhdHRlcnBsb3QoeD1jb2ZmZWVfcXVhbGl0eVsnYXJvbWEnXSxcbiAgICAgICAgICAgICAgICB5PWNvZmZlZV9xdWFsaXR5Wyd0b3RhbF9jdXBfcG9pbnRzJ10pO1xucGx0LnRpdGxlKCdTY2F0dGVyIFBsb3Qgb2YgQXJvbWEgdnMuIFRvdGFsIEN1cCBQb2ludHMnKTtcbnBsdC54bGFiZWwoJ0Fyb21hJyk7XG5wbHQueWxhYmVsKCdUb3RhbCBDdXAgUG9pbnRzJyk7XG5wbHQuc2hvdygpIn0=
 </script>
 </div>
 </section>
@@ -774,6 +802,9 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBDaGVjayBmb3IgbWlzc2lu
 </section>
 <section id="handling-outliers" class="level3">
 <h3 class="anchored" data-anchor-id="handling-outliers">Handling Outliers</h3>
+<blockquote class="blockquote">
+<p><strong>Common Pitfall:</strong> The <code>1.5 * IQR</code> rule flags points as potential outliers, but a flagged value is not automatically an error. Dropping every flagged row can throw away legitimate data and bias your results. Inspect outliers before removing them, and document why you removed any.</p>
+</blockquote>
 <div>
 <div id="pyodide-47" class="exercise-cell">
 
@@ -790,7 +821,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTZWxlY3Qgb25seSBudW1l
 
 </div>
 <script type="pyodide-48-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZnJvbSBza2xlYXJuLnByZXByb2Nlc3NpbmcgaW1wb3J0IE1pbk1heFNjYWxlciwgU3RhbmRhcmRTY2FsZXJcblxuIyBOb3JtYWxpemF0aW9uIG9uICdjb252ZXJ0ZWRfY29tcF95ZWFybHknXG5zY2FsZXIgPSBNaW5NYXhTY2FsZXIoKVxuZGF0YV9kZXZfc3VydmV5X2ltcHV0ZWRbWydjb252ZXJ0ZWRfY29tcF95ZWFybHknXV0gPSBzY2FsZXIuZml0X3RyYW5zZm9ybShcbiAgZGF0YV9kZXZfc3VydmV5X2ltcHV0ZWRbWydjb252ZXJ0ZWRfY29tcF95ZWFybHknXV1cbilcblxuIyBTdGFuZGFyZGl6YXRpb24gb24gJ3dvcmtfZXhwJ1xuc2NhbGVyID0gU3RhbmRhcmRTY2FsZXIoKVxuZGF0YV9kZXZfc3VydmV5X2ltcHV0ZWRbWyd3b3JrX2V4cCddXSA9IHNjYWxlci5maXRfdHJhbnNmb3JtKFxuICBkYXRhX2Rldl9zdXJ2ZXlfaW1wdXRlZFtbJ3dvcmtfZXhwJ11dXG4pXG5cbiMgRW5jb2RpbmcgY2F0ZWdvcmljYWwgdmFyaWFibGVzICgnY291bnRyeScpXG5kYXRhX2Rldl9zdXJ2ZXlfaW1wdXRlZCA9IHBkLmdldF9kdW1taWVzKGRhdGFfZGV2X3N1cnZleV9pbXB1dGVkLCBcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgY29sdW1ucz1bJ2NvdW50cnknXSkifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZnJvbSBza2xlYXJuLnByZXByb2Nlc3NpbmcgaW1wb3J0IE1pbk1heFNjYWxlciwgU3RhbmRhcmRTY2FsZXJcblxuIyBOb3JtYWxpemF0aW9uIG9uICdjb252ZXJ0ZWRfY29tcF95ZWFybHknXG5zY2FsZXIgPSBNaW5NYXhTY2FsZXIoKVxuZGF0YV9kZXZfc3VydmV5X2ltcHV0ZWRbWydjb252ZXJ0ZWRfY29tcF95ZWFybHknXV0gPSBzY2FsZXIuZml0X3RyYW5zZm9ybShcbiAgZGF0YV9kZXZfc3VydmV5X2ltcHV0ZWRbWydjb252ZXJ0ZWRfY29tcF95ZWFybHknXV1cbilcblxuIyBTdGFuZGFyZGl6YXRpb24gb24gJ3dvcmtfZXhwJ1xuc2NhbGVyID0gU3RhbmRhcmRTY2FsZXIoKVxuZGF0YV9kZXZfc3VydmV5X2ltcHV0ZWRbWyd3b3JrX2V4cCddXSA9IHNjYWxlci5maXRfdHJhbnNmb3JtKFxuICBkYXRhX2Rldl9zdXJ2ZXlfaW1wdXRlZFtbJ3dvcmtfZXhwJ11dXG4pXG5cbiMgRW5jb2RpbmcgY2F0ZWdvcmljYWwgdmFyaWFibGVzICgnY291bnRyeScpXG5kYXRhX2Rldl9zdXJ2ZXlfaW1wdXRlZCA9IHBkLmdldF9kdW1taWVzKGRhdGFfZGV2X3N1cnZleV9pbXB1dGVkLFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBjb2x1bW5zPVsnY291bnRyeSddKSJ9
 </script>
 </div>
 </section>
@@ -848,7 +879,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTZWxlY3Qgb25seSBudW1l
 
 </div>
 <script type="pyodide-53-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBOb3JtYWxpemF0aW9uIG9uICd0b3RhbF9jdXBfcG9pbnRzJ1xuc2NhbGVyID0gTWluTWF4U2NhbGVyKClcbmNvZmZlZV9xdWFsaXR5X2ltcHV0ZWRbWyd0b3RhbF9jdXBfcG9pbnRzJ11dID0gXFxcbiAgc2NhbGVyLmZpdF90cmFuc2Zvcm0oY29mZmVlX3F1YWxpdHlfaW1wdXRlZFtbJ3RvdGFsX2N1cF9wb2ludHMnXV0pXG4jIENhbiB1c2UgdGhpcyBpbnN0ZWFkXG5jb2ZmZWVfcXVhbGl0eV9pbXB1dGVkLmxvY1s6LCBbJ3RvdGFsX2N1cF9wb2ludHMnXV0gPSBcXFxuICBzY2FsZXIuZml0X3RyYW5zZm9ybShjb2ZmZWVfcXVhbGl0eV9pbXB1dGVkW1sndG90YWxfY3VwX3BvaW50cyddXSlcblxuIyBTdGFuZGFyZGl6YXRpb24gb24gYWNpZGl0eVxuc2NhbGVyID0gU3RhbmRhcmRTY2FsZXIoKVxuY29mZmVlX3F1YWxpdHlfaW1wdXRlZFtbJ2FjaWRpdHknXV0gPSBzY2FsZXIuZml0X3RyYW5zZm9ybShcbiAgY29mZmVlX3F1YWxpdHlfaW1wdXRlZFtbJ2FjaWRpdHknXV1cbilcbiMgT3IgdGhpc1xuY29mZmVlX3F1YWxpdHlfaW1wdXRlZC5sb2NbOiwgWydhY2lkaXR5J11dID0gXFxcbiAgc2NhbGVyLmZpdF90cmFuc2Zvcm0oY29mZmVlX3F1YWxpdHlfaW1wdXRlZFtbJ2FjaWRpdHknXV0pXG5cbiMgRW5jb2RpbmcgY2F0ZWdvcmljYWwgdmFyaWFibGVzICgnY291bnRyeScgYW5kICdjb250aW5lbnRfb2Zfb3JpZ2luJylcbmNvZmZlZV9xdWFsaXR5X2ltcHV0ZWQgPSBwZC5nZXRfZHVtbWllcyhcbiAgY29mZmVlX3F1YWxpdHlfaW1wdXRlZCwgXG4gIGNvbHVtbnM9Wydjb3VudHJ5X29mX29yaWdpbicsICdjb250aW5lbnRfb2Zfb3JpZ2luJ10pIn0=
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBOb3JtYWxpemF0aW9uIG9uICd0b3RhbF9jdXBfcG9pbnRzJ1xuc2NhbGVyID0gTWluTWF4U2NhbGVyKClcbmNvZmZlZV9xdWFsaXR5X2ltcHV0ZWRbWyd0b3RhbF9jdXBfcG9pbnRzJ11dID0gXFxcbiAgc2NhbGVyLmZpdF90cmFuc2Zvcm0oY29mZmVlX3F1YWxpdHlfaW1wdXRlZFtbJ3RvdGFsX2N1cF9wb2ludHMnXV0pXG4jIENhbiB1c2UgdGhpcyBpbnN0ZWFkXG5jb2ZmZWVfcXVhbGl0eV9pbXB1dGVkLmxvY1s6LCBbJ3RvdGFsX2N1cF9wb2ludHMnXV0gPSBcXFxuICBzY2FsZXIuZml0X3RyYW5zZm9ybShjb2ZmZWVfcXVhbGl0eV9pbXB1dGVkW1sndG90YWxfY3VwX3BvaW50cyddXSlcblxuIyBTdGFuZGFyZGl6YXRpb24gb24gYWNpZGl0eVxuc2NhbGVyID0gU3RhbmRhcmRTY2FsZXIoKVxuY29mZmVlX3F1YWxpdHlfaW1wdXRlZFtbJ2FjaWRpdHknXV0gPSBzY2FsZXIuZml0X3RyYW5zZm9ybShcbiAgY29mZmVlX3F1YWxpdHlfaW1wdXRlZFtbJ2FjaWRpdHknXV1cbilcbiMgT3IgdGhpc1xuY29mZmVlX3F1YWxpdHlfaW1wdXRlZC5sb2NbOiwgWydhY2lkaXR5J11dID0gXFxcbiAgc2NhbGVyLmZpdF90cmFuc2Zvcm0oY29mZmVlX3F1YWxpdHlfaW1wdXRlZFtbJ2FjaWRpdHknXV0pXG5cbiMgRW5jb2RpbmcgY2F0ZWdvcmljYWwgdmFyaWFibGVzICgnY291bnRyeScgYW5kICdjb250aW5lbnRfb2Zfb3JpZ2luJylcbmNvZmZlZV9xdWFsaXR5X2ltcHV0ZWQgPSBwZC5nZXRfZHVtbWllcyhcbiAgY29mZmVlX3F1YWxpdHlfaW1wdXRlZCxcbiAgY29sdW1ucz1bJ2NvdW50cnlfb2Zfb3JpZ2luJywgJ2NvbnRpbmVudF9vZl9vcmlnaW4nXSkifQ==
 </script>
 </div>
 </section>
@@ -859,7 +890,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBOb3JtYWxpemF0aW9uIG9u
 
 </div>
 <script type="pyodide-54-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBIaXN0b2dyYW0gZm9yICdhcm9tYSdcbnNucy5oaXN0cGxvdChjb2ZmZWVfcXVhbGl0eV9pbXB1dGVkWydhcm9tYSddKTtcbnBsdC50aXRsZSgnSGlzdG9ncmFtIG9mIENvZmZlZSBBcm9tYScpO1xucGx0LnhsYWJlbCgnQXJvbWEnKTtcbnBsdC55bGFiZWwoJ0ZyZXF1ZW5jeScpO1xucGx0LnNob3coKVxuXG4jIEJveCBwbG90IGZvciAnYWNpZGl0eSdcbnNucy5ib3hwbG90KHk9Y29mZmVlX3F1YWxpdHlfaW1wdXRlZFsnYWNpZGl0eSddKTtcbnBsdC50aXRsZSgnQm94IFBsb3Qgb2YgQ29mZmVlIEFjaWRpdHknKTtcbnBsdC55bGFiZWwoJ0FjaWRpdHknKTtcbnBsdC5zaG93KClcblxuIyBTY2F0dGVyIHBsb3QgZm9yICdhcm9tYScgdnMuICd0b3RhbF9jdXBfcG9pbnRzJ1xuc25zLnNjYXR0ZXJwbG90KHg9Y29mZmVlX3F1YWxpdHlfaW1wdXRlZFsnYXJvbWEnXSwgXG4gICAgICAgICAgICAgICAgeT1jb2ZmZWVfcXVhbGl0eV9pbXB1dGVkWyd0b3RhbF9jdXBfcG9pbnRzJ10pO1xucGx0LnRpdGxlKCdTY2F0dGVyIFBsb3Qgb2YgQXJvbWEgdnMuIFRvdGFsIEN1cCBQb2ludHMnKTtcbnBsdC54bGFiZWwoJ0Fyb21hJyk7XG5wbHQueWxhYmVsKCdUb3RhbCBDdXAgUG9pbnRzJyk7XG5wbHQuc2hvdygpIn0=
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBIaXN0b2dyYW0gZm9yICdhcm9tYSdcbnNucy5oaXN0cGxvdChjb2ZmZWVfcXVhbGl0eV9pbXB1dGVkWydhcm9tYSddKTtcbnBsdC50aXRsZSgnSGlzdG9ncmFtIG9mIENvZmZlZSBBcm9tYScpO1xucGx0LnhsYWJlbCgnQXJvbWEnKTtcbnBsdC55bGFiZWwoJ0ZyZXF1ZW5jeScpO1xucGx0LnNob3coKVxuXG4jIEJveCBwbG90IGZvciAnYWNpZGl0eSdcbnNucy5ib3hwbG90KHk9Y29mZmVlX3F1YWxpdHlfaW1wdXRlZFsnYWNpZGl0eSddKTtcbnBsdC50aXRsZSgnQm94IFBsb3Qgb2YgQ29mZmVlIEFjaWRpdHknKTtcbnBsdC55bGFiZWwoJ0FjaWRpdHknKTtcbnBsdC5zaG93KClcblxuIyBTY2F0dGVyIHBsb3QgZm9yICdhcm9tYScgdnMuICd0b3RhbF9jdXBfcG9pbnRzJ1xuc25zLnNjYXR0ZXJwbG90KHg9Y29mZmVlX3F1YWxpdHlfaW1wdXRlZFsnYXJvbWEnXSxcbiAgICAgICAgICAgICAgICB5PWNvZmZlZV9xdWFsaXR5X2ltcHV0ZWRbJ3RvdGFsX2N1cF9wb2ludHMnXSk7XG5wbHQudGl0bGUoJ1NjYXR0ZXIgUGxvdCBvZiBBcm9tYSB2cy4gVG90YWwgQ3VwIFBvaW50cycpO1xucGx0LnhsYWJlbCgnQXJvbWEnKTtcbnBsdC55bGFiZWwoJ1RvdGFsIEN1cCBQb2ludHMnKTtcbnBsdC5zaG93KCkifQ==
 </script>
 </div>
 <hr>
@@ -867,6 +898,9 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBIaXN0b2dyYW0gZm9yICdh
 </section>
 <section id="walkthrough-2.4-correlations" class="level2">
 <h2 class="anchored" data-anchor-id="walkthrough-2.4-correlations">Walkthrough 2.4: Correlations</h2>
+<blockquote class="blockquote">
+<p><strong>Common Pitfall:</strong> Correlation measures only the strength of a linear association, and a strong correlation does not imply that one variable causes the other. Two variables can be highly correlated because of a third, lurking variable. Also, <code>.corr()</code> (Pearson) can miss strong non-linear relationships, so always pair it with a scatter plot.</p>
+</blockquote>
 <section id="correlation-matrix" class="level3">
 <h3 class="anchored" data-anchor-id="correlation-matrix">Correlation Matrix</h3>
 <div>
@@ -896,7 +930,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBIZWF0bWFwIGZvciBjb3Jy
 
 </div>
 <script type="pyodide-57-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTY2F0dGVyIHBsb3QgZm9yICd5ZWFyc19jb2RlX3BybycgdnMuICd5ZWFyc19jb2RlJ1xuc25zLnNjYXR0ZXJwbG90KHg9ZGF0YV9kZXZfc3VydmV5Wyd5ZWFyc19jb2RlX3BybyddLCBcbiAgICAgICAgICAgICAgICB5PWRhdGFfZGV2X3N1cnZleVsneWVhcnNfY29kZSddKTtcbnBsdC50aXRsZSgnU2NhdHRlciBQbG90IG9mIFllYXJzIG9mIFByb2Zlc3Npb25hbCBDb2RpbmcgRXhwZXJpZW5jZSB2cy4gWWVhcnMgb2YgUHJvZmVzc2lvbmFsIENvZGluZyBFeHBlcmllbmNlJyk7XG5wbHQueGxhYmVsKCdZZWFycyBvZiBQcm9mZXNzaW9uYWwgQ29kaW5nIEV4cGVyaWVuY2UnKTtcbnBsdC55bGFiZWwoJ1llYXJzIG9mIENvZGluZyBFeHBlcmllbmNlJyk7XG5wbHQuc2hvdygpXG5cbiMgU2NhdHRlciBwbG90IGZvciAnd29ya19leHAnIHZzLiAneWVhcnNfY29kZV9wcm8nXG5zbnMuc2NhdHRlcnBsb3QoeD1kYXRhX2Rldl9zdXJ2ZXlbJ3dvcmtfZXhwJ10sIFxuICAgICAgICAgICAgICAgIHk9ZGF0YV9kZXZfc3VydmV5Wyd5ZWFyc19jb2RlX3BybyddKTtcbnBsdC50aXRsZSgnU2NhdHRlciBQbG90IG9mIFdvcmsgRXhwZXJpZW5jZSB2cy4gWWVhcnMgb2YgUHJvZmVzc2lvbmFsIENvZGluZyBFeHBlcmllbmNlJyk7XG5wbHQueGxhYmVsKCdXb3JrIEV4cGVyaWVuY2UnKTtcbnBsdC55bGFiZWwoJ1llYXJzIG9mIFByb2Zlc3Npb25hbCBDb2RpbmcgRXhwZXJpZW5jZScpO1xucGx0LnNob3coKSJ9
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTY2F0dGVyIHBsb3QgZm9yICd5ZWFyc19jb2RlX3BybycgdnMuICd5ZWFyc19jb2RlJ1xuc25zLnNjYXR0ZXJwbG90KHg9ZGF0YV9kZXZfc3VydmV5Wyd5ZWFyc19jb2RlX3BybyddLFxuICAgICAgICAgICAgICAgIHk9ZGF0YV9kZXZfc3VydmV5Wyd5ZWFyc19jb2RlJ10pO1xucGx0LnRpdGxlKCdTY2F0dGVyIFBsb3Qgb2YgWWVhcnMgb2YgUHJvZmVzc2lvbmFsIENvZGluZyBFeHBlcmllbmNlIHZzLiBZZWFycyBvZiBQcm9mZXNzaW9uYWwgQ29kaW5nIEV4cGVyaWVuY2UnKTtcbnBsdC54bGFiZWwoJ1llYXJzIG9mIFByb2Zlc3Npb25hbCBDb2RpbmcgRXhwZXJpZW5jZScpO1xucGx0LnlsYWJlbCgnWWVhcnMgb2YgQ29kaW5nIEV4cGVyaWVuY2UnKTtcbnBsdC5zaG93KClcblxuIyBTY2F0dGVyIHBsb3QgZm9yICd3b3JrX2V4cCcgdnMuICd5ZWFyc19jb2RlX3BybydcbnNucy5zY2F0dGVycGxvdCh4PWRhdGFfZGV2X3N1cnZleVsnd29ya19leHAnXSxcbiAgICAgICAgICAgICAgICB5PWRhdGFfZGV2X3N1cnZleVsneWVhcnNfY29kZV9wcm8nXSk7XG5wbHQudGl0bGUoJ1NjYXR0ZXIgUGxvdCBvZiBXb3JrIEV4cGVyaWVuY2UgdnMuIFllYXJzIG9mIFByb2Zlc3Npb25hbCBDb2RpbmcgRXhwZXJpZW5jZScpO1xucGx0LnhsYWJlbCgnV29yayBFeHBlcmllbmNlJyk7XG5wbHQueWxhYmVsKCdZZWFycyBvZiBQcm9mZXNzaW9uYWwgQ29kaW5nIEV4cGVyaWVuY2UnKTtcbnBsdC5zaG93KCkifQ==
 </script>
 </div>
 </section>
@@ -910,7 +944,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTY2F0dGVyIHBsb3QgZm9y
 
 </div>
 <script type="pyodide-58-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTZWxlY3Qgb25seSBudW1lcmljIGNvbHVtbnNcbm51bWVyaWNfY29sdW1ucyA9IGNvZmZlZV9xdWFsaXR5LnNlbGVjdF9kdHlwZXMoaW5jbHVkZT1bbnAubnVtYmVyXSlcblxuIyBSZW1vdmUgJ2NsZWFuX2N1cCcgYW5kICdzd2VldG5lc3MnIHRvb1xubnVtZXJpY19jb2x1bW5zID0gbnVtZXJpY19jb2x1bW5zLmRyb3AoY29sdW1ucz1bJ2NsZWFuX2N1cCcsICdzd2VldG5lc3MnXSwgXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlcnJvcnM9J2lnbm9yZScpXG5cbiMgQ2FsY3VsYXRlIHRoZSBjb3JyZWxhdGlvbiBtYXRyaXhcbmNvcnJlbGF0aW9uX21hdHJpeCA9IG51bWVyaWNfY29sdW1ucy5jb3JyKClcblxuIyBEaXNwbGF5IHRoZSBjb3JyZWxhdGlvbiBtYXRyaXhcbmNvcnJlbGF0aW9uX21hdHJpeCJ9
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTZWxlY3Qgb25seSBudW1lcmljIGNvbHVtbnNcbm51bWVyaWNfY29sdW1ucyA9IGNvZmZlZV9xdWFsaXR5LnNlbGVjdF9kdHlwZXMoaW5jbHVkZT1bbnAubnVtYmVyXSlcblxuIyBSZW1vdmUgJ2NsZWFuX2N1cCcgYW5kICdzd2VldG5lc3MnIHRvb1xubnVtZXJpY19jb2x1bW5zID0gbnVtZXJpY19jb2x1bW5zLmRyb3AoY29sdW1ucz1bJ2NsZWFuX2N1cCcsICdzd2VldG5lc3MnXSxcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVycm9ycz0naWdub3JlJylcblxuIyBDYWxjdWxhdGUgdGhlIGNvcnJlbGF0aW9uIG1hdHJpeFxuY29ycmVsYXRpb25fbWF0cml4ID0gbnVtZXJpY19jb2x1bW5zLmNvcnIoKVxuXG4jIERpc3BsYXkgdGhlIGNvcnJlbGF0aW9uIG1hdHJpeFxuY29ycmVsYXRpb25fbWF0cml4In0=
 </script>
 </div>
 </section>
@@ -932,9 +966,20 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBIZWF0bWFwIGZvciBjb3Jy
 
 </div>
 <script type="pyodide-60-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTY2F0dGVyIHBsb3QgZm9yICdmbGF2b3InIHZzLiAndG90YWxfY3VwX3BvaW50cydcbnNucy5zY2F0dGVycGxvdCh4PWNvZmZlZV9xdWFsaXR5WydmbGF2b3InXSwgXG4gICAgICAgICAgICAgICAgeT1jb2ZmZWVfcXVhbGl0eVsndG90YWxfY3VwX3BvaW50cyddKTtcbnBsdC50aXRsZSgnU2NhdHRlciBQbG90IG9mIEZsYXZvciB2cy4gVG90YWwgQ3VwIFBvaW50cycpO1xucGx0LnhsYWJlbCgnRmxhdm9yJyk7XG5wbHQueWxhYmVsKCdUb3RhbCBDdXAgUG9pbnRzJyk7XG5wbHQuc2hvdygpXG5cbiMgU2NhdHRlciBwbG90IGZvciAnb3ZlcmFsbCcgdnMuICd0b3RhbF9jdXBfcG9pbnRzJ1xuc25zLnNjYXR0ZXJwbG90KHg9Y29mZmVlX3F1YWxpdHlbJ292ZXJhbGwnXSwgXG4gICAgICAgICAgICAgICAgeT1jb2ZmZWVfcXVhbGl0eVsndG90YWxfY3VwX3BvaW50cyddKTtcbnBsdC50aXRsZSgnU2NhdHRlciBQbG90IG9mIE92ZXJhbGwgdnMuIFRvdGFsIEN1cCBQb2ludHMnKTtcbnBsdC54bGFiZWwoJ092ZXJhbGwnKTtcbnBsdC55bGFiZWwoJ1RvdGFsIEN1cCBQb2ludHMnKTtcbnBsdC5zaG93KCkifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTY2F0dGVyIHBsb3QgZm9yICdmbGF2b3InIHZzLiAndG90YWxfY3VwX3BvaW50cydcbnNucy5zY2F0dGVycGxvdCh4PWNvZmZlZV9xdWFsaXR5WydmbGF2b3InXSxcbiAgICAgICAgICAgICAgICB5PWNvZmZlZV9xdWFsaXR5Wyd0b3RhbF9jdXBfcG9pbnRzJ10pO1xucGx0LnRpdGxlKCdTY2F0dGVyIFBsb3Qgb2YgRmxhdm9yIHZzLiBUb3RhbCBDdXAgUG9pbnRzJyk7XG5wbHQueGxhYmVsKCdGbGF2b3InKTtcbnBsdC55bGFiZWwoJ1RvdGFsIEN1cCBQb2ludHMnKTtcbnBsdC5zaG93KClcblxuIyBTY2F0dGVyIHBsb3QgZm9yICdvdmVyYWxsJyB2cy4gJ3RvdGFsX2N1cF9wb2ludHMnXG5zbnMuc2NhdHRlcnBsb3QoeD1jb2ZmZWVfcXVhbGl0eVsnb3ZlcmFsbCddLFxuICAgICAgICAgICAgICAgIHk9Y29mZmVlX3F1YWxpdHlbJ3RvdGFsX2N1cF9wb2ludHMnXSk7XG5wbHQudGl0bGUoJ1NjYXR0ZXIgUGxvdCBvZiBPdmVyYWxsIHZzLiBUb3RhbCBDdXAgUG9pbnRzJyk7XG5wbHQueGxhYmVsKCdPdmVyYWxsJyk7XG5wbHQueWxhYmVsKCdUb3RhbCBDdXAgUG9pbnRzJyk7XG5wbHQuc2hvdygpIn0=
 </script>
 </div>
+</section>
+<section id="self-check-1" class="level3">
+<h3 class="anchored" data-anchor-id="self-check-1">Self-Check</h3>
+<p>By the end of this week, you should be able to:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Build advanced visualizations (correlation heatmaps, pair plots, and time series line charts) to explore relationships.</label></li>
+<li><label><input type="checkbox">Carry out a basic exploratory data analysis: check for missing values, remove duplicates, and summarize variables.</label></li>
+<li><label><input type="checkbox">Preprocess data by imputing missing values, handling outliers with the IQR rule, scaling features, and encoding categorical variables.</label></li>
+<li><label><input type="checkbox">Compute and interpret a correlation matrix while remembering that correlation does not imply causation.</label></li>
+<li><label><input type="checkbox">Explain why a scatter plot should accompany any correlation coefficient.</label></li>
+</ul>
 <hr>
 </section>
 </section>
@@ -994,12 +1039,18 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBTaW11bGF0ZSBleHBvbmVu
 </section>
 <section id="walkthrough-3.2-t-tests" class="level2">
 <h2 class="anchored" data-anchor-id="walkthrough-3.2-t-tests">Walkthrough 3.2: t-tests</h2>
+<blockquote class="blockquote">
+<p><strong>Common Pitfall:</strong> A p-value is not the probability that the null hypothesis is true. It is the probability of seeing data at least as extreme as yours if the null hypothesis were true. A small p-value is evidence against the null, not a statement about how likely the null is.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Common Pitfall:</strong> The <code>alternative</code> argument controls whether the test is one-tailed (<code>'greater'</code> or <code>'less'</code>) or two-tailed (<code>'two-sided'</code>, the default). Pick the direction before you see the data, based on the question. A one-tailed test only detects an effect in the specified direction, so using the wrong tail can hide a real effect.</p>
+</blockquote>
 <div>
 <div id="pyodide-65" class="exercise-cell">
 
 </div>
 <script type="pyodide-65-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBPbmUtc2FtcGxlIHQtdGVzdCBjaGVja2luZyBmb3IgZXZpZGVuY2UgdGhhdCBtdSBjb21wZW5zYXRpb24gPiA4NTAwMFxuc2FsYXJ5X21lYW4gPSA4NTAwMFxudF9zdGF0LCBwX3ZhbHVlID0gc3RhdHMudHRlc3RfMXNhbXAoXG4gIGRhdGFfZGV2X3N1cnZleVsnY29udmVydGVkX2NvbXBfeWVhcmx5J10uZHJvcG5hKCksIFxuICBwb3BtZWFuID0gc2FsYXJ5X21lYW4sXG4gIGFsdGVybmF0aXZlPSdncmVhdGVyJylcblxucHJpbnQoZlwiVC1zdGF0aXN0aWM6IHt0X3N0YXR9XCIpXG5wcmludChmXCJQLXZhbHVlOiB7cF92YWx1ZX1cIikifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBPbmUtc2FtcGxlIHQtdGVzdCBjaGVja2luZyBmb3IgZXZpZGVuY2UgdGhhdCBtdSBjb21wZW5zYXRpb24gPiA4NTAwMFxuc2FsYXJ5X21lYW4gPSA4NTAwMFxudF9zdGF0LCBwX3ZhbHVlID0gc3RhdHMudHRlc3RfMXNhbXAoXG4gIGRhdGFfZGV2X3N1cnZleVsnY29udmVydGVkX2NvbXBfeWVhcmx5J10uZHJvcG5hKCksXG4gIHBvcG1lYW4gPSBzYWxhcnlfbWVhbixcbiAgYWx0ZXJuYXRpdmU9J2dyZWF0ZXInKVxuXG5wcmludChmXCJULXN0YXRpc3RpYzoge3Rfc3RhdH1cIilcbnByaW50KGZcIlAtdmFsdWU6IHtwX3ZhbHVlfVwiKSJ9
 </script>
 </div>
 <div>
@@ -1018,7 +1069,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBUd28tc2FtcGxlIHQtdGVz
 
 </div>
 <script type="pyodide-67-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBPbmUtc2FtcGxlIHQtdGVzdCBjaGVja2luZyBmb3IgZXZpZGVuY2UgdGhhdCBtdSAnZmxhdm9yJyA8IDcuOFxuZmxhdm9yX21lYW4gPSA3LjhcbnRfc3RhdCwgcF92YWx1ZSA9IHN0YXRzLnR0ZXN0XzFzYW1wKFxuICBjb2ZmZWVfcXVhbGl0eVsnZmxhdm9yJ10uZHJvcG5hKCksIFxuICBmbGF2b3JfbWVhbixcbiAgYWx0ZXJuYXRpdmU9J2xlc3MnXG4pXG5cbnByaW50KGZcIlQtc3RhdGlzdGljOiB7dF9zdGF0fVwiKVxucHJpbnQoZlwiUC12YWx1ZToge3BfdmFsdWV9XCIpIn0=
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBPbmUtc2FtcGxlIHQtdGVzdCBjaGVja2luZyBmb3IgZXZpZGVuY2UgdGhhdCBtdSAnZmxhdm9yJyA8IDcuOFxuZmxhdm9yX21lYW4gPSA3LjhcbnRfc3RhdCwgcF92YWx1ZSA9IHN0YXRzLnR0ZXN0XzFzYW1wKFxuICBjb2ZmZWVfcXVhbGl0eVsnZmxhdm9yJ10uZHJvcG5hKCksXG4gIGZsYXZvcl9tZWFuLFxuICBhbHRlcm5hdGl2ZT0nbGVzcydcbilcblxucHJpbnQoZlwiVC1zdGF0aXN0aWM6IHt0X3N0YXR9XCIpXG5wcmludChmXCJQLXZhbHVlOiB7cF92YWx1ZX1cIikifQ==
 </script>
 </div>
 <div>
@@ -1026,7 +1077,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBPbmUtc2FtcGxlIHQtdGVz
 
 </div>
 <script type="pyodide-68-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBUd28tc2FtcGxlIHQtdGVzdCBjaGVja2luZyBmb3IgZGlmZmVyZW5jZSBpbiBcbiMgQ29sdW1iaWEgYW5kIEJyYXppbCAndG90YWxfY3VwX3BvaW50cydcbmNvbG9tYmlhID0gY29mZmVlX3F1YWxpdHlbY29mZmVlX3F1YWxpdHlbJ2NvdW50cnlfb2Zfb3JpZ2luJ10gPT0gJ0NvbG9tYmlhJ10gXFxcbiAgICAgICAgICAgICAgICBbJ3RvdGFsX2N1cF9wb2ludHMnXSBcXFxuICAgICAgICAgICAgICAgIC5kcm9wbmEoKVxuYnJhemlsID0gY29mZmVlX3F1YWxpdHlbY29mZmVlX3F1YWxpdHlbJ2NvdW50cnlfb2Zfb3JpZ2luJ10gPT0gJ0JyYXppbCddIFxcXG4gICAgICAgICAgICAgICAgWyd0b3RhbF9jdXBfcG9pbnRzJ10uXFxcbiAgICAgICAgICAgICAgICBkcm9wbmEoKVxudF9zdGF0LCBwX3ZhbHVlID0gc3RhdHMudHRlc3RfaW5kKGNvbG9tYmlhLCBicmF6aWwsIGVxdWFsX3Zhcj1GYWxzZSlcblxucHJpbnQoZlwiVC1zdGF0aXN0aWM6IHt0X3N0YXR9XCIpXG5wcmludChmXCJQLXZhbHVlOiB7cF92YWx1ZX1cIikifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBUd28tc2FtcGxlIHQtdGVzdCBjaGVja2luZyBmb3IgZGlmZmVyZW5jZSBpblxuIyBDb2x1bWJpYSBhbmQgQnJhemlsICd0b3RhbF9jdXBfcG9pbnRzJ1xuY29sb21iaWEgPSBjb2ZmZWVfcXVhbGl0eVtjb2ZmZWVfcXVhbGl0eVsnY291bnRyeV9vZl9vcmlnaW4nXSA9PSAnQ29sb21iaWEnXSBcXFxuICAgICAgICAgICAgICAgIFsndG90YWxfY3VwX3BvaW50cyddIFxcXG4gICAgICAgICAgICAgICAgLmRyb3BuYSgpXG5icmF6aWwgPSBjb2ZmZWVfcXVhbGl0eVtjb2ZmZWVfcXVhbGl0eVsnY291bnRyeV9vZl9vcmlnaW4nXSA9PSAnQnJhemlsJ10gXFxcbiAgICAgICAgICAgICAgICBbJ3RvdGFsX2N1cF9wb2ludHMnXS5cXFxuICAgICAgICAgICAgICAgIGRyb3BuYSgpXG50X3N0YXQsIHBfdmFsdWUgPSBzdGF0cy50dGVzdF9pbmQoY29sb21iaWEsIGJyYXppbCwgZXF1YWxfdmFyPUZhbHNlKVxuXG5wcmludChmXCJULXN0YXRpc3RpYzoge3Rfc3RhdH1cIilcbnByaW50KGZcIlAtdmFsdWU6IHtwX3ZhbHVlfVwiKSJ9
 </script>
 </div>
 <hr>
@@ -1048,7 +1099,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBQZXJmb3JtIG9uZS13YXkg
 
 </div>
 <script type="pyodide-70-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBDcmVhdGUgYSBjb250aW5nZW5jeSB0YWJsZSBvZiAnZW1wbG95bWVudCcgYW5kICdyZW1vdGVfd29yaydcbmNvbnRpbmdlbmN5X3RhYmxlID0gcGQuY3Jvc3N0YWIoZGF0YV9kZXZfc3VydmV5WydlbXBsb3ltZW50J10sIFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBkYXRhX2Rldl9zdXJ2ZXlbJ3JlbW90ZV93b3JrJ10pXG5cbiMgUGVyZm9ybSBjaGktc3F1YXJlIHRlc3RcbmNoaTIsIHAsIGRvZiwgZXhwZWN0ZWQgPSBzdGF0cy5jaGkyX2NvbnRpbmdlbmN5KGNvbnRpbmdlbmN5X3RhYmxlKVxuXG5wcmludChmXCJDaGktU3F1YXJlIFN0YXRpc3RpYzoge2NoaTJ9XCIpXG5wcmludChmXCJQLXZhbHVlOiB7cH1cIikifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBDcmVhdGUgYSBjb250aW5nZW5jeSB0YWJsZSBvZiAnZW1wbG95bWVudCcgYW5kICdyZW1vdGVfd29yaydcbmNvbnRpbmdlbmN5X3RhYmxlID0gcGQuY3Jvc3N0YWIoZGF0YV9kZXZfc3VydmV5WydlbXBsb3ltZW50J10sXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGFfZGV2X3N1cnZleVsncmVtb3RlX3dvcmsnXSlcblxuIyBQZXJmb3JtIGNoaS1zcXVhcmUgdGVzdFxuY2hpMiwgcCwgZG9mLCBleHBlY3RlZCA9IHN0YXRzLmNoaTJfY29udGluZ2VuY3koY29udGluZ2VuY3lfdGFibGUpXG5cbnByaW50KGZcIkNoaS1TcXVhcmUgU3RhdGlzdGljOiB7Y2hpMn1cIilcbnByaW50KGZcIlAtdmFsdWU6IHtwfVwiKSJ9
 </script>
 </div>
 </section>
@@ -1074,6 +1125,9 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBQZXJmb3JtIGEgY2hpLXNx
 </section>
 <section id="walkthrough-3.4-non-parametric-tests" class="level2">
 <h2 class="anchored" data-anchor-id="walkthrough-3.4-non-parametric-tests">Walkthrough 3.4: Non-Parametric Tests</h2>
+<blockquote class="blockquote">
+<p><strong>Common Pitfall:</strong> Non-parametric tests like Mann-Whitney U and Kruskal-Wallis do not assume normally distributed data, which makes them useful for skewed data such as salaries. But they compare distributions (ranks/medians) rather than means, so do not report them as tests of the difference in means. Reach for them when the normality assumption of a t-test or ANOVA is clearly violated.</p>
+</blockquote>
 <div>
 <div id="pyodide-73" class="exercise-cell">
 
@@ -1106,9 +1160,19 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBQZXJmb3JtIE1hbm4tV2hp
 
 </div>
 <script type="pyodide-76-contents">
-eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBQZXJmb3JtIEtydXNrYWwtV2FsbGlzIEggVGVzdCBjb21wYXJpbmcgJ3RvdGFsX2N1cF9wb2ludHMnIGFjcm9zcyBcbiMgJ2NvbnRpbmVudF9vZl9vcmlnaW4nXG5ncm91cHMgPSBjb2ZmZWVfcXVhbGl0eS5ncm91cGJ5KCdjb250aW5lbnRfb2Zfb3JpZ2luJykgXFxcbiAgWyd0b3RhbF9jdXBfcG9pbnRzJ10gXFxcbiAgLmFwcGx5KGxpc3QpXG5zdGF0LCBwX3ZhbHVlID0gc3RhdHMua3J1c2thbCgqZ3JvdXBzKVxuXG5wcmludChmXCJLcnVza2FsLVdhbGxpcyBIIFN0YXRpc3RpYzoge3N0YXR9XCIpXG5wcmludChmXCJQLXZhbHVlOiB7cF92YWx1ZX1cIikifQ==
+eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBQZXJmb3JtIEtydXNrYWwtV2FsbGlzIEggVGVzdCBjb21wYXJpbmcgJ3RvdGFsX2N1cF9wb2ludHMnIGFjcm9zc1xuIyAnY29udGluZW50X29mX29yaWdpbidcbmdyb3VwcyA9IGNvZmZlZV9xdWFsaXR5Lmdyb3VwYnkoJ2NvbnRpbmVudF9vZl9vcmlnaW4nKSBcXFxuICBbJ3RvdGFsX2N1cF9wb2ludHMnXSBcXFxuICAuYXBwbHkobGlzdClcbnN0YXQsIHBfdmFsdWUgPSBzdGF0cy5rcnVza2FsKCpncm91cHMpXG5cbnByaW50KGZcIktydXNrYWwtV2FsbGlzIEggU3RhdGlzdGljOiB7c3RhdH1cIilcbnByaW50KGZcIlAtdmFsdWU6IHtwX3ZhbHVlfVwiKSJ9
 </script>
 </div>
+<section id="self-check-2" class="level3">
+<h3 class="anchored" data-anchor-id="self-check-2">Self-Check</h3>
+<p>By the end of this week, you should be able to:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Simulate common distributions (binomial, normal, Poisson, exponential) and recognize their typical shapes.</label></li>
+<li><label><input type="checkbox">Run one-sample and two-sample t-tests and choose a one-tailed or two-tailed alternative appropriately.</label></li>
+<li><label><input type="checkbox">Interpret a p-value correctly as evidence against the null hypothesis, not as the probability the null is true.</label></li>
+<li><label><input type="checkbox">Apply ANOVA and the chi-square test of independence to compare groups and categorical variables.</label></li>
+<li><label><input type="checkbox">Choose non-parametric tests (Mann-Whitney U, Kruskal-Wallis) when the assumptions of parametric tests are violated.</label></li>
+</ul>
 
 
 <script type="pyodide-data">
@@ -1128,6 +1192,7 @@ eyJjb250ZW50cyI6W3siY2VsbE5hbWUiOiJweW9kaWRlLTc2IiwiaW5saW5lIjpmYWxzZSwibWV0aG9k
 <script type="vfs-file">
 WyJkYXRhX2Rldl9zdXJ2ZXkuY3N2IiwiY29mZmVlX3F1YWxpdHkuY3N2Il0=
 </script>
+</section>
 </section>
 </section>
 
