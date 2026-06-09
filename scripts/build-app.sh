@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
-# Rebuild the in-browser course apps from the source notebooks
-# (exercises.qmd / exercises_solutions.qmd) and assemble them into app/.
+# Rebuild the in-browser course apps from the source notebooks and assemble
+# them into app/.
 #
 #   app/
 #   ├── index.html      landing page (from scripts/app-index.html)
@@ -16,13 +16,13 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 PYBIN="${PYTHON:-python3}"
 
-# --- 1. Source qmd -> Quarto Live pages (swap python->pyodide, drop the pip cell) ---
+# --- 1. Source qmd -> Quarto Live pages (swap python->pyodide, neutralize pip) ---
 echo "==> Generating Quarto Live pages"
 transform_body () {
   perl -0777 -pe '
     s/\A---\n.*?\n---\n//s;                                               # drop YAML front matter
-    s/```\{python[^}\n]*\}\n(?:(?!```).)*?!pip install.*?\n```\n//gs;     # drop the !pip install cell
     s/```\{python[^}\n]*\}/```{pyodide}/g;                                # python cells -> pyodide
+    s/^(\s*)!\s*pip install.*/$1# pip install not needed in-browser (packages auto-load)/mg;  # neutralize pip
     s/\A\n+//;                                                            # trim leading blank lines
   ' "$1"
 }
