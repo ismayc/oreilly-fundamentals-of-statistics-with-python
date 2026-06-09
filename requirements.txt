@@ -1,0 +1,11 @@
+# Packages for running this course's notebooks locally and for the GitHub Actions
+# workflow that renders exercises_solutions.html. The in-browser app (app/) installs
+# its own JupyterLite/Pyodide deps separately and does not use this file.
+numpy
+pandas
+scipy
+matplotlib
+seaborn
+statsmodels
+scikit-learn
+jupyter

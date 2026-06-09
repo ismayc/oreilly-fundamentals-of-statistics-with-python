@@ -6,7 +6,6 @@ data/
 *.RData
 renv/
 renv.lock
-requirements.txt
 so_data_walkthrough*
 coffee_data_walkthrough*
 exercises_solutions_walkthrough*
