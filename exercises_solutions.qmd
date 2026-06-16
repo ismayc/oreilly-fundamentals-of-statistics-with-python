@@ -589,7 +589,7 @@ plt.ylabel('Work Experience (years)');
 plt.show()
 
 # Scatter plot for 'years_code_pro' vs. 'converted_comp_yearly'
-sns.scatterplot(x=data_dev_survey['years_code'],
+sns.scatterplot(x=data_dev_survey['years_code_pro'],
                 y=data_dev_survey['converted_comp_yearly']);
 plt.title('Scatter Plot of Years of Coding Experience vs. Yearly Compensation');
 plt.xlabel('Years of Coding Experience');
