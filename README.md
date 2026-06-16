@@ -2,7 +2,7 @@
 
 ## Run this course online — nothing to install
 
-**▶️ Course page: <https://ismay-oreilly-fsp.netlify.app/app/>**
+**▶️ Course page: <https://ismay-oreilly-fsp.netlify.app/>**
 
 Run every walkthrough and exercise right in your web browser from the course page
 above — choose **Quarto Live** (a guided page with runnable code cells) or
