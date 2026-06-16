@@ -1099,7 +1099,7 @@ print(f"P-value: {p_value}")
 
 ```{python}
 # Two-sample t-test checking for difference in
-# Columbia and Brazil 'total_cup_points'
+# Colombia and Brazil 'total_cup_points'
 colombia = coffee_quality[coffee_quality['country_of_origin'] == 'Colombia'] \
                 ['total_cup_points'] \
                 .dropna()

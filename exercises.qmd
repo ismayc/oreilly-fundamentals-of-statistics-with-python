@@ -769,7 +769,7 @@ By the end of this week, you should be able to:
 ```
 
 ```{python}
-# Two-sample t-test checking for difference in Columbia and Brazil total_cup_points
+# Two-sample t-test checking for difference in Colombia and Brazil total_cup_points
 
 ```
 
