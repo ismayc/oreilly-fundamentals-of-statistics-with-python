@@ -190,3 +190,4 @@ cython_debug/
 
 # Annotated instructor edition (local working file, not committed)
 *with_notes*
+run-sheets/
