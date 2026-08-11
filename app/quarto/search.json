@@ -25,7 +25,7 @@
     "href": "solutions.html#walkthrough-1.2-data-summarizing",
     "title": "Solutions — Fundamentals of Statistics with Python",
     "section": "Walkthrough 1.2: Data Summarizing",
-    "text": "Walkthrough 1.2: Data Summarizing\n\nCompute and interpret measures of central tendency\n\n\n\n\n\n\n\nCommon Pitfall: .mode() returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with [0] grabs the first mode, but remember the others may exist – do not assume the mode is always unique.\n\n\n\nCompute and interpret measures of variation"
+    "text": "Walkthrough 1.2: Data Summarizing\n\nCompute and interpret measures of central tendency\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommon Pitfall: .mode() returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with [0] grabs the first mode, but remember the others may exist – do not assume the mode is always unique.\n\n\n\nCompute and interpret measures of variation"
   },
   {
     "objectID": "solutions.html#exercise-1.2-data-summarizing",
@@ -81,28 +81,28 @@
     "href": "solutions.html#walkthrough-2.2-eda",
     "title": "Solutions — Fundamentals of Statistics with Python",
     "section": "Walkthrough 2.2: EDA",
-    "text": "Walkthrough 2.2: EDA\n\nData Cleaning\n\n\n\n\n\n\n\n\nData Visualization\n\n\n\n\n\n\n\n\nSummary Statistics"
+    "text": "Walkthrough 2.2: EDA\n\nData Cleaning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization\n\n\n\n\n\n\n\n\nSummary Statistics"
   },
   {
     "objectID": "solutions.html#exercise-2.2-eda",
     "href": "solutions.html#exercise-2.2-eda",
     "title": "Solutions — Fundamentals of Statistics with Python",
     "section": "Exercise 2.2: EDA",
-    "text": "Exercise 2.2: EDA\n\nData Cleaning\n\n\n\n\n\n\n\n\nData Visualization\n\n\n\n\n\n\n\n\nSummary Statistics"
+    "text": "Exercise 2.2: EDA\n\nData Cleaning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nData Visualization\n\n\n\n\n\n\n\n\nSummary Statistics"
   },
   {
     "objectID": "solutions.html#walkthrough-2.3-data-preprocessing",
     "href": "solutions.html#walkthrough-2.3-data-preprocessing",
     "title": "Solutions — Fundamentals of Statistics with Python",
     "section": "Walkthrough 2.3: Data Preprocessing",
-    "text": "Walkthrough 2.3: Data Preprocessing\n\nInspect the Data after Loading\n\n\n\n\n\n\n\n\nHandle Missing Values\n\n\n\n\n\n\n\n\nHandling Outliers\n\nCommon Pitfall: The 1.5 * IQR rule flags points as potential outliers, but a flagged value is not automatically an error. Dropping every flagged row can throw away legitimate data and bias your results. Inspect outliers before removing them, and document why you removed any.\n\n\n\n\n\n\n\n\n\nData Transformation\n\n\n\n\n\n\n\n\nData Visualizations on Preprocessed Data"
+    "text": "Walkthrough 2.3: Data Preprocessing\n\nInspect the Data after Loading\n\n\n\n\n\n\n\n\nHandle Missing Values\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHandling Outliers\n\nCommon Pitfall: The 1.5 * IQR rule flags points as potential outliers, but a flagged value is not automatically an error. Dropping every flagged row can throw away legitimate data and bias your results. Inspect outliers before removing them, and document why you removed any.\n\n\n\n\n\n\n\n\n\nData Transformation\n\n\n\n\n\n\n\n\nData Visualizations on Preprocessed Data"
   },
   {
     "objectID": "solutions.html#exercise-2.3-data-preprocessing",
     "href": "solutions.html#exercise-2.3-data-preprocessing",
     "title": "Solutions — Fundamentals of Statistics with Python",
     "section": "Exercise 2.3: Data Preprocessing",
-    "text": "Exercise 2.3: Data Preprocessing\n\nInspect the Data after Loading\n\n\n\n\n\n\n\n\nHandle Missing Values\n\n\n\n\n\n\n\n\nHandle Outliers\n\n\n\n\n\n\n\n\nData Transformation\n\n\n\n\n\n\n\n\nData Visualizations on Preprocessed Data"
+    "text": "Exercise 2.3: Data Preprocessing\n\nInspect the Data after Loading\n\n\n\n\n\n\n\n\nHandle Missing Values\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHandle Outliers\n\n\n\n\n\n\n\n\nData Transformation\n\n\n\n\n\n\n\n\nData Visualizations on Preprocessed Data"
   },
   {
     "objectID": "solutions.html#walkthrough-2.4-correlations",
@@ -221,7 +221,7 @@
     "href": "exercises.html#walkthrough-1.2-data-summarizing",
     "title": "Walkthroughs & Exercises — Fundamentals of Statistics with Python",
     "section": "Walkthrough 1.2: Data Summarizing",
-    "text": "Walkthrough 1.2: Data Summarizing\n\nCompute and interpret measures of central tendency\n\n\n\n\n\n\n\nCommon Pitfall: .mode() returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with [0] grabs the first mode, but remember the others may exist – do not assume the mode is always unique.\n\n\n\nCompute and interpret measures of variation"
+    "text": "Walkthrough 1.2: Data Summarizing\n\nCompute and interpret measures of central tendency\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommon Pitfall: .mode() returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with [0] grabs the first mode, but remember the others may exist – do not assume the mode is always unique.\n\n\n\nCompute and interpret measures of variation"
   },
   {
     "objectID": "exercises.html#exercise-1.2-data-summarizing",
