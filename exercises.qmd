@@ -39,10 +39,6 @@ import pandas as pd
 
 # Display all columns
 pd.set_option('display.max_columns', None)
-
-# Display all outputs from each cell
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 ```
 
 
@@ -192,8 +188,9 @@ be good to proceed here. If not, scroll up and run it.
 
 ```{python}
 # Calculate center statistics for years_code_pro
+```
 
-
+```{python}
 # To extract just the value for mode
 
 ```

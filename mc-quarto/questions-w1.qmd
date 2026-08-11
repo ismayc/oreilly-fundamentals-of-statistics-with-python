@@ -441,13 +441,13 @@ Welcome to the quiz!
 
 ## Question 35
 
-**Given a dataset with values {10, 20, 30, 40, 50}, what is the standard deviation approximately?**
+**A dataset of daily temperatures has a variance of 25. What is its standard deviation, and in what units?**
 
-- **A)** 1  
-- **B)** 14.14  
-- **C)** 30  
-- **D)** 100  
-- **E)** 200  
+- **A)** 5, in the same units as the data  
+- **B)** 25, in the same units as the data  
+- **C)** 5, in squared units  
+- **D)** 625, in the same units as the data  
+- **E)** It cannot be determined from the variance alone  
 
 ---
 

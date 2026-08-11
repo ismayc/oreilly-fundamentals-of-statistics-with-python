@@ -191,3 +191,12 @@ cython_debug/
 # Annotated instructor edition (local working file, not committed)
 *with_notes*
 run-sheets/
+
+# ollama-ta (instructor-local teaching assistant)
+-Start TA*.command
+ta-sources/
+ta-sources-extra/
+.ta-index.db
+ollama-ta-log/
+persona.md
+prep_qa.md*

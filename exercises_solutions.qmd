@@ -42,10 +42,6 @@ import pandas as pd
 
 # Display all columns
 pd.set_option('display.max_columns', None)
-
-# Display all outputs from each cell
-from IPython.core.interactiveshell import InteractiveShell
-InteractiveShell.ast_node_interactivity = "all"
 ```
 
 
@@ -203,9 +199,17 @@ print(f"P-value: {p_value}")
 ```{python}
 # Calculate center statistics for years_code_pro
 data_dev_survey['years_code_pro'].mean()
-data_dev_survey['years_code_pro'].median()
-data_dev_survey['years_code_pro'].mode()
+```
 
+```{python}
+data_dev_survey['years_code_pro'].median()
+```
+
+```{python}
+data_dev_survey['years_code_pro'].mode()
+```
+
+```{python}
 # To extract just the value for mode
 data_dev_survey['years_code_pro'].mode()[0]
 ```
@@ -219,9 +223,14 @@ data_dev_survey['years_code_pro'].mode()[0]
 range_years_code_pro = data_dev_survey['years_code_pro'].max() \
                         - data_dev_survey['years_code_pro'].min()
 range_years_code_pro
+```
 
+```{python}
 # ddof=1 tells Python to calculate the variance in a way that works better when you're using a sample instead of data from everyone
 data_dev_survey['years_code_pro'].var(ddof=1)
+```
+
+```{python}
 data_dev_survey['years_code_pro'].std(ddof=1)
 ```
 
@@ -566,7 +575,9 @@ plt.show();
 ```{python}
 # Check for missing values
 data_dev_survey.isnull().sum()
+```
 
+```{python}
 # Remove duplicates if any
 data_dev_survey = data_dev_survey.drop_duplicates()
 data_dev_survey.info()
@@ -613,7 +624,9 @@ data_dev_survey.describe()
 ```{python}
 # Check for missing values
 coffee_quality.isnull().sum()
+```
 
+```{python}
 # Remove duplicates if any
 coffee_quality = coffee_quality.drop_duplicates()
 ```
@@ -673,7 +686,9 @@ data_dev_survey.head()
 ```{python}
 # Check for missing values
 data_dev_survey.isnull().sum()
+```
 
+```{python}
 # Make a copy of the dataset for imputation
 data_dev_survey_imputed = data_dev_survey.copy()
 
@@ -778,7 +793,9 @@ coffee_quality.head()
 ```{python}
 # Check for missing values
 coffee_quality.isnull().sum()
+```
 
+```{python}
 # Make a copy of the dataset for imputation
 coffee_quality_imputed = coffee_quality.copy()
 
