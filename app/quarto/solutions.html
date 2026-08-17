@@ -511,7 +511,7 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiIyBUbyBleHRyYWN0IGp1c3Qg
 </script>
 </div>
 <blockquote class="blockquote">
-<p><strong>Common Pitfall:</strong> <code>.mode()</code> returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with <code>[0]</code> grabs the first mode, but remember the others may exist – do not assume the mode is always unique.</p>
+<p><strong>Common Pitfall:</strong> <code>.mode()</code> returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with <code>[0]</code> grabs the first mode, but remember the others may exist: do not assume the mode is always unique.</p>
 </blockquote>
 </section>
 <section id="compute-and-interpret-measures-of-variation" class="level3">

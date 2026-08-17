@@ -25,7 +25,7 @@
     "href": "solutions.html#walkthrough-1.2-data-summarizing",
     "title": "Solutions: Fundamentals of Statistics with Python",
     "section": "Walkthrough 1.2: Data Summarizing",
-    "text": "Walkthrough 1.2: Data Summarizing\n\nCompute and interpret measures of central tendency\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommon Pitfall: .mode() returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with [0] grabs the first mode, but remember the others may exist – do not assume the mode is always unique.\n\n\n\nCompute and interpret measures of variation"
+    "text": "Walkthrough 1.2: Data Summarizing\n\nCompute and interpret measures of central tendency\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommon Pitfall: .mode() returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with [0] grabs the first mode, but remember the others may exist: do not assume the mode is always unique.\n\n\n\nCompute and interpret measures of variation"
   },
   {
     "objectID": "solutions.html#exercise-1.2-data-summarizing",
@@ -221,7 +221,7 @@
     "href": "exercises.html#walkthrough-1.2-data-summarizing",
     "title": "Walkthroughs & Exercises: Fundamentals of Statistics with Python",
     "section": "Walkthrough 1.2: Data Summarizing",
-    "text": "Walkthrough 1.2: Data Summarizing\n\nCompute and interpret measures of central tendency\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommon Pitfall: .mode() returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with [0] grabs the first mode, but remember the others may exist – do not assume the mode is always unique.\n\n\n\nCompute and interpret measures of variation"
+    "text": "Walkthrough 1.2: Data Summarizing\n\nCompute and interpret measures of central tendency\n\n\n\n\n\n\n\n\n\n\n\n\n\nCommon Pitfall: .mode() returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with [0] grabs the first mode, but remember the others may exist: do not assume the mode is always unique.\n\n\n\nCompute and interpret measures of variation"
   },
   {
     "objectID": "exercises.html#exercise-1.2-data-summarizing",
