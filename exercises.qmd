@@ -195,7 +195,7 @@ be good to proceed here. If not, scroll up and run it.
 
 ```
 
-> **Common Pitfall:** `.mode()` returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with `[0]` grabs the first mode, but remember the others may exist -- do not assume the mode is always unique.
+> **Common Pitfall:** `.mode()` returns a Series, not a single number, because a column can have more than one most-frequent value. Indexing with `[0]` grabs the first mode, but remember the others may exist: do not assume the mode is always unique.
 
 ### Compute and interpret measures of variation
 
